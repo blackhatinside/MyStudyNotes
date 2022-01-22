@@ -1,10 +1,20 @@
 Linux File System -----> ext4
 
-# To install a .deb file
-sudo dpkg -i package_file.deb
-
 # To update the Linux (packages)
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install --fix-missing
 
+# To install a .deb file
+sudo dpkg -i package_file.deb
+eg:
+  sudo dpkg -i anydesk.deb
+
 # To run a shell script
 sudo ./executable_file.sh
+eg:
+  sudo ./start.sh
+
+# To download and install a package
+sudo apt-get install package_name
+eg:
+  sudo apt-get install gedit
+  sudo apt-get install kde-plasma-desktop

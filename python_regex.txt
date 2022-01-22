@@ -1,0 +1,34 @@
+# import the regex module
+import re
+
+# compile() takes in a regular expression as input
+# compile() returns a Regex Pattern Object (Regex Object)
+# note 'r' is used here to pass the string as a raw string
+# raw strings don't treat '\' as an escape character
+phoneNumberRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+
+# pass the input string to the Regex Object's search() method
+# functions inside classes (and objects) are called methods
+# search() method returns a Match Object
+sentence = "My number is 415-555-4242."
+matchResults = phoneNumberRegex.search(sentence)
+
+# Match Object's group() method returns the actual matched text
+# passing 0 or nothing to the group() methoc will return the entire matched text
+# passing positive non zero natural numbers like 1, 2, 3 ... will return that particular group from the matched text
+print(matchResults.group())
+
+##################################################
+
+# groups can be created in the Regex by using parentheses "()"
+phoneNumberRegex2 = re.compile('(\d\d\d)-(\d\d\d)-(\d\d\d\d)')
+matchResults2 = phoneNumberRegex2.search(sentence)
+print(matchResults2.group(3))   # prints "4242"
+
+# to match actual brackets use the escape characters "\(" and "\)"
+sentence2 = "My phone number is (415) 555-4242."
+phoneNumberRegex3 = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
+matchResults3 = phoneNumberRegex3.search(sentence2)
+print(matchResults3.group())    # prints "(415)"
+
+##################################################

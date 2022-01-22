@@ -1,0 +1,10 @@
+Linux File System -----> ext4
+
+# To install a .deb file
+sudo dpkg -i package_file.deb
+
+# To update the Linux (packages)
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get install --fix-missing
+
+# To run a shell script
+sudo ./executable_file.sh

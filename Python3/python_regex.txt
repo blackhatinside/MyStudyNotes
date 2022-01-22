@@ -31,4 +31,5 @@ phoneNumberRegex3 = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
 matchResults3 = phoneNumberRegex3.search(sentence2)
 print(matchResults3.group())    # prints "(415)"
 
+# groups() methoc is used to retrieve all the groups at once
 ##################################################

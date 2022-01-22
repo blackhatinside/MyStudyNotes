@@ -1,0 +1,1 @@
+sudo apt install g++ vlc gimp gparted synaptic timeshift preload stacer bleachbit kazam conky-all apt-transport-https sublime-text python2 openshot cheese deluge tlp tlp-rdw git gedit

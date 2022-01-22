@@ -1,2 +1,2 @@
-# My_Notes.txt
+# My-Notes
 My Personal Study Notes - 2022

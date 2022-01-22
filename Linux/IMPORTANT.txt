@@ -3,6 +3,10 @@ Linux File System -----> ext4
 # To update the Linux (packages)
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get install --fix-missing
 
+# To get my nvidia GPU information
+nvidia-smi -q | grep 'Driver Version'
+nvidia-xconfig --query-gpu-info | grep UUID
+
 # To install a .deb file
 sudo dpkg -i package_file.deb
 eg:

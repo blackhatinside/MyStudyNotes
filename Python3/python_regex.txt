@@ -26,10 +26,11 @@ matchResults2 = phoneNumberRegex2.search(sentence)
 print(matchResults2.group(3))   # prints "4242"
 
 # to match actual brackets use the escape characters "\(" and "\)"
+# other special characters: \. \^ \$ \* \+ \? \{ \} \[ \] \\ \| \( \)
 sentence2 = "My phone number is (415) 555-4242."
 phoneNumberRegex3 = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
 matchResults3 = phoneNumberRegex3.search(sentence2)
 print(matchResults3.group())    # prints "(415)"
 
-# groups() methoc is used to retrieve all the groups at once
+# groups() method retrieves all the groups at once as a tuple
 ##################################################

@@ -1,1 +1,31 @@
 
+In Windows, the root directory is C:\
+In Linux, the root directory is /
+
+# -----> Output
+cyberkid05@Cyberkid-Swift-SF315-52G:~$ cd /
+cyberkid05@Cyberkid-Swift-SF315-52G:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   srv  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  sys  usr
+cyberkid05@Cyberkid-Swift-SF315-52G:/$
+# Output <-----
+
+/bin (binaries): This directory holds Linux binaries like thels command.
+/sbin (system binaries): This directory contains system binary files that serve as administrative commands (e.g., fdisk).
+/boot: This directory contains the Linux bootloader files.
+/dev (devices): This directory contains the device configuration files (e.g., /dev/null).
+/sys: This is similar to /dev, which contains configurations about devices and drivers.
+/etc (etcetera): This directory contains all the administration system files (e.g., /etc/passwd shows all the system users in Kali).
+/lib (libraries): This directory contains the shared libraries for the binaries inside /bin and /sbin.
+/proc (processes): This directory holds the processes and kernel information files.
+/lost+found: As the name says, this directory contains the files that have been recovered.
+/mnt (mount): This directory contains the mounted directories (e.g., a remote file share).
+/media: This directory holds the removable media mounted directories (e.g., DVD).
+/opt (option): This directory is used for add-on software package installation. Also, it is used when installing software by users (e.g., hacking tools that you download from GitHub).
+/tmp (temporary): This is a temporary folder used temporarily; the contents are wiped after each reboot. The tmp folder is a good place to download your tools for privilege escalation once you get a limited shell.
+/usr (user): This directory contains many subdirectories. In fact, /usr/share is a folder that you need to memorize because most of the tools that you use in Kali Linux (e.g., Nmap, Metasploit, etc.) are stored there, and it contains the wordlists dictionary files (/usr/share/wordlists/).
+/home: This is the home for Kali Linux users (e.g., /home/john/).
+/root: This is the root user home directory.
+/srv (serve): This folder holds some data related to system server functionalities (e.g., data for FTP servers).
+/var (variable): This folder holds variable data for databases, logs, and websites. For example, /var/www/html/ contains the files for the Apache web server.
+/run (runtime): This directory contains runtime system data (e.g., currently logged-in users).

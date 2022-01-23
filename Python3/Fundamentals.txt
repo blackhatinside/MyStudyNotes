@@ -2,17 +2,20 @@ def squareMatrix(n):
     grid = [[0] * n for _ in range(n)]
     return grid
 
+
 def Matrix2D(rows, cols):
     grid = [[0 for j in range(cols)] for i in range(rows)]
     return grid
-    
+
+
 class LinkedListNode:
     # __slots__ = ['data', 'next',]
     def __init__(self, data):
         self.data = data
         self.next = None
-        
-  class TreeNode:
+
+
+class TreeNode:
     def __init__(self, data):
         self.left = None
         self.right = None

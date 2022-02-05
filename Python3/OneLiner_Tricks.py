@@ -17,6 +17,9 @@ arr = [(i + 1) * 10 for i in range(10)] # [10 20 30 ..... 80 90 100]
 # n-sized array declaration
 arr = [0] * 10  # [0 0 0 ..... 0 0 0]
 
-# filter in python array (single line for and if-else statement)
+# filter in array (single line for and if-else statement)
 oddarr = [i for i in range(10) if i % 2 == 1] # [1 3 5 7 9]
+
+# difference array 
+diffarr = [val - arr[i - 1] for i, val in enumerate(arr, 0) if i > 0]
 

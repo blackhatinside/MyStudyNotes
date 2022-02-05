@@ -1,6 +1,6 @@
 Things I didn't know
 
-1. \0 is the null termination character and it is used to mark the end of a string. In C/C++ the null character ends the string.
+/* \0 is the null termination character and it is used to mark the end of a string. In C/C++ the null character ends the string. */
 // -----INPUT-----
 #include <stdio.h>
 int main()
@@ -10,7 +10,7 @@ int main()
 // -----OUTPUT-----
 Hello
 
-2. In a for loop, all the expressions in parenthesis are optional. Two semicolons are compulsory even though there are no expressions.
+/* In a for loop, all the expressions in parenthesis are optional. Two semicolons are compulsory even though there are no expressions. */
 // -----INPUT-----
 #include <stdio.h>
 int main()
@@ -23,7 +23,7 @@ int main()
 // -----OUTPUT-----
 HelloWorldHelloWorldHelloWorldHelloWorldHelloWorld.....
 
-3. The purpose of using extra curly braces is to provide scope-limit. 
+/* The purpose of using extra curly braces is to provide scope-limit. */
 // -----INPUT-----
 #include <stdio.h>
 int main()

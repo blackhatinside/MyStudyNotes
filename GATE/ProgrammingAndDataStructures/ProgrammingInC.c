@@ -42,3 +42,21 @@ error: ‘j’ undeclared (first use in this function)
 printf("%d %d", i, j);
                    ^
 / -----OUTPUT----- */
+
+/* some interesting facts about pointers */
+// -----INPUT-----
+#include <stdio.h>
+int main()
+{
+    int arr[] = {5, 6, 7};
+    int *p = arr;   // array name itself is a pointer
+    printf("%d", *p);
+    int x = *(&arr[0] + 1); // to move to next element in the array
+    printf("%d", x);
+    printf("%d", arr[2]);   // ways to access array elements
+    printf("%d", 2[arr]);   // ways to access array elements
+    printf("%d", *(arr + 2));  // ways to access array elements
+}
+/* -----OUTPUT-----
+56777
+/ -----OUTPUT----- */

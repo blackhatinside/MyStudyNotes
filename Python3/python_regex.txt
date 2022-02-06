@@ -15,7 +15,7 @@ matchResults = phoneNumberRegex.search(sentence)
 
 # Match Object's group() method returns the actual matched text
 # passing 0 or nothing to the group() methoc will return the entire matched text
-# passing positive non zero natural numbers like 1, 2, 3, ... will return that particular group from the matched text
+# passing positive non zero natural numbers like 1, 2, 3 ... will return that particular group from the matched text
 print(matchResults.group())
 
 ##################################################

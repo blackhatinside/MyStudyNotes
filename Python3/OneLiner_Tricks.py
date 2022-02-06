@@ -1,6 +1,8 @@
+# arr = [1, 3, 5, 7, 8, 6, 4, 2,]
+# grid = ['apple', 30], ['guava', 25], ['grapes', 25], ['banana', 20], ['orange', 40]]
+
 # to get an array from STDIN
 arr = list(map(int, input().split()))
-# arr = [1, 3, 5, 7, 8, 6, 4, 2,]
 
 # to print the array without [,]
 print(*arr) # 1 3 5 ..... 6 4 2
@@ -21,5 +23,8 @@ arr = [0] * 10  # [0 0 0 ..... 0 0 0]
 oddarr = [i for i in range(10) if i % 2 == 1] # [1 3 5 7 9]
 
 # difference array 
-diffarr = [val - arr[i - 1] for i, val in enumerate(arr, 0) if i > 0]
+diffarr = [abs(val - arr[i - 1]) for i, val in enumerate(arr, 0) if i > 0] # 2 2 2 1 2 2 2
+
+# sort a 2D array by its 2nd value first and then by its 1st value
+grid.sort(key = lambda x: (x[1], x[0]))
 

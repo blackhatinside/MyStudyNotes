@@ -9,7 +9,7 @@ def binSearch_iter(arr, key):
 		else:
 			beg = mid + 1
 	return False
-# arr = [84, 21, 47, 96, 15]
+# arr = [84, 21, 47, 96, 15,]
 # print(binSearch_iter(arr, 96))
 
 def binSearch_recur(arr, key, beg, end):

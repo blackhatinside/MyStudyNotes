@@ -203,7 +203,6 @@ def main():
 # # REGION FASTIO
 BUFSIZE = 8192
 
-
 class FastIO(IOBase):
     newlines = 0
 

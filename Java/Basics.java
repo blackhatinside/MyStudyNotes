@@ -7,7 +7,9 @@ int[] arr = new int[lim];
 int total = 0;
 for (int i = 0; i < lim; i += 1) {
     arr[i] = scan.nextInt();
-    total += arr[i];
+}
+for (int num : arr) {
+    total += num;
 }
 System.out.println(total);
 // 45

@@ -1,5 +1,13 @@
 Scanner scan = new Scanner(System.in);
 
+// 10 helloworld
+int lim = scan.nextInt();
+String word = scan.next();
+System.out.println(lim);
+System.out.println(word);
+// 10
+// helloworld
+
 // 10
 // 9 8 7 6 5 4 3 2 1 0
 int lim = scan.nextInt();

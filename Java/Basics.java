@@ -51,3 +51,11 @@ for (String ele : arr) {
 // still
 // allow
 // that
+
+// HelloWorld
+String word = scan.nextLine();
+char[] letters = word.toCharArray();
+for (char letter : letters) {
+    System.out.print(letter + " ");
+}
+// H e l l o W o r l d 

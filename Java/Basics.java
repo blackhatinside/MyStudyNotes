@@ -29,7 +29,7 @@ for (int i = 0; i < lim; i += 1) {
 int num = scan.nextInt();
 scan.nextLine();
 String sentence = scan.nextLine();
-String[] arr = sentence.split(" ");
+String[] arr = sentence.split("\\s");
 for (String ele : arr) {
     System.out.println(ele);
 }

@@ -1,0 +1,5 @@
+// Things I didn't know
+
+Algorithms
+    Step by step procedure for solving a computational problem
+    

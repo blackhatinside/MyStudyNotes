@@ -50,3 +50,16 @@ Hashing
       - {256, 512} outputs
     SHA3
       -
+      
+Insecure Protocols
+  FTP
+  SMTP
+  HTTP
+  Telnet
+Secure Protocols
+  S/MIME (Secure MIME)
+  PGP (Pretty Good Privacy)
+  SSH (Secure Shell)
+  SSL (Secure Socket Layer)
+  PPTP (Point to Point Tunneling Protocol)
+  TLS (Transport Layer Security)

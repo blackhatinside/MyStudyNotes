@@ -35,3 +35,18 @@ Asymmetric Encryption
   Diffie Hellman
     - used for key exchanges
   
+Hashing
+  - one way mathematical function
+  - small change in i/p will produce larger charge in o/p
+  - variable size input and fixed size output
+  MD5
+    - Message Digest
+    - 128 bit output
+  SHA
+    - Secure Hashing Algorithm
+    SHA1
+      - 160 bits output
+    SHA2
+      - {256, 512} outputs
+    SHA3
+      -

@@ -34,6 +34,14 @@
 // string1.toLowerCase()
 // string1.lower()
 
+// character1.isLowerCase()
+// character1.islower()
+
+// Map<Character, Integer> hp = new HashMap<>();
+// hp.containsKey(key1); hp.put(key1, value1); int xx = hp.get(key1);
+// hp = collections.defaultdict(lambda: 0)
+// hp[key1] = value1; xx = hp[key1];
+
 // StringBuilder sb = new StringBuilder();
 // string word = sb.append("Valid\n");
 

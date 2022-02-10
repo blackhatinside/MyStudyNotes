@@ -1,0 +1,37 @@
+Substitution Cipher - Caesar Cipher
+  Substituting a letter with another letter (Decoder ring)
+  
+Transposition Cipher
+  Shift letters by 'key' times
+  
+XOR Cipher
+  XOR of plain text and key
+  
+Symmetric Encryption
+  DES
+    - Data Encryption Standard
+    - input byte length == output byte length
+    - 64 bit input blocks
+  AES
+    - Advanced Encryption Standard
+    - 128 bit input blocks
+    - {128, 192, 256} key sizes 
+  RC
+    - Rivest Cipher
+    - RC4
+      - Stream Cipher
+      - variable key size 
+    - RC5
+      - Block Cipher
+      - variable block size
+      - variable key size
+    - RC6
+      - RC5 + integer multiplication + 4/4 working registers
+
+Asymmetric Encryption
+  RSA
+    - Rivest Shamir Adleman
+    - Popular Authentication Algorithm
+  Diffie Hellman
+    - used for key exchanges
+  

@@ -1,0 +1,8 @@
+echo "Hello, World!"
+
+# this is a comment
+# this is yet another comment
+
+name="Cyberkid Adithya"
+echo $name
+

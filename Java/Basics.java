@@ -1,3 +1,47 @@
+// System.out.println("Hello World");	// using print() will not throw "\n"
+// print("Hello World")
+
+// string1.toCharArray();
+// list(string1)
+
+// string1.length();
+// len(string1)
+
+// String1.toCharArray().length;
+// len(list(string1))
+
+// string1.indexOf("A");
+// string1.find("A")
+
+// string1.charAt(index);
+// string1[index]
+
+// boolean flag = true
+// bool flag = True
+
+// int tcs = Integer.parseInt(br.readLine);
+// tcs = int(input())
+
+// Arrays.sort(arr1);
+// arr1.sort()
+
+// string1.equals(string2);
+// string1 == string2
+
+// string1.contains("abc")
+// "abc" in string1
+
+// string1.toLowerCase()
+// string1.lower()
+
+// StringBuilder sb = new StringBuilder();
+// string word = sb.append("Valid\n");
+
+// Math.abs(4 - 5)
+// abs(4 - 5)
+
+##################################################
+
 Scanner scan = new Scanner(System.in);
 
 // 10 helloworld

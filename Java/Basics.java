@@ -1,7 +1,7 @@
 /*
 
 Java is a verbose programming language.
-Compilation: Source Code to Byte Code
+Compilation: Source Code to Byte Code (Creates a executable class file)
 
 */
 

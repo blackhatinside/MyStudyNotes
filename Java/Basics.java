@@ -1,3 +1,11 @@
+/*
+
+Java is a verbose programming language.
+
+*/
+
+##################################################
+
 // System.out.println("Hello World");	// using print() will not throw "\n"
 // print("Hello World")
 

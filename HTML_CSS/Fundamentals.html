@@ -1,21 +1,99 @@
-DOM - Document Object Model
+<!-- DOM - Document Object Model -->
+<!-- Style Precedence: Inline > Id > Class > Type -->
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Welcome</title>
+        <style>
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+            div {
+                background-color: blue;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                font-weight: bold;
+                width: 400px;
+                height: 400px;
+                padding: 20px;
+                margin: 20px;
+                border: 5px solid black;
+            }
+            table, td, th {
+                border: 5px solid black;
+                border-collapse: collapse;
+            }
+            button:hover {  // pseudoselector
+                background-color: green;
+            }
+        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         Hello, World!
         <h2>Heading Big</h2>
         <h4>Heading Medium</h4>
         <h6>Heading Small</h6>
+        
         An Ordered List
         <ol>
             <li>List Item One</li>
             <li>List Item Two</li>
             <li>List Item Three</li>
         </ol>
+        An Unordered List
+        <ul>
+            <li>Item</li>
+            <li>Another Item</li>
+            <li>Yet Another Item</li>
+        </ul>
+        
         <img src="cat.jpg", alt="Picture">
+        
+        <a href="https:www.google.com">Google Me</a>
+        <a href="#">Refresh</a>
+        
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Place</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Adithya</td>
+                    <td>21</td>
+                    <td>Chennai</td>
+                </tr>
+                <tr>
+                    <td>Neeti</td>
+                    <td>22</td>
+                    <td>Meerut</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <form>
+            <input type="text" placeholder="Fullname" name="person_name">
+            <input type="submit">
+        </form>
+        
+        <input name="city" list="cities" placeholder="person_city">
+        <datalist id="Cities">
+            <option value="Chennai">
+            <option value="Mumbai">
+            <option value="Delhi">
+        </datalist>   
+        
+        <div>
+            Welcome Back!
+        </div>
+        <h5 id="foo">Heading 5a</h5>  // #foo { }  // #ID given to unique element
+        <h5 class="bar">Heading 5b</h5>     // .bar { } // #CLASS given to multiple elements
+        <h5 class="bar">Heading 5c</h5>
+        
+        <h5 id
     </body>
 </html>

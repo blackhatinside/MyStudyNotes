@@ -8,11 +8,16 @@ ARRAYS:
         Constant
             Array Sum
             Sum of every pair of adjacent elements  
+        Properties:
+            
     Sorted array:
         Techniques:
             Binary Search
+        Properties:
+            in Two pointers Sum for finding a pair (x, y) that sums to z, moving head pointer forward increases the sum and moving tail pointer backward decreases sum 
     Circular array:
         Techniques:
             Look for modulo properties
+            
             
         

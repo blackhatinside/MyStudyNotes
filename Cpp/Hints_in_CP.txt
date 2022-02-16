@@ -1,7 +1,18 @@
 ARRAYS:
     Reversing an array:
+        Techniques:
+            Kadane's algorithm
+            Two pointers
         Changes
             Indices of elements change
         Constant
             Array Sum
             Sum of every pair of adjacent elements  
+    Sorted array:
+        Techniques:
+            Binary Search
+    Circular array:
+        Techniques:
+            Look for modulo properties
+            
+        

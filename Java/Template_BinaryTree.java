@@ -25,9 +25,7 @@ class BinaryTree {
 
 public class Application {
 	public static String solve(int a, int b) {
-		Triangle myTriangle = new Triangle(a, b);
-		System.out.println(Triangle.numofsides);
-		System.out.println(myTriangle.findArea());
+		System.out.println("Hello World");
 		return "\n";
 	}
 	public static void main(String[] args) {

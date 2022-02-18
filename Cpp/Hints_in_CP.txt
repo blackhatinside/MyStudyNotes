@@ -17,7 +17,16 @@ ARRAYS:
             in Two pointers Sum for finding a pair (x, y) that sums to z, moving head pointer forward increases the sum and moving tail pointer backward decreases sum 
     Circular array:
         Techniques:
-            Look for modulo properties
-            
+            Look out for modulo properties
+
+Stacks:
+    Pushing and Popping:
+        Techniques:
+            Balancing Parentheses
+            Infix to Postfix Conversion
+            Evaluation of Expressions
+        Properties:
+            Operations are usually dependent on the (previous) last element in the array
+    
             
         

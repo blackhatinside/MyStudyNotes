@@ -8,3 +8,7 @@ sudo apt-get install qml-module-qt-websockets \
 sudo add-apt-repository ppa:hsheth2/ppa && sudo apt update && sudo apt install cava
 
 disabled startup services: casper acpid accounds-daemon
+
+sudo add-apt-repository ppa:kubuntu-ppa/backports
+sudo apt update
+sudo apt install kde-plasma-desktop

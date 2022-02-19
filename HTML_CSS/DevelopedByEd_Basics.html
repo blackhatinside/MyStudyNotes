@@ -10,11 +10,34 @@
 </head>
 <body>
     <h1>Hello World</h1>
-    <img src="/title_icon.png" alt="dummy" width="300" height="300">
+    <img src="/title_icon.png" alt="dummy image 1" width="300" height="300">
     <video controls height="216" width="384">
         <source src="/body_movie.mp4" type="video/mp4">
     </video>
-    <a href="https:www.google.com">Click Me</a>
+    <a target="_blank" href="https:www.google.com"><img src="/anchor_icon.png" alt="dummy image 2"></a>
+    <br>
+    <a href="#">Refresh</a>
+    <form action="#" autocomplete="on">
+        <label for="user">Username</label>
+        <input required minlength="3" maxlength="30" name="user" type="text" id="user">
+        <br>
+        <label for="mail">Email ID</label>
+        <input required autocomplete="off" name="mail" type="email" id="mail">
+        <!-- only input fields that get submitted are the ones that have name on it -->
+        <br>
+        <select name="products" id="product">
+            <option value=""></option>
+            <option value="windows">Windows 7,8,10,11</option>
+            <option value="linux">Debian or Arch</option>
+            <option value="iOS">Macbook or Iphone</option>
+            <!-- the actual value in value tag gets submitted -->
+        </select>
+        <br>
+        <textarea placeholder="Enter your Feedback" name="message" id="message" cols="30" rows="10"></textarea>
+        <input type="radio" name="bool_license" value="agreed">
+        <input type="radio" name="bool_license" value="disagreed">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
 

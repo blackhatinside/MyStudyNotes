@@ -17,7 +17,7 @@ ARRAYS:
             Binary Search
         Properties:
             in Two pointers Sum for finding a pair (x, y) that sums to z, moving head pointer forward increases the sum and moving tail pointer backward decreases sum 
-            all the prefix subarrays are permutations 
+            all the prefix subarrays are permutations if array is of the form [1,2,3...N-2,N-1,N]
     Circular array:
         Techniques:
             Look out for modulo properties

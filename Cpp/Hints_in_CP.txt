@@ -27,6 +27,9 @@ Stacks:
             Evaluation of Expressions
         Properties:
             Operations are usually dependent on the (previous) last element in the array
+            Best way to order the given set of brackets { "((", "))", "()", ")(" } to make a valid bracket sequence string: all strings ((, then all strings (), then all strings )(, then all strings ))
+            adding "()" anywhere to a balanced bracket sequence won't affect the balanced state
+            adding ")(" to a balanced bracket sequence also won't affect the balanced state if it is enclosed by at least one "((" and "))"
     
             
         

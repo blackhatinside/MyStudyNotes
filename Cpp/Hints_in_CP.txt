@@ -10,6 +10,7 @@ ARRAYS:
             Sum of every pair of adjacent elements  
         Properties:
             For an array to have zero as its bitwise AND, at least one of the elements must have offbit
+            In problems related to Kadane's algorithm, always look for Local and Global Maxima/Minima values
     Sorted array:
         Techniques:
             Binary Search

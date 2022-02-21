@@ -1,0 +1,16 @@
+Arrays - High
+Strings - High
+Hashmaps - High
+Sorting - High
+Searching - High
+Matrix - Medium
+Math - Medium
+Stack - Medium (implementation using list)
+Trees - Medium (leetcode)
+Graph - Low
+Queue - Low
+Subarrays - Low
+Bitmasking - Low
+Subsequences - Low
+Range Queries - Low
+Algorithms - Low

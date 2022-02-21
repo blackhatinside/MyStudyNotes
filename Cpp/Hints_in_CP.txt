@@ -31,6 +31,7 @@ STACKS:
             To always retrieve the maximum element from the stack in O(1), always push max(stack[-1], new_elemenet) into the non empty stack instead of pushing new_element directly
             adding "()" anywhere to a balanced bracket sequence won't affect the balanced state
             adding ")(" to a balanced bracket sequence also won't affect the balanced state if it is enclosed by at least one "((" and "))"
+            Stacks can be used to convert an array with contiguous repeating elements to an array without any contiguous repeating elements (sequeezing the array)
             
 GRIDS:
     Traversal:

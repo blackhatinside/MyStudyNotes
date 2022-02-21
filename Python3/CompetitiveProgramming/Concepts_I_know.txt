@@ -7,6 +7,8 @@ Matrix - Medium
 Math - Medium
 Stack - Medium (implementation using list)
 Trees - Medium (leetcode)
+Recursion - Medium
+DP - Low
 Graph - Low
 Queue - Low
 Subarrays - Low

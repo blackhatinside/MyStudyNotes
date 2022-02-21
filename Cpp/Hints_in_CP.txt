@@ -28,6 +28,7 @@ STACKS:
         Properties:
             Operations are usually dependent on the (previous) last element in the array
             Best way to order the given set of brackets { "((", "))", "()", ")(" } to make a valid bracket sequence string: all strings ((, then all strings (), then all strings )(, then all strings ))
+            To always retrieve the maximum element from the stack in O(1), always push max(stack[-1], new_elemenet) into the non empty stack instead of pushing new_element directly
             adding "()" anywhere to a balanced bracket sequence won't affect the balanced state
             adding ")(" to a balanced bracket sequence also won't affect the balanced state if it is enclosed by at least one "((" and "))"
             

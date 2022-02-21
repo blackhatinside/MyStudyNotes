@@ -34,5 +34,5 @@ STACKS:
 GRIDS:
     Traversal:
         properties:
-            Never forget to check if the cell is valid (a part of the grid) or invalid
+            Never forget to check if the cell is a part of the declared grid or not (using a isValid(x1, y1) function for the row-column indices
     

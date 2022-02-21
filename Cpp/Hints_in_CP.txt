@@ -11,11 +11,13 @@ ARRAYS:
         Properties:
             For an array to have zero as its bitwise AND, at least one of the elements must have offbit
             In problems related to Kadane's algorithm, always look for Local and Global Maxima/Minima values
+            Reversing an entire increasing permutation array [1,2,3...,N-2,N-1,N] will reduce the number of prefix permutations present in it to 1 [N,N-1,N-2,...3,2,1]
     Sorted array:
         Techniques:
             Binary Search
         Properties:
             in Two pointers Sum for finding a pair (x, y) that sums to z, moving head pointer forward increases the sum and moving tail pointer backward decreases sum 
+            all the prefix subarrays are permutations 
     Circular array:
         Techniques:
             Look out for modulo properties

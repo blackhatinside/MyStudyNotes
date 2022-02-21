@@ -19,7 +19,7 @@ ARRAYS:
         Techniques:
             Look out for modulo properties
 
-Stacks:
+STACKS:
     Pushing and Popping:
         Techniques:
             Balancing Parentheses
@@ -30,6 +30,9 @@ Stacks:
             Best way to order the given set of brackets { "((", "))", "()", ")(" } to make a valid bracket sequence string: all strings ((, then all strings (), then all strings )(, then all strings ))
             adding "()" anywhere to a balanced bracket sequence won't affect the balanced state
             adding ")(" to a balanced bracket sequence also won't affect the balanced state if it is enclosed by at least one "((" and "))"
-    
             
-        
+GRIDS:
+    Traversal:
+        properties:
+            Never forget to check if the cell is valid (a part of the grid) or invalid
+    

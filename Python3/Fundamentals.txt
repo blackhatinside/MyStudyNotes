@@ -26,3 +26,13 @@ class TreeNode:
 
 # sort a 2D array named "grid"
 grid.sort(key = lambda x: (x[0], x[1]))
+
+# squeeze consecutive repeating elements in an array by replacing them with a single element (stack implementation)
+stack = []
+for x in arr:
+    if not stack:
+        stack.append([x, 1])
+    elif stack[-1][0] == x:
+        stack[-1][1] += 1
+    else:
+        stack.append([x, 1])

@@ -36,3 +36,7 @@ for x in arr:
         stack[-1][1] += 1
     else:
         stack.append([x, 1])
+
+# inorder traversal : left child -->> root -->> right child
+def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right) if root else list()

@@ -14,5 +14,6 @@ Queue - Low
 Subarrays - Low
 Bitmasking - Low
 Subsequences - Low
+Permutations - Low
 Range Queries - Low
 Algorithms - Low

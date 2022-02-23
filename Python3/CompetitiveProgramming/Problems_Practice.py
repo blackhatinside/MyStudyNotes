@@ -1,8 +1,6 @@
 # Important Problems for Practice for Interviews
 
 # Stack: https://www.hackerrank.com/challenges/simple-text-editor/problem
-arr = []
-oldarr = []
 stack = [[],]
 n = int(input())
 while n:

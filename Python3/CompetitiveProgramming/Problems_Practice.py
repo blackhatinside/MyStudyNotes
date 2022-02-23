@@ -5,7 +5,6 @@ stack = [[],]
 n = int(input())
 while n:
     q = input().split()
-    oldarr = arr[:]
     if q[0] == "1":
         stack.append(stack[-1] + list(q[1]))
     elif q[0] == "2":

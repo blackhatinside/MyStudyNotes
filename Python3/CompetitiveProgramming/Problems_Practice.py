@@ -1,5 +1,23 @@
 # Important Problems for Practice for Interviews
 
+# Stack: https://www.hackerrank.com/challenges/simple-text-editor/problem
+arr = []
+oldarr = []
+stack = [[],]
+n = int(input())
+while n:
+    q = input().split()
+    oldarr = arr[:]
+    if q[0] == "1":
+        stack.append(stack[-1] + list(q[1]))
+    elif q[0] == "2":
+        stack.append(stack[-1][:-int(q[1])])
+    elif q[0] == "3":
+        print(stack[-1][int(q[1]) - 1])
+    elif q[0] == "4":
+        stack.pop()
+    n -= 1
+
 # Stack: https://www.hackerrank.com/challenges/largest-rectangle/problem
 n = int(input())
 arr = list(map(int, input().split()))

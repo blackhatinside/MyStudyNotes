@@ -3,7 +3,7 @@
 # Stack: https://www.hackerrank.com/challenges/largest-rectangle/problem
 n = int(input())
 arr = list(map(int, input().split()))
-def largestRectangleArea(heights):
+def largestRectangleAreaUnderHistogram(heights):
     maxarea = 0
     pstack, hstack = [], []
     currarea, maxarea = 0, 0
@@ -23,13 +23,13 @@ def largestRectangleArea(heights):
         #     currarea = (len(heights) - pstack.pop()) * hstack.pop()
         #     maxarea = max(currarea, maxarea)
     return maxarea
-ans = largestRectangleArea(arr)
+ans = largestRectangleAreaUnderHistogram(arr)
 print(ans)
 
 # Stack: https://codeforces.com/gym/102760/problem/F
 n = int(input())
 arr = list(map(int, input().split()))
-def solve(heights): # O(n) solution using Stacks
+def largestSquareUnderHistogram(heights): # O(n) solution using Stacks
     pstack, hstack = [], []
     maxside, currarea, maxside = 0, 0, 0
     heights.append(0)   # to finish off the remaining items in the stack
@@ -42,5 +42,5 @@ def solve(heights): # O(n) solution using Stacks
             hstack.append(heights[i])
             pstack.append(min(prevwidth, i))
     return maxside
-ans = solve(arr)
+ans = largestSquareUnderHistogram(arr)
 print(ans)

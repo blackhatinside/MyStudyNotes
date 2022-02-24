@@ -48,6 +48,22 @@ while n:
         stack.pop()
     n -= 1
 
+# Stack: https://leetcode.com/problems/next-greater-element-ii/
+class Solution:
+    def nextGreaterElements(self, arr: List[int]) -> List[int]:
+        n = len(arr)
+        arr = arr[::-1]
+        stack = [arr[0], ]; ans = [];
+        for i in range(2 * n):
+            while stack and arr[i % n] >= stack[-1]:
+                stack.pop()
+            if not stack:
+                ans.append(-1)
+            else:
+                ans.append(stack[-1])
+            stack.append(arr[i % n])
+        return ans[::-1][:n]
+
 # Stack: https://www.hackerrank.com/challenges/largest-rectangle/problem
 n = int(input())
 arr = list(map(int, input().split()))

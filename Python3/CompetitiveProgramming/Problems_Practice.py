@@ -23,6 +23,16 @@ for x in stack:
 		ans = ans + ")"
 print(ans)
 
+# Stack: https://atcoder.jp/contests/arc108/tasks/arc108_b
+n = int(input()); w = input(); stack = [];
+for x in w:
+	stack.append(x)
+	if len(stack) >= 2:
+		while len(stack) >= 3 and (stack[-1] == "x" and stack[-2] == "o" and stack[-3] == "f"):
+			stack.pop(); stack.pop(); stack.pop();
+ans = "".join(stack)
+print(len(ans) if len(w) != len(ans) else len(w))
+
 # Stack: https://www.hackerrank.com/challenges/simple-text-editor/problem
 stack = [[],]
 n = int(input())

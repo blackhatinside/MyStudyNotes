@@ -30,6 +30,8 @@ STACKS:
             Evaluation of Expressions
         Properties:
             Operations are usually dependent on the (previous) last element in the array
+            All operations [push, pop, peek] have O(1) time complexity
+            Some problems having exponential time complexity can be solved in linear time O(n) using Stacks (even with a inner while loop running, since N + N = 2N ==> O(N) only)
             Best way to order the given set of brackets { "((", "))", "()", ")(" } to make a valid bracket sequence string: all strings ((, then all strings (), then all strings )(, then all strings ))
             To always retrieve the maximum element from the stack in O(1), always push max(stack[-1], new_elemenet) into the non empty stack instead of pushing new_element directly
             adding "()" anywhere to a balanced bracket sequence won't affect the balanced state

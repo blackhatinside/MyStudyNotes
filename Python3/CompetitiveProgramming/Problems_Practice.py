@@ -9,6 +9,20 @@ for x in w:
 		stack.pop()
 print(len(stack))
 
+# Stack: https://atcoder.jp/contests/abc064/tasks/abc064_d
+n = int(input()); w = input(); stack = []; ans = w;
+for x in w:
+	if not stack or not (stack[-1] == "(" and x == ")"):
+		stack.append(x)
+	else:
+		stack.pop()
+for x in stack:
+	if x == ")":
+		ans = "(" + ans
+	else:
+		ans = ans + ")"
+print(ans)
+
 # Stack: https://www.hackerrank.com/challenges/simple-text-editor/problem
 stack = [[],]
 n = int(input())

@@ -1,5 +1,6 @@
 # Important Problems for Practice for Interviews
 	# https://medium.com/techie-delight/stack-data-structure-practice-problems-and-interview-questions-9f08a35a7f19
+	# https://www.hackerearth.com/practice/data-structures/stacks/basics-of-stacks/practice-problems/
 
 # Stack: https://atcoder.jp/contests/agc005/tasks/agc005_a
 w = input(); stack = [];

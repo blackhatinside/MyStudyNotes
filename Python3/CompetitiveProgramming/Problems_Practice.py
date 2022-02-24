@@ -1,5 +1,14 @@
 # Important Problems for Practice for Interviews
 
+# Stack: https://atcoder.jp/contests/agc005/tasks/agc005_a
+w = input(); stack = [];
+for x in w:
+	if not stack or not (stack[-1] == "S" and x == "T"):
+		stack.append(x)
+	else:
+		stack.pop()
+print(len(stack))
+
 # Stack: https://www.hackerrank.com/challenges/simple-text-editor/problem
 stack = [[],]
 n = int(input())

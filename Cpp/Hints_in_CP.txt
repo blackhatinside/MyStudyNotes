@@ -11,6 +11,7 @@ ARRAYS:
         Properties:
             For an array to have zero as its bitwise AND, at least one of the elements must have offbit
             In problems related to Kadane's algorithm, always look for Local and Global Maxima/Minima values
+            To make the traversal through an array in circular fashion just do index_value % array_length in the loop
             Reversing an entire increasing permutation array [1,2,3...,N-2,N-1,N] will reduce the number of prefix permutations present in it to 1 [N,N-1,N-2,...3,2,1]
     Sorted array:
         Techniques:

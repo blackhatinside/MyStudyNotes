@@ -51,18 +51,18 @@ while n:
 # Stack: https://leetcode.com/problems/next-greater-element-ii/
 class Solution:
     def nextGreaterElements(self, arr: List[int]) -> List[int]:
-        n, beg = len(arr), 0
+        n = len(arr)
         arr = arr[::-1]
         stack = []; ans = [];
         for i in range(2 * n):
             while stack and arr[i % n] >= stack[-1]:
                 stack.pop()
             if not stack:
-                ans.insert(beg, -1)
+                ans.append(-1)
             else:
-                ans.insert(beg, stack[-1])
+                ans.append(stack[-1])
             stack.append(arr[i % n])
-        return ans[:n]
+        return ans[::-1][:n]
 
 # Stack: https://www.hackerrank.com/challenges/largest-rectangle/problem
 n = int(input())

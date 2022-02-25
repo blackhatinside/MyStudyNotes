@@ -71,7 +71,7 @@ public class Vehicle {
 	int wheeler;
 
 	Vehicle (String uname, int vID, int vWheeler) {
-		this.username = uname;
+		this.username = uname;	// 'this' keyword is not mandatory
 		this.vehicleID = vID;
 		this.wheeler = vWheeler;
 	}

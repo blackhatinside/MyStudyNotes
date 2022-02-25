@@ -106,6 +106,10 @@ public class Application {
 				break;
 			}
 			case 2: {
+				if (lane1.empty()) {
+					System.out.println("The lane is already empty.");
+					break;
+				}
 				System.out.println("Vehicle removed from lane!");
 				lane1.pop();
 				break;
@@ -117,6 +121,10 @@ public class Application {
 				break;
 			}
 			case 4: {
+				if (lane1.empty()) {
+					System.out.println("Unable to peek an empty lane.");
+					break;
+				}
 				System.out.println("Peeking into the last vehicle.");
 				System.out.println(lane1.peek());
 				break;

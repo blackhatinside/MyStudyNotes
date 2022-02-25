@@ -87,7 +87,6 @@ public class Vehicle {
 }
 
 // Applicationjava
-// package codechef; /* don't place package name! */
 import java.io.*;
 import java.lang.*;
 import java.time.LocalDateTime;
@@ -115,7 +114,7 @@ public class Application {
 		int choice = -1, maxxsize = 2;
 		while (choice != 0) {
 			System.out.println("\n1. Add a Vehicle\n2. Remove a Vehicle\n3. Number of Vehicles\n4. Peek into last Vehicle\n5. Exit\nEnter your choice: ");
-			choice = scan.nextInt(); scan.nextLine();
+			choice = scan.nextInt(); scan.nextLine(); System.out.println();
 			switch (choice) {
 			case 1: {
 				if (lane1.size() == maxxsize) {
@@ -142,8 +141,12 @@ public class Application {
 			}
 			case 3: {
 				System.out.println("Displaying lane details.");
-				System.out.println("\n" + lane1.size() + " vehicles found!\n");
-				System.out.println(lane1);
+				if (lane1.empty()) {
+					System.out.println("The lane is already empty.");
+				} else {
+					System.out.println(lane1.size() + " vehicles found!");
+					System.out.println(lane1);
+				}
 				break;
 			}
 			case 4: {
@@ -167,4 +170,3 @@ public class Application {
 		}
 	}
 }
-

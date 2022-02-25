@@ -83,6 +83,12 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // -	offer(element)
 // -	poll()
 // -	peek()
+
+// SET
+// - 	add(element)
+// - 	remove(element)
+// - 	contains(element)
+// - 	isEmpty()
 // --------------------------------------------------
 
 ##################################################

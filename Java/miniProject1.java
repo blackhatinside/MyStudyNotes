@@ -82,20 +82,21 @@ public class Vehicle {
 }
 
 // Applicationjava
-import java.io.*;
-import java.lang.*;
-import java.util.*;
 public class Application {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Vehicle> lane1 = new Stack<>();
-		int choice = -1;
+		int choice = -1, maxxsize = 2;
 		while (choice != 0) {
 			System.out.println("\nParking System\n1. Add a Vehicle\n2. Remove a Vehicle\n3. Number of Vehicles\n4. Peek into last Vehicle\n5. Exit\nEnter your choice: ");
 			choice = scan.nextInt(); scan.nextLine();
 			switch (choice) {
 			case 1: {
+				if (lane1.size() == maxxsize) {
+					System.out.println("Sorry, the lane is full."); scan.nextLine();
+					break;
+				}
 				String givenName = scan.next();
 				int givenID = scan.nextInt();
 				int givenwheels = scan.nextInt();
@@ -118,9 +119,10 @@ public class Application {
 			case 4: {
 				System.out.println("Peeking into the last vehicle.");
 				System.out.println(lane1.peek());
+				break;
 			}
 			case 5: {
-				System.out.println("Exiting from program.");
+				System.out.println("Exiting from the program.");
 				choice = 0;
 				break;
 			}

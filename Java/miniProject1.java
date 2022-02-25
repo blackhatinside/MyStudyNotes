@@ -59,6 +59,12 @@ public class Application {
 // ##################################################
 
 // Vehicle.java
+enum VehicleOutline {
+	username,
+	vehicleID,
+	wheeler;
+}
+
 public class Vehicle {
 	String username;
 	int vehicleID;

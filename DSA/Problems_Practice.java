@@ -1,3 +1,4 @@
+// https://atcoder.jp/contests/agc005/tasks/agc005_a
 import java.io.*;
 import java.lang.*;
 import java.util.*;

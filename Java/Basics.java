@@ -50,6 +50,12 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // character1.isLowerCase()
 // character1.islower()
 
+// Math.abs(4 - 5)
+// abs(4 - 5)
+
+// (Character.compare('a', 'b') == 0)
+// 'a' == 'b'
+
 // Map<Character, Integer> hp = new HashMap<>();
 // hp.containsKey(key1); hp.put(key1, value1); int xx = hp.get(key1);
 // hp = collections.defaultdict(lambda: 0)
@@ -58,8 +64,26 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // StringBuilder sb = new StringBuilder();
 // string word = sb.append("Valid\n");
 
-// Math.abs(4 - 5)
-// abs(4 - 5)
+// --------------------------------------------------
+// ARRAY LIST
+// -	add(index = n, element)
+// -	addAll(oldarr)
+// -	get(index)
+// -	set(index, newvalue)
+// -	remove(index)
+// -	remove(Integer.valueOf(30))
+// -	size()
+// -	clear()
+// STACK
+// -	push(element)
+// -	pop()
+// -	peek()
+
+// QUEUE
+// -	offer(element)
+// -	poll()
+// -	peek()
+// --------------------------------------------------
 
 ##################################################
 

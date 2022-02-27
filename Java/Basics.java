@@ -35,7 +35,7 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // string1.charAt(index);
 // string1[index]
 
-// char x = 
+// char x = arr.get(j).charAt(i)    // ArrayList<String> arr = new ArrayList<>();
 // letter = arr[2][5]   # ["Geek", "Geeks", "GeeksForGeeks", "GeekWorld"]   # letter = 'F'
 
 // boolean flag = true

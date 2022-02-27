@@ -20,6 +20,9 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // string1.length();
 // len(string1)
 
+// string1.split("\\.", 0);    // 0 is max. times which is all occurences
+// string1.split(".")  // default max. times is -1 which is all occurences
+
 // String1.toCharArray().length;
 // len(list(string1))
 

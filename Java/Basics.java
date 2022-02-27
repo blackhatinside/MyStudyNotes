@@ -17,7 +17,7 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // string1.toCharArray();
 // list(string1)
 
-// string1.length();
+// string1.length();    // .length for arrays, .size() for collections, .length() for strings
 // len(string1)
 
 // string1.split("\\.", 0);    // 0 is max. times which is all occurences
@@ -34,6 +34,9 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 
 // string1.charAt(index);
 // string1[index]
+
+// char x = 
+// letter = arr[2][5]   # ["Geek", "Geeks", "GeeksForGeeks", "GeekWorld"]   # letter = 'F'
 
 // boolean flag = true
 // bool flag = True

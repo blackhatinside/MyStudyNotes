@@ -23,8 +23,11 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // string1.split("\\.", 0);    // 0 is max. times which is all occurences
 // string1.split(".")  // default max. times is -1 which is all occurences
 
-// String1.toCharArray().length;
+// string1.toCharArray().length;
 // len(list(string1))
+
+// string1.substring(beg_index, end_index);    // substring from beg to end - 1
+// string1[beg_index:end_index]     #   using string slicing
 
 // string1.indexOf("A");
 // string1.find("A")

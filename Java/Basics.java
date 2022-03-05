@@ -47,6 +47,9 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // Arrays.sort(arr1);
 // arr1.sort()
 
+// int tot = IntStream.of(arr).sum();
+// tot = sum(arr1)
+
 // string1.equals(string2);
 // string1 == string2
 

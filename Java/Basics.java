@@ -98,6 +98,12 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // - 	remove(element)
 // - 	contains(element)
 // - 	isEmpty()
+
+// HASHMAP
+// -   get(index)
+// -   put(index, newvalue)
+// -   containsKey(element)
+    
 // --------------------------------------------------
 
 ##################################################

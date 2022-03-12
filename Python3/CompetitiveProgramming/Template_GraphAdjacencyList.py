@@ -1,13 +1,13 @@
-class Graph:
-	V = 0
-	l = [[], ]
-	def __init__(self, v = 0):
+class Graph:	# using adjacency lists
+	V = 0	# number of vertices
+	l = [[], ]	# adjacency list
+	def __init__(self, v = 0):	# constructor
 		self.V = v
 		self.l = [list() for _ in range(self.V)]
 
 	def addEdge(self, i, j, undir = True):
 		self.l[i].append(j)
-		if undir:
+		if undir:	# undirected graph has both A -> B and B -> A connections
 			self.l[j].append(i)
 
 	def printAdjList(self):

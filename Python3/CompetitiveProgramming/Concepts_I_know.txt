@@ -2,14 +2,14 @@ Arrays - High
 Strings - High
 Hashmaps - High
 Sorting - High
-Searching - High
+Searching - High (Linear, Binary)
 Matrix - Medium
 Math - Medium
 Stack - Medium (implementation using list)
 Trees - Medium (leetcode)
 Recursion - Medium
 DP - Low
-Graph - Low
+Graph - Medium (BFS)
 Queue - Low
 Subarrays - Low
 Bitmasking - Low

@@ -23,6 +23,11 @@ ARRAYS:
         Techniques:
             Look out for modulo properties
 
+LINKED LISTS:
+    Pointers:
+        Techniques:
+            Converting the Linked List to a Circular Linked List (tail.next = head) and then changing any node's next pointer to None (prev.next = None && head = curr.next) will rotate the Linked List making that particular node as the head node.
+            The maximum rotations k allowed on a linkedlist list is its size n, beyond which linked list starts repeating (k %= n) 
 STACKS:
     Pushing and Popping:
         Techniques:

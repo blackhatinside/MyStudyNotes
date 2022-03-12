@@ -55,5 +55,5 @@ GRAPHS:
         Using adjacency lists
     Traversal
         Properties
-            Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path from Single Source to Destination in an undirected graph
+            Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path (and distance) from Single Source to Destination in an undirected graph
         

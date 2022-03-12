@@ -45,3 +45,10 @@ GRIDS:
         properties:
             Never forget to check if the cell is a part of the declared grid or not (using a isValid(x1, y1) function for the row-column indices
     
+GRAPHS:
+    Implementation:
+        Using adjacency lists
+    Traversal
+        Properties
+            Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path from Source to Destination in an unweighted undirected graph
+        

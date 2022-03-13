@@ -15,7 +15,7 @@ class Graph:	# using adjacency lists
 	V = 0	# number of vertices
 	l = [[], ]	# adjacency list
 	def __init__(self, v = 0):	# constructor
-		self.V = v
+		self.V = v	# len(self.l)
 		self.l = [list() for _ in range(self.V)]
 
 	def addEdge(self, i, j, undir = True):
@@ -39,7 +39,7 @@ class Graph:	# using adjacency lists
 		return ans
 
 	def printAdjList(self):
-		for ii in range(len(self.l)):
+		for ii in range(self.V):
 			x = self.l[ii]
 			print(ii, *x)
 

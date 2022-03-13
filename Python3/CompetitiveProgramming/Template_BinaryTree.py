@@ -47,6 +47,8 @@ class Solution:
 # preorder :
 # postorder :
 # pathSum :
+# maxLevelSum:
+# minDepth:
 
 
 
@@ -214,3 +216,19 @@ class BinaryTree:
                 maxx = lvls[i]
                 ind = i + 1
         return ind
+    def minDepth(self, root):
+        if not root:
+            return 0
+        q = [root, ]
+        depth = 0
+        while q:
+            depth += 1
+            sz = len(q)
+            for _ in range(sz):
+                ele = q.pop(0)
+                if ele.left == None and ele.right == None:
+                    return depth
+                if ele.left:
+                    q.append(ele.left)
+                if ele.right:
+                    q.append(ele.right)

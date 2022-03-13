@@ -190,3 +190,27 @@ class BinaryTree:
                     res.append(ls)
             self.pathSum_util(root.left, k, ls, res, tot)
             self.pathSum_util(root.right, k, ls, res, tot)
+    def maxLevelSum(self, root: Optional[TreeNode]) -> int:
+        def LevelOrderSum(root):
+            q = []
+            q.append(root)
+            levels = []
+            while q:
+                ans = 0 # will update the level sum at each level till last level
+                currentSize = len(q) # size of the queue = no. of elements in current level
+                for _ in range(currentSize): # iterating over the current level nodes
+                    ele = q.pop(0)
+                    ans += ele.val
+                    if ele.left:    # check if left child exists
+                        q.append(ele.left)
+                    if ele.right:   # check if right child exists
+                        q.append(ele.right)
+                levels.append(ans)
+            return levels
+        lvls = LevelOrderSum(root)
+        ind, maxx = -1, -sys.maxsize
+        for i in range(len(lvls)):
+            if lvls[i] > maxx:
+                maxx = lvls[i]
+                ind = i + 1
+        return ind

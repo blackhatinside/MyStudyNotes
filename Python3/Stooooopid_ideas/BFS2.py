@@ -23,7 +23,7 @@ class Graph:	# using adjacency lists
 		if undir:	# undirected graph has both A -> B and B -> A connections
 			self.l[j].append(i)
 
-	def BFS(self, graph, source):
+	def BFS(self, graph, source):	# O(vertices + edges)
 		visited = defaultdict(lambda:False)
 		ans = list()
 		q = Queue()

@@ -48,6 +48,7 @@ STACKS:
 GRIDS:
     Traversal:
         properties:
+            The algorithm can be understood as a fire spreading on the graph
             Never forget to check if the cell is a part of the declared grid or not (using a isValid(x1, y1) function for the row-column indices
     
 GRAPHS:

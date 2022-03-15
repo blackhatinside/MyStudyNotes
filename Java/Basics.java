@@ -1,7 +1,10 @@
+################ NOTES #########################
+
 /*
 
 Java is a verbose programming language.
 Java is platform independent.
+Java supports multithreading. 
 All code in Java is defined in classes.
 Java constants can be initialized using public static final variable_name.  
 Compilation: Source Code to Byte Code (Creates a executable class file)
@@ -9,7 +12,7 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 
 */
 
-##################################################
+################# SYNTAX #########################
 
 // System.out.println("Hello World");	// using print() will not throw "\n"
 // print("Hello World")
@@ -76,16 +79,19 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // StringBuilder sb = new StringBuilder();
 // string word = sb.append("Valid\n");
 
+################# USEFUL METHODS #######################
+
 // --------------------------------------------------
 // ARRAY LIST
 // -	add(index = n, element)
-// -	addAll(oldarr)
+// -	addAll(ArrayList)
 // -	get(index)
-// -	set(index, newvalue)
+// -	set(index, value)
 // -	remove(index)
 // -	remove(Integer.valueOf(30))
 // -	size()
 // -	clear()
+// -   isEmpty()
 // STACK
 // -	push(element)
 // -	pop()
@@ -104,12 +110,25 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 
 // HASHMAP
 // -   get(index)
-// -   put(index, newvalue)
-// -   containsKey(element)
+// -   put(index, value)
+// -   containsKey(value)
+    
+// THREAD
+// -   start()
+// -   sleep()
+//     join()
+// -   getState()
+// -   getName()
+// -   setName()
+//     getPriority()
+// -   getCount()
+// -   run()
+// -   isDaemon()
+// -   setDaemon()
     
 // --------------------------------------------------
 
-##################################################
+########## IMPORTANT CODE BLOCKS #########################
 
 Scanner scan = new Scanner(System.in);
 

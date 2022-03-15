@@ -6,9 +6,14 @@ Java is a verbose programming language.
 Java is platform independent.
 Java supports multithreading. 
 All code in Java is defined in classes.
-Java constants can be initialized using public static final variable_name.  
-Compilation: Source Code to Byte Code (Creates a executable class file)
+Java constants can be initialized using "static final" (public static final variable_name).  
+// static keyword - different instances (objects) share same class variable - memory management.
+Compilation: Source Code to Byte Code (Creates a executable class file).
+
 {} can be used for creating scopes in the program
+scanner - does the parsing of input data
+BufferedReader - simply reads a sequence of characters
+BufferedReader is a bit faster as compared to scanner
 
 */
 
@@ -87,7 +92,7 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // -	addAll(ArrayList)
 // -	get(index)
 // -	set(index, value)
-// -	remove(index)
+// -	remove(index), remove(value)
 // -	remove(Integer.valueOf(30))
 // -	size()
 // -	clear()
@@ -116,7 +121,9 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // THREAD
 // -   start()                  // used for calling the newly created thread
 // -   sleep()                  // used to sleep execution of the current thread 
-//     join()
+//     join()                   // make a thread wait for another thread to terminate
+// -   wait()
+// -   notify()
 // -   getState()
 // -   getName()                // returns the name of the current threadt
 // -   setName()
@@ -125,7 +132,7 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // -   run()                    // contains the code that is excuted inside the new thread
 // -   isDaemon()
 // -   setDaemon()
-    
+// -   isAlive()
 // --------------------------------------------------
 
 ########## IMPORTANT CODE BLOCKS #########################

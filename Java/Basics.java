@@ -114,15 +114,15 @@ Compilation: Source Code to Byte Code (Creates a executable class file)
 // -   containsKey(value)
     
 // THREAD
-// -   start()
-// -   sleep()
+// -   start()                  // used for calling the newly created thread
+// -   sleep()                  // used to sleep execution of the current thread 
 //     join()
 // -   getState()
-// -   getName()
+// -   getName()                // returns the name of the current threadt
 // -   setName()
 //     getPriority()
 // -   getCount()
-// -   run()
+// -   run()                    // contains the code that is excuted inside the new thread
 // -   isDaemon()
 // -   setDaemon()
     

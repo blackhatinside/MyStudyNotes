@@ -58,5 +58,5 @@ GRAPHS:
             The algorithm can be understood as a fire spreading on the graph
             Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path (and distance) from Single Source to Destination in an undirected graph
             BFS - Iterative implementation - using Queue
-            DFS - ecursive implementation - using Stack
+            DFS - Recursive implementation - using Stack
         

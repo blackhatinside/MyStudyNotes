@@ -87,6 +87,8 @@ Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Con
 // StringBuilder sb = new StringBuilder();
 // string word = sb.append("Valid\n");
 
+// int noCoreCPU = Runtime.getRuntime().availableProcessors();
+
 ################# USEFUL METHODS #######################
 
 // --------------------------------------------------

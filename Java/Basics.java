@@ -90,6 +90,9 @@ Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Con
 // int noCoreCPU = Runtime.getRuntime().availableProcessors();
 // ExecutorService threadrunner = Executors.newFixedThreadPool(coreCount);
 
+// threadrunner.execute()   // for runnable threads
+// threadrunner.submit()    // for runnable and callable threads
+
 ################# USEFUL METHODS #######################
 
 // --------------------------------------------------

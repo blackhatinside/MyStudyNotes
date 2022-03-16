@@ -15,6 +15,9 @@ scanner - does the parsing of input data
 BufferedReader - simply reads a sequence of characters
 BufferedReader is a bit faster as compared to scanner
 
+Tools to enable parallelism - Threads, ExecutorService (ThreadPool)
+Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Concurrent data structures (ConcurrentHashMap, BlockingQueue)
+
 */
 
 ################# SYNTAX #########################

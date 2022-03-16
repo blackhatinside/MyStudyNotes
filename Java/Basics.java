@@ -93,6 +93,8 @@ Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Con
 // threadrunner.execute()   // for runnable threads
 // threadrunner.submit()    // for runnable and callable threads
 
+// threadrunner.shutdown(); // // shut down the executor service threadpool
+
 ################# USEFUL METHODS #######################
 
 // --------------------------------------------------

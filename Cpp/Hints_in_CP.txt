@@ -52,7 +52,8 @@ GRIDS:
     
 GRAPHS:
     Implementation:
-        Using adjacency lists
+        Using adjacency lists - Sparse graph (fewer connections/edges)
+        Using adjacency matrix - Dense graph (many connections/edges)
     Traversal
         Properties
             The algorithm can be understood as a fire spreading on the graph

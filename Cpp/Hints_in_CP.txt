@@ -56,7 +56,8 @@ GRAPHS:
         Using adjacency matrix - Dense graph (many connections/edges)
     Traversal
         Properties
-            The algorithm can be understood as a fire spreading on the graph
+            Hamiltonian Path - Path in a graph visiting all vertices only once
+            The BFS algorithm can be understood as a fire spreading on the graph
             Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path (and distance) from Single Source to Destination in an undirected graph
             BFS - Iterative implementation - using Queue
             DFS - Recursive implementation - using Stack

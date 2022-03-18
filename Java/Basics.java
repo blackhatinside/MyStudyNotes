@@ -18,6 +18,18 @@ BufferedReader is a bit faster as compared to scanner
 Tools to enable parallelism - Threads, ExecutorService (ThreadPool)
 Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Concurrent data structures (ConcurrentHashMap, BlockingQueue)
 
+A class can only extend one parent. (class A extends B)
+A class can implement more than one interface. (class A implements A, B, C)
+
+In Java, abstraction is achieved by interfaces and abstract classes. 
+Synchronization of threads helps us avoid Race Conditions. 
+Ways to avoid race conditions: 
+    Using a block/scope of synchronized lock object
+    Using atomic variables (atomic operations)
+    Using a concurrent lock 
+    Using a semaphore
+    
+
 */
 
 ################# SYNTAX #########################

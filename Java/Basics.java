@@ -29,6 +29,8 @@ Ways to avoid race conditions:
     Using a concurrent lock 
     Using a semaphore
     
+In Java, every thread we create is a native/kernel/OS thread
+Threads can be killed by using the interrupt() method (sets the interrupt flag to True)
 
 */
 

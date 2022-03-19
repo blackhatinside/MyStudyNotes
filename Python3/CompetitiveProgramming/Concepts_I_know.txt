@@ -9,7 +9,7 @@ Stack - Medium (implementation using list)
 Trees - Medium (leetcode)
 Recursion - Medium
 DP - Low
-Graph - Medium (BFS/LevelOrder/DFS/Bipartite)
+Graph - Medium (BFS/LevelOrder, DFS/Bipartite)
 Queue - Low
 Subarrays - Low
 Bitmasking - Low

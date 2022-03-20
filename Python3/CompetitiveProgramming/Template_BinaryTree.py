@@ -49,6 +49,7 @@ class Solution:
 # pathSum :
 # maxLevelSum:
 # minDepth:
+# deepestLeavesSum:
 
 
 
@@ -232,3 +233,18 @@ class BinaryTree:
                     q.append(ele.left)
                 if ele.right:
                     q.append(ele.right)
+    def deepestLeavesSum(self, root):
+        queue = []
+        if root: queue.append(root)
+        levels = []
+        while queue:
+            sz = len(queue)
+            level = []
+            for i in range(sz):
+                x = queue.pop(0)
+                level.append(x.val)
+                if x.left: queue.append(x.left)
+                if x.right: queue.append(x.right)
+            levels.append(level)
+        # return levels if root else []
+        return sum(levels[-1]) if levels else 0

@@ -1,81 +1,88 @@
-# Shortest Path from Source to all other vertices
-# Shortest Distance from Source to all other vertices
-from collections import defaultdict
+# CALL YOUR MODULES HERE    -------------------->
+# import bisect, heapq
+# import fractions, math, numpy
+# import atexit, io, os, sys, time
+#       <----------------------------------------
 
-class Queue:
-	queue = []
-	def __init__(self):
-		self.queue = []
-	def enqueue(self, nbr):
-		self.queue.append(nbr)
-	def dequeue(self):
-		return self.queue.pop(0)
-	def __len__(self):
-		return len(self.queue)
+# DEFINE YOUR FASTIO HERE   -------------------->
+# # 0 in os.read() indicated file descriptor for standard input (STDIN)
+# # os.fstat(0).st_size will tell Python how many bytes are currently waiting in the STDIN buffer
+# # Then os.read() will read those bytes in bulk from STDIN, producing a bytestring
+# inputt = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+# # A lambda function to get integer input and return it
+# input = lambda: inputt()   # integers
+# # A lambda function to get string input and return it
+# input = lambda: inputt().decode().strip()   # strings
+# # ss = sys.stdout
+# ss = io.BytesIO()
+# _write = ss.write
+# ss.write = lambda s: _write(s.encode())
+# atexit.register(lambda: os.write(1, ss.getvalue()))
+#       <----------------------------------------
 
-class Graph:	# using adjacency lists
-	V = 0	# number of vertices
-	l = [[], ]	# adjacency list
-	def __init__(self, v = 0):	# constructor
-		self.V = v	# len(self.l)
-		self.l = [list() for _ in range(self.V)]
+# DEFINE YOUR FUNCTIONS HERE    -------------------->
+# def readnumbers(zero=0):
+#     _ord, nums, num, neg = lambda nbr: nbr, [], zero, False
+#     i, s = 0, io.BytesIO(os.read(0,os.fstat(0).st_size)).read()
+#     try:
+#         while True:
+#             if s[i] >= b"0"[0]:num = 10 * num + _ord(s[i]) - 48
+#             elif s[i] == b"-"[0]:neg = True
+#             elif s[i] != b"\r"[0]:
+#                 nums.append(-num if neg else num)
+#                 num, neg = zero, False
+#             i += 1
+#     except IndexError:
+#         pass
+#     if s and s[-1] >= b"0"[0]: nums.append(-num if neg else num)
+#     return nums
+# def FastInt(zero=0):
+#     _ord, nums, num, neg = lambda nbr: nbr, [], zero, False
+#     i, s = 0, io.BytesIO(os.read(0,os.fstat(0).st_size)).read()
+#     try:
+#         while True:
+#             if s[i] >= b"0"[0]:num = 10 * num + _ord(s[i]) - 48
+#             elif s[i] == b"-"[0]:neg = True
+#             elif s[i] != b"\r"[0]:
+#                 nums.append(-num if neg else num)
+#                 num, neg = zero, False
+#             i += 1
+#     except IndexError:
+#         pass
+#     if s and s[-1] >= b"0"[0]: nums.append(-num if neg else num)
+#     return nums
+#       <----------------------------------------
 
-	def addEdge(self, i, j, undir = True):
-		self.l[i].append(j)
-		if undir:	# undirected graph has both A -> B and B -> A connections
-			self.l[j].append(i)
+# ENTER YOUR CODE HERE  -------------------->
+try:
+    import tracemalloc
+    sample = open('outputf.txt', 'w')
+    tracemalloc.start()
+except Exception as e:
+    # print("Failed to open file")
+    pass
 
-	def BFS(self, graph, source, destination = -1):	# O(vertices + edges)
-		visited = [0] * self.V
-		parent = [-1] * self.V 
-		dist = [0] * self.V
-		dist[source] = 0
-		parent[source] = source
-		ans = list()
-		q = Queue()
-		q.enqueue(source)
-		visited[source] = 1
-		while len(q) > 0:
-			ele = q.dequeue()
-			ans.append(ele)
-			for nbr in self.l[ele]:
-				if not visited[nbr]:
-					q.enqueue(nbr)
-					parent[nbr] = ele
-					dist[nbr] = dist[ele] + 1 
-					visited[nbr] = 1
-		def printShortestPathToAllNodes():
-			for i in range(self.V):
-				print("Shortest Distance from {} to {} is {}".format(source, i, dist[i]))
-		printShortestPathToAllNodes()
-		def printPathFromSourceToDestination():
-			path = []
-			if destination != -1:
-				temp = destination
-				while temp != source:
-					path.append(temp)
-					temp = parent[temp]
-			path.append(source)
-			return path
-		print("Path from Source to Destination:", *printPathFromSourceToDestination())
-		return ans
-
-	def printAdjList(self):
-		for ii in range(self.V):
-			nbr = self.l[ii]
-			print(ii, *nbr)
+def solve():
+    print("Hello World")
 
 def main():
-	g = Graph(7)
-	g.addEdge(1, 2)
-	g.addEdge(1, 0)
-	g.addEdge(2, 3)
-	g.addEdge(0, 4)
-	g.addEdge(3, 5)
-	g.addEdge(4, 5)
-	g.addEdge(5, 6)
-	print(*g.BFS(g, 1, 6))
-	return
+    solve()
+    return
 
 if __name__ == '__main__':
-	main()
+    main()
+    try:
+        op_file = open("outputf.txt", "w")
+        print("Memory used: ", tracemalloc.get_traced_memory(), file = op_file)
+        tracemalloc.stop()
+    except Exception as e:
+        pass
+#       <----------------------------------------
+
+# ENTER YOUR NOTES HERE -------------------->
+'''     # NOTES - uncomment line to run this block
+
+Python Competitive Programming Template for FAST I/O 
+
+# '''
+#       <----------------------------------------

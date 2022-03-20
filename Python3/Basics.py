@@ -1,3 +1,26 @@
+# sort an array
+arr.sort()
+
+# sort and return an array
+arr2 = sorted(arr)
+
+# reverse an array
+arr2 = arr[::-1]
+
+# count frequency of elements in array (and return as hashmap)
+import collections
+freq = collections.Counter(arr)
+
+# convert an array into a heap queue (priority queue)
+import heapq
+heapq.heapify(arr)
+'''
+arr.heappush(5)
+arr.heappop()	# pop smallest element
+arr.heappushpop(5)	# first push then pop
+arr.heapreplace()	# first pop then push
+'''
+
 # create a square matrix
 def squareMatrix(n):
     grid = [[0] * n for _ in range(n)]

@@ -100,6 +100,9 @@ By calling reset() the matching will start from the beginning of the text again.
 // (Character.compare('a', 'b') == 0)
 // 'a' == 'b'
 
+// int[][] arr = new int[m][n]
+// arr = [[0] * m for _ in range(n)]
+
 // Map<Character, Integer> hp = new HashMap<>();
 // hp.containsKey(key1); hp.put(key1, value1); int xx = hp.get(key1);
 // hp = collections.defaultdict(lambda: 0)

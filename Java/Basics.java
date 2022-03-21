@@ -11,26 +11,30 @@ Java constants can be initialized using "static final" (public static final vari
 Compilation: Source Code to Byte Code (Creates a executable class file).
 
 {} can be used for creating scopes in the program
-scanner - does the parsing of input data
+Scanner - does the parsing of input data
 BufferedReader - simply reads a sequence of characters
-BufferedReader is a bit faster as compared to scanner
+BufferedReader is a bit faster as compared to Scanner
 
 Tools to enable parallelism - Threads, ExecutorService (ThreadPool)
 Tools to enable concurrency - Synchronized/Locks, Atomic classes, Semaphore, Concurrent data structures (ConcurrentHashMap, BlockingQueue)
-
-A class can only extend one parent. (class A extends B)
-A class can implement more than one interface. (class A implements A, B, C)
-
-In Java, abstraction is achieved by interfaces and abstract classes. 
 Synchronization of threads helps us avoid Race Conditions. 
 Ways to avoid race conditions: 
     Using a block/scope of synchronized lock object
     Using atomic variables (atomic operations)
     Using a concurrent lock 
     Using a semaphore
-    
 In Java, every thread we create is a native/kernel/OS thread
 Threads can be killed by using the interrupt() method (sets the interrupt flag to True)
+    
+A class can only extend one parent. (class A extends B)
+A class can implement more than one interface. (class A implements A, B, C)
+In Java, abstraction is achieved by interfaces and abstract classes. 
+
+import java.util.regex.Pattern;     // defines a pattern
+import java.util.regex.Matcher;     // search for a pattern
+import java.util.regex.PatternSyntaxException;      // syntax error in a RE pattern
+The Matcher (while using find() method) will internally keep a state about how far it has searched through the input text. 
+By calling reset() the matching will start from the beginning of the text again.
 
 */
 

@@ -94,6 +94,9 @@ By calling reset() the matching will start from the beginning of the text again.
 // Math.abs(4 - 5)
 // abs(4 - 5)
 
+// Math.max(4, 5)
+// max(4, 5)
+
 // (Character.compare('a', 'b') == 0)
 // 'a' == 'b'
 

@@ -33,6 +33,7 @@ In Java, abstraction is achieved by interfaces and abstract classes.
 import java.util.regex.Pattern;     // defines a pattern
 import java.util.regex.Matcher;     // search for a pattern
 import java.util.regex.PatternSyntaxException;      // syntax error in a RE pattern
+matches() compares the entire string with the given Regex pattern
 The Matcher (while using find() method) will internally keep a state about how far it has searched through the input text. 
 By calling reset() the matching will start from the beginning of the text again.
 
@@ -47,6 +48,11 @@ By calling reset() the matching will start from the beginning of the text again.
     X{n,}-  count(X) >= n
     X{n,m}- count(X) >= n and count(X) < m
 
+        string      regex
+        .           \\.
+        /           ////
+        
+    
  */
 
 ################# SYNTAX #########################

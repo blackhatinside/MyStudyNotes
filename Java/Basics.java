@@ -30,6 +30,14 @@ A class can only extend one parent. (class A extends B)
 A class can implement more than one interface. (class A implements A, B, C)
 In Java, abstraction is achieved by interfaces and abstract classes. 
 
+/*
+X* -    count(X) >= 0
+X+ -    count(X) >= 1
+X? -    count(X) == 0/1
+X{n} -  count(X) == n
+X{n,}-  count(X) >= n
+X{n,m}- count(X) >= n and count(X) < m
+ */
 import java.util.regex.Pattern;     // defines a pattern
 import java.util.regex.Matcher;     // search for a pattern
 import java.util.regex.PatternSyntaxException;      // syntax error in a RE pattern

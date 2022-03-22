@@ -64,6 +64,9 @@ By calling reset() the matching will start from the beginning of the text again.
 // string1.charAt(index);
 // string1[index]
 
+StringBuilder sb = new StringBuilder(); word2 = sb.append(word1).reverse().toString();
+word2 = word1[::-1]     # python string slicing
+
 // char x = arr.get(j).charAt(i)    // ArrayList<String> arr = new ArrayList<>();
 // letter = arr[2][5]   # ["Geek", "Geeks", "GeeksForGeeks", "GeekWorld"]   # letter = 'F'
 

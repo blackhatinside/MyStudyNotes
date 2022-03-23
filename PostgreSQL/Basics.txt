@@ -11,6 +11,8 @@ SYNTAX:
     
     \l      -- list all databases
     
+    \d      -- list all tables
+    
     CREATE TABLE IF NOT EXISTS testtable (name text);   -- create a table if it doesn't exist
 
     DROP TABLE table_name;      -- delete a table
@@ -18,3 +20,7 @@ SYNTAX:
     DROP SCHEMA schema_name;    -- delete a schema
     
     DROP SCHEMA schema_name CASCADE;    -- delete a schema and all objects in it
+    
+    INSERT INTO testschema.testtable VALUES(DEFAULT, 'Adithya');    -- insert into a table (use single quotes)
+    
+    

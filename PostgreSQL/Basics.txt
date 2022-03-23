@@ -1,0 +1,18 @@
+NOTES:
+
+    psql – a terminal-based front-end to PostgreSQL database server.
+    pgAdmin – a web-based front-end to PostgreSQL database server.
+
+SYNTAX:
+
+    SELECT version();   -- returns the current version of PostgreSQL
+    
+    ALTER DATABASE old_name RENAME TO new_name;     -- to rename the database
+    
+    \l      -- list all databases
+    
+    CREATE TABLE IF NOT EXISTS testtable (name text);   -- create a table if it doesn't exist
+
+    DROP TABLE table_name;      -- delete a table
+    
+    DROP SCHEMA schema_name;    -- delete a schema

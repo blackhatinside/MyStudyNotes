@@ -37,6 +37,10 @@ matches() compares the entire string with the given Regex pattern
 The Matcher (while using find() method) will internally keep a state about how far it has searched through the input text. 
 By calling reset() the matching will start from the beginning of the text again.
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/testdb", "SQLusername", "SQLpassword");
+
 */
 
 /*      REGEX GUIDE

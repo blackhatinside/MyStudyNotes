@@ -6,3 +6,10 @@ echo "Hello, World!"
 name="Cyberkid Adithya"
 echo $name
 
+declare -l small_name=$name
+declare -u caps_name=$name
+
+echo -n "Enter two numbers:"   # -n means no newline after echo
+read $var1 $var2
+echo $var1
+echo $var2

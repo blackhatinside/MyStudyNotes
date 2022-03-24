@@ -2,6 +2,13 @@ NOTES:
 
     psql – a terminal-based front-end to PostgreSQL database server.
     pgAdmin – a web-based front-end to PostgreSQL database server.
+    default port - 5432
+    forName() is a method in Java that returns the class object associated with the class or interface passed as the first parameter
+    Steps to create a new DB:
+        Import the packages
+        Open a connection
+        Execute a query
+        Clean up the environment
 
 SYNTAX:
 
@@ -13,6 +20,8 @@ SYNTAX:
     
     \d      -- list all tables
     
+    \c      -- connect to a database
+    
     CREATE TABLE IF NOT EXISTS testtable (name text);   -- create a table if it doesn't exist
 
     DROP TABLE table_name;      -- delete a table
@@ -23,4 +32,9 @@ SYNTAX:
     
     INSERT INTO testschema.testtable VALUES(DEFAULT, 'Adithya');    -- insert into a table (use single quotes)
     
+    UPDATE testschema.testtable SET name = 'Praney' WHERE name = 'Vishwa';
     
+    SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;
+
+JAVA:
+    Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost");

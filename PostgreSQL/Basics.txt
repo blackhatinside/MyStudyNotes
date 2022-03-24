@@ -19,6 +19,7 @@ SYNTAX:
     \l      -- list all databases
     
     \d      -- list all tables
+    \d+     -- list all tables ellaborately
     
     \c      -- connect to a database
     

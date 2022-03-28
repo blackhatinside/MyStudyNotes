@@ -46,7 +46,7 @@ SELECT [col1, col2, col3,...] aggregate_function(col2)
 FROM [table]
 WHERE [conditions] 
 WHERE value IN (
-	SELECT [col1, col2, col3,...] 
+	SELECT [col1] AS [alias_name]
 	FROM table2
 	WHERE [conditions && CAST(value AS type)]
 	)

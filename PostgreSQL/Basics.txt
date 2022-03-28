@@ -27,7 +27,7 @@ SYNTAX:
 
     DROP TABLE table_name;      -- delete a table
     
-    DROP SCHEMA schema_name;    -- delete a schema
+    DROP SCHEMA IF EXISTS schema_name;    -- delete a schema
     
     DROP SCHEMA schema_name CASCADE;    -- delete a schema and all objects in it
     

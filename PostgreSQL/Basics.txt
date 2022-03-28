@@ -39,3 +39,19 @@ SYNTAX:
 
 JAVA:
     Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost");
+
+
+-- 		QUERYING TABLES
+SELECT [col1, col2, col3,...] aggregate_function(col2)
+FROM [table]
+WHERE [conditions] 
+WHERE value IN (
+	SELECT [col1, col2, col3,...] 
+	FROM table2
+	WHERE [conditions && CAST(value AS type)]
+	)
+ORDER BY [col1] DESC
+OFFSET [offset_row_count] ROWS
+FETCH NEXT [fetch_row_count] ROWS ONLY
+GROUP BY [col1]
+HAVING [condition1]

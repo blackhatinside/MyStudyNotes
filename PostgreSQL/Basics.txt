@@ -23,6 +23,8 @@ SYNTAX:
     
     \c      -- connect to a database
     
+    \timing -- To turn on query execution time
+    
     \i filename -- to execute psql commands from a file
     
     CREATE TABLE IF NOT EXISTS testtable (name text);   -- create a table if it doesn't exist

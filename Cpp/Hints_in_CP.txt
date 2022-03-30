@@ -64,4 +64,5 @@ GRAPHS:
     Techniques/Algorithms:
         Dijkstra algorithm
             The core idea of the algorithm is to continuously eliminate longer paths between the starting node and all possible destinations
+            When to not run Dijkstra algorithm for new incoming nodes and edges: If triangular inequality holds =====>  d(v) < d(u) + w(u,v)
         

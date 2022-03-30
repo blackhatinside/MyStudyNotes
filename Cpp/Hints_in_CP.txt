@@ -61,4 +61,7 @@ GRAPHS:
             Breadth First Search (BFS) <-----> Level Order Traversal <-----> Shortest Path (and distance) from Single Source to Destination in an undirected graph
             BFS - Iterative implementation - using Queue
             DFS - Recursive implementation - using Stack
+    Techniques/Algorithms:
+        Dijkstra algorithm
+            The core idea of the algorithm is to continuously eliminate longer paths between the starting node and all possible destinations
         

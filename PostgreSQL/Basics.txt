@@ -40,6 +40,8 @@ SYNTAX:
     UPDATE testschema.testtable SET name = 'Praney' WHERE name = 'Vishwa';
     
     SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;
+    
+    CREATE OR REPLACE VIEW rider_view AS SELECT name FROM rider;	-- create view of a table
 
 JAVA:
     Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost");

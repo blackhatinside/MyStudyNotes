@@ -23,6 +23,8 @@ SYNTAX:
     
     \c      -- connect to a database
     
+    \i      --  to execute psql commands from a file
+    
     CREATE TABLE IF NOT EXISTS testtable (name text);   -- create a table if it doesn't exist
 
     DROP TABLE table_name;      -- delete a table

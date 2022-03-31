@@ -12,6 +12,8 @@ NOTES:
 
 SYNTAX:
 
+	psql -U postgres	-- go as user 'postgres' into postgresql from cmd
+	
     SELECT version();   -- returns the current version of PostgreSQL
     
     ALTER DATABASE old_name RENAME TO new_name;     -- to rename the database

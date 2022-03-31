@@ -67,6 +67,9 @@ Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/
 // string1.toCharArray();
 // list(string1)
 
+// System.out.println(Arrays.toString(arr));   # arr = {1,2,3,4}
+// print(arr)  # arr = [1,2,3,4]
+
 // string1.length();    // .length for arrays, .size() for collections, .length() for strings
 // len(string1)
 

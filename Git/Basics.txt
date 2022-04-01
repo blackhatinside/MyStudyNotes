@@ -1,0 +1,21 @@
+// steps to push everything into an existing repository
+git status
+git add .
+git commit -m "Updating Repository"
+git pull
+git push
+git status
+
+// Let's say we have a folder in our local drive with the name 'CabBookingv2'
+echo "# CabBookingv2" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/CyberkidAdithya/CabBookingv2.git
+git push -u origin main
+
+// dealing with branches in git
+git branch
+git checkout -b new_branch
+git checkout new_branch

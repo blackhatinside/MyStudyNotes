@@ -108,3 +108,6 @@ Design a Call taxi booking application
 		booking: if no cabs, move to waiting
 		booking: if no cabs, and cabs in leave, cancel booking
 
+https://www.vtnetzwelt.com/mobile/21-must-have-features-in-online-cab-booking-app/
+https://www.peerbits.com/blog/understanding-working-taxi-app-development.html
+https://examples.javacodegeeks.com/enterprise-java/sql-enterprise-java/jdbc-best-practices-tutorial/

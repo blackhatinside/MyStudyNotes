@@ -111,3 +111,4 @@ Design a Call taxi booking application
 https://www.vtnetzwelt.com/mobile/21-must-have-features-in-online-cab-booking-app/
 https://www.peerbits.com/blog/understanding-working-taxi-app-development.html
 https://examples.javacodegeeks.com/enterprise-java/sql-enterprise-java/jdbc-best-practices-tutorial/
+https://docs.google.com/spreadsheets/d/10XBot4S3YiyVcyXjceb_sx1aS7w5KpU5Rv_qYWW1sG8/edit#gid=0

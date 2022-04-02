@@ -1,0 +1,211 @@
+psql
+	Username: postgres
+	Password:
+
+	psql -h localhost -p 5432 -U postgres 
+
+	\c 			-- connect to testdb DB
+
+	\l 			-- list available DBs
+
+	\dt 		-- list available tables
+
+	\dn 		-- list all schemas of current DB
+
+	\d 			-- describe a table
+
+	SELECT version()	-- get current version of PostgreSQL server
+
+	\g 			-- execute the last command
+
+	\?			-- help
+
+	\q 			-- exit
+
+
+	||			-- concatenation operator
+
+
+-- 		QUERYING TABLES
+SELECT [col1, col2, col3,...] aggregate_function(col2)
+FROM [table]
+WHERE [conditions] 
+WHERE mark IN (
+	SELECT [col1, col2, col3,...] 
+	FROM table2
+	WHERE [conditions && CAST(value AS type)]
+	)
+ORDER BY [col1] DESC
+OFFSET [offset_row_count] ROWS
+FETCH NEXT [fetch_row_count] ROWS ONLY
+GROUP BY [col1]
+HAVING [condition1]
+
+TIMESTAMP value converts from the current time to UTC and vice-versa,
+DATETIME does not do any conversion,
+TIMESTAMP data can be indexed while the DATETIME data cannot.
+
+>>>>
+	CREATE TABLE IF NOT EXISTS rider (
+		id SERIAL PRIMARY KEY,
+		name TEXT NOT NULL,
+		phonenumber VARCHAR(15),
+		accountnumber BIGINT CHECK((accountnumber > 99999999999) AND (accountnumber < 1000000000000))
+	);
+
+	INSERT INTO rider VALUES(DEFAULT, 'adithya', '7904187134', 486289684027);
+	INSERT INTO rider VALUES(DEFAULT, 'pranav', '9234889876', 376289684038);
+	INSERT INTO rider VALUES(DEFAULT, 'sudeep', '8765432190', 266289684049);
+<<<<<
+
+	 id |  name   | phonenumber | accountnumber
+	----+---------+-------------+---------------
+	  1 | adithya | 7904187134  |  486289684027
+	  2 | pranav  | 9234889876  |  376289684038
+	  3 | sudeep  | 8765432190  |  266289684049
+
+>>>>>
+	CREATE TABLE IF NOT EXISTS cab (
+		id SERIAL PRIMARY KEY,
+		type TEXT NOT NULL,
+		base_rate INTEGER CHECK (base_rate > 0)
+	);
+
+	-- regular cab, extended cab, crew cab
+	INSERT INTO cab VALUES(DEFAULT, 'regular cab', 500);
+	INSERT INTO cab VALUES(DEFAULT, 'extended cab', 1000);
+	INSERT INTO cab VALUES(DEFAULT, 'crew cab', 1500);
+<<<<<
+
+	 id |     type     | base_rate
+	----+--------------+-----------
+	  1 | regular cab  |       500
+	  2 | extended cab |      1000
+	  3 | crew cab     |      1500
+	  
+>>>>>
+	CREATE TABLE IF NOT EXISTS driver (
+	id SERIAL PRIMARY KEY,
+	name TEXT NOT NULL,
+	current_cab_id INTEGER,
+	isAvailable BOOLEAN NOT NULL
+	);
+
+	INSERT INTO driver VALUES(DEFAULT, 'Yash', 1, 'yes');
+	INSERT INTO driver VALUES(DEFAULT, 'Vidyut', 2, 'yes');
+	INSERT INTO driver VALUES(DEFAULT, 'Bruce', 3, 'yes');
+<<<<<
+
+	 id |  name  | current_cab_id
+	----+--------+----------------
+	  1 | Yash   |              1
+	  2 | Vidyut |              2
+	  3 | Bruce  |              3
+
+>>>>>
+	SELECT cab.id, cab.type, driver.name
+	FROM cab, driver
+	WHERE cab.id = driver.id;
+<<<<<
+
+	 id |     type     |  name
+	----+--------------+--------
+	  1 | regular cab  | Yash
+	  2 | extended cab | Vidyut
+	  3 | crew cab     | Bruce
+
+>>>>>
+	SELECT cab.id, driver.name, cab.type
+	FROM driver
+	INNER JOIN cab ON driver.current_cab_id = cab.id;
+<<<<<
+
+	 id |  name  |     type
+	----+--------+--------------
+	  1 | Yash   | regular cab
+	  2 | Vidyut | extended cab
+	  3 | Bruce  | crew cab
+
+>>>>>
+	CREATE TABLE IF NOT EXISTS location (
+		id SERIAL PRIMARY KEY,
+		name TEXT NOT NULL
+	);
+	INSERT INTO location VALUES(DEFAULT, 'Chennai');
+	INSERT INTO location VALUES(DEFAULT, 'Bangalore');
+	INSERT INTO location VALUES(DEFAULT, 'Kochi');
+<<<<<
+
+>>>>>
+	SELECT cab.id, driver.name, cab.type
+	FROM driver
+	INNER JOIN cab ON driver.current_cab_id = cab.id;
+<<<<<
+
+	 id |  name  |     type
+	----+--------+--------------
+	  1 | Yash   | regular cab
+	  2 | Vidyut | extended cab  public static void viewTable(Connection conn) throws SQLException {
+    String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
+    try (Statement stmt = conn.createStatement()) {
+      ResultSet rs = stmt.executeQuery(query);
+      while (rs.next()) {
+        String coffeeName = rs.getString("COF_NAME");
+        int supplierID = rs.getInt("SUP_ID");
+        float price = rs.getFloat("PRICE");
+        int sales = rs.getInt("SALES");
+        int total = rs.getInt("TOTAL");
+        System.out.println(coffeeName + ", " + supplierID + ", " + price +
+                           ", " + sales + ", " + total);
+      }
+    } catch (SQLException e) {
+      JDBCTutorialUtilities.printSQLException(e);
+    }
+  }
+	  3 | Bruce  | crew cab
+
+>>>>>
+	CREATE TABLE IF NOT EXISTS trip (
+		id SERIAL PRIMARY KEY,
+		curr_cab_id INTEGER,
+		curr_rider_id INTEGER,
+		curr_driver_id INTEGER,
+		trip_date DATE,
+		trip_request_time TIMESTAMP
+	);
+	INSERT INTO trip VALUES(DEFAULT, 1, 1, 1, CURRENT_DATE, CURRENT_TIMESTAMP);
+<<<<<
+
+	 id | curr_cab_id | curr_rider_id | curr_driver_id | trip_date  |     trip_request_time
+	----+-------------+---------------+----------------+------------+---------------------------
+	  1 |           1 |             1 |              1 | 2022-03-30 | 2022-03-30 16:09:14.44849
+
+>>>>>
+	CREATE TABLE IF NOT EXISTS bookingdetails (
+	TaxiID INTEGER,
+	BookingID INTEGER PRIMARY KEY,
+	FromWhere TEXT,
+	ToWhere TEXT,
+	PickupTime INTEGER,
+	DropTime INTEGER,
+	Amount INTEGER);
+<<<<<
+
+>>>>>
+    public static void view_drivers() throws SQLException {
+        String query = "SELECT * FROM driver;";
+        try (Statement stmt = conn.createStatement()) {
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                int driver_id = rs.getInt("id");
+                String driver_name = rs.getString("name");
+                int driver_current_cab_id = rs.getInt("current_cab_id");
+                boolean isAvailable = rs.getString("isavailable").equals("yes");
+                System.out.println(driver_id + ". " + driver_name + ", [" + driver_id +
+                        "] " + "| Status: " + (isAvailable ?  "Free" : "Not Free"));
+            }
+        } catch (SQLException err) {
+            System.out.println(err);
+        }
+    }
+<<<<<

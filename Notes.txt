@@ -209,3 +209,13 @@ TIMESTAMP data can be indexed while the DATETIME data cannot.
         }
     }
 <<<<<
+
+>>>>>
+CREATE TABLE IF NOT EXISTS bookingdetails (
+    BookingID SERIAL PRIMARY KEY,
+    TaxiID INTEGER,
+    TaxiPresent BOOLEAN,
+    TaxiStatus TEXT,
+    CurrentSpot TEXT,
+    Amount INTEGER);
+<<<<<

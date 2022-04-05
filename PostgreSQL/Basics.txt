@@ -39,6 +39,8 @@ SYNTAX:
     
     INSERT INTO testschema.testtable VALUES(DEFAULT, 'Adithya');    -- insert into a table (use single quotes)
     
+    ALTER TABLE testschema.testtable ADD email VARCHAR(255);
+    
     UPDATE testschema.testtable SET name = 'Praney' WHERE name = 'Vishwa';
     
     SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;

@@ -4,113 +4,126 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Welcome</title>
-        <style>
-            h1 {
-                color: blue;
-                text-align: center;
-            }
-            div {
-                background-color: blue;
-                font-family: Arial, sans-serif;
-                font-size: 20px;
-                font-weight: bold;
-                width: 400px;
-                height: 400px;
-                padding: 20px;
-                margin: 20px;
-                border: 5px solid black;
-            }
-            table, td, th {
-                border: 5px solid black;
-                border-collapse: collapse;
-            }
-            button:hover {  // pseudoselector
-                background-color: green;
-            }
-        </style>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        Hello, World!
-        <h2>Heading Big</h2>
-<!--         horizontal rule (draw a horizontal line) -->
-        <hr>
-<!--         preserve the format of text (newlines and whitespaces) -->
-        <pre>
-<!--         subscript -->
-        x <sub> 2 </sub>
-<!--         superscript -->
-        y <sup> 2 </sup>
-<!--         deleted text         -->
-        <del> DONT RUN THIS CODE </del>
-<!--         inserted text -->
-        The capital of TN is <ins> Chennai </ins>
-<!--         highlighted text -->
-        <mark> this line is important </mark>
-        <blockquote cite="cited_from_which_source"> Time and Tide waits for none. </blockquote>
-        
-        <h4>Heading Medium</h4>
-        <h6>Heading Small</h6>
-        
-        An Ordered List
-        <ol>
-            <li>List Item One</li>
-            <li>List Item Two</li>
-            <li>List Item Three</li>
-        </ol>
-        An Unordered List
-        <ul>
-            <li>Item</li>
-            <li>Another Item</li>
-            <li>Yet Another Item</li>
-        </ul>
-        
-        <img src="cat.jpg", alt="Picture" with="200" height="100">
-        
-        <a href="https:www.google.com">Google Me</a>
-        <a href="#">Refresh</a>
-        
-        <table>
-            <thead>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Place</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Adithya</td>
-                    <td>21</td>
-                    <td>Chennai</td>
-                </tr>
-                <tr>
-                    <td>Neeti</td>
-                    <td>22</td>
-                    <td>Meerut</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <form>
-            <input type="text" placeholder="Fullname" name="person_name">
-            <input type="submit">
-        </form>
-        
-        <input name="city" list="cities" placeholder="person_city">
-        <datalist id="Cities">
-            <option value="Chennai">
-            <option value="Mumbai">
-            <option value="Delhi">
-        </datalist>   
-        
-        <div>
-            Welcome Back!
-        </div>
-        <h5 id="foo">Heading 5a</h5>  // #foo { }  // #ID given to unique element
-        <h5 class="bar">Heading 5b</h5>     // .bar { } // #CLASS given to multiple elements
-        <h5 class="bar">Heading 5c</h5>
-        
-        <p title = "This is a paragraph"> Time and Tide waits for none. </p> 
-    </body>
+<head>
+	<title>Welcome</title>
+	<style>
+		h1 {
+			color: blue;
+			text-align: center;
+		}
+		div {
+			background-color: yellow;
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			font-weight: bold;
+			width: 400px;
+			height: 400px;
+			padding: 20px;
+			margin: 20px;
+			border: 5px solid black;
+		}
+		table, td, th {
+			border: 5px solid black;
+			border-collapse: collapse;
+		}
+		button:hover {  // pseudoselector
+			background-color: green;
+		}
+	</style>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	Hello, World!
+
+	<h1 id="header1"> WELCOME BACK :) </h1>
+	<h2>Heading Big</h2>
+	<!--         horizontal rule (draw a horizontal line) -->
+	<hr>
+	<!--         preserve the format of text (newlines and whitespaces) -->
+	<pre> </pre>
+	<!--         subscript -->
+	x <sub> 2 </sub>
+	<!--         superscript -->
+	y <sup> 2 </sup>
+	<!--         deleted text         -->
+	<del> DONT RUN THIS CODE </del>
+	<!--         inserted text -->
+	The capital of TN is <ins> Chennai </ins>
+	<!--         highlighted text -->
+	<mark> this line is important </mark>
+	<blockquote cite="cited_from_which_source"> Time and Tide waits for none. </blockquote>
+
+	<h4>Heading Medium</h4>
+	<h6>Heading Small</h6>
+
+	An Ordered List
+	<ol>
+		<li>List Item One</li>
+		<li>List Item Two</li>
+		<li>List Item Three</li>
+	</ol>
+	An Unordered List
+	<ul>
+		<li>Item</li>
+		<li>Another Item</li>
+		<li>Yet Another Item</li>
+	</ul>
+
+	<img src="cat.jpg", alt="Picture" with="200" height="100">
+
+	<a href="https:www.google.com">Google Me</a>
+	<a href="#">Refresh</a>
+
+	<table>
+		<thead>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Place</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Adithya</td>
+				<td>21</td>
+				<td>Chennai</td>
+			</tr>
+			<tr>
+				<td>Neeti</td>
+				<td>22</td>
+				<td>Meerut</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<form>
+		<input type="text" placeholder="Fullname" name="person_name">
+		<input type="submit">
+	</form>
+
+	<input name="city" list="cities" placeholder="person_city">
+	<datalist id="Cities">
+		<option value="Chennai"></option>
+		<option value="Mumbai"></option>
+		<option value="Delhi"></option>
+	</datalist>   
+
+	<div>
+		Welcome Back!
+	</div>
+
+	<!-- // #foo { }  // #ID given to unique element -->
+	<h5 id="foo">Heading 5a</h5>  
+	<!-- // .bar { } // #CLASS given to multiple elements -->
+	<h5 class="bar">Heading 5b</h5>     
+	<h5 class="bar">Heading 5c</h5>
+
+	<p title = "This is a paragraph"> Time and Tide waits for none. </p> 
+
+	<button onclick="myFunction()">Activate</button>
+	<script type="text/javascript">
+		function myFunction() {
+			document.getElementById('header1').innerHTML = "Hello, Adithya!";
+		// document.getElementById('header1').style.display = "none";
+	}
+</script>
+</body>
 </html>

@@ -119,7 +119,7 @@ print(x)                    # X = x[0]  Y = x[1]  Z = x[2]
 Ainv = np.linalg.inv(A)
 print(np.matmul(Ainv,B))    #A * X = B ===> A^-1 * B = X
 
-# Animated Sine wave
+# NUMPY MINI PROJECT - Animated Sine wave
 
 from matplotlib import pyplot as plt 
 import numpy as np 

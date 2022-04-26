@@ -4,6 +4,9 @@ NOTES:
     pgAdmin – a web-based front-end to PostgreSQL database server.
     default port - 5432
     forName() is a method in Java that returns the class object associated with the class or interface passed as the first parameter
+    After installing postgres in windows, do this to avoid 'Connection refused' error:
+    	Services >> postgres >> properties >> log on >> Check 'Local System Account'
+	Start the postgres service
     Steps to create a new DB:
         Import the packages
         Open a connection

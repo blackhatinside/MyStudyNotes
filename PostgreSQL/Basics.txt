@@ -6,7 +6,10 @@ NOTES:
     forName() is a method in Java that returns the class object associated with the class or interface passed as the first parameter
     After installing postgres in windows, do this to avoid 'Connection refused' error:
     	Services >> postgres >> properties >> log on >> Check 'Local System Account'
-	Start the postgres service
+		Start the postgres service
+	To change the password of any user_account (using command line)
+		postgres=# \password user_account
+	
     Steps to create a new DB:
         Import the packages
         Open a connection

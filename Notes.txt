@@ -27,6 +27,7 @@ psql
 
 
 -- 		QUERYING TABLES
+>>>>>
 SELECT [col1, col2, col3,...] aggregate_function(col2)
 FROM [table]
 WHERE [conditions] 
@@ -40,10 +41,12 @@ OFFSET [offset_row_count] ROWS
 FETCH NEXT [fetch_row_count] ROWS ONLY
 GROUP BY [col1]
 HAVING [condition1]
+<<<<<
 
 TIMESTAMP value converts from the current time to UTC and vice-versa,
 DATETIME does not do any conversion,
 TIMESTAMP data can be indexed while the DATETIME data cannot.
+insert DEFAULT when datatype is SERIAL
 
 >>>>
 	CREATE TABLE IF NOT EXISTS rider (

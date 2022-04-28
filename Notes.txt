@@ -222,3 +222,84 @@ CREATE TABLE IF NOT EXISTS bookingdetails (
     CurrentSpot TEXT,
     Amount INTEGER);
 <<<<<
+
+>>>>>
+CREATE TABLE IF NOT EXISTS bookingdetails (
+    BookingID SERIAL PRIMARY KEY,
+    TaxiID INTEGER,
+    TaxiPresent BOOLEAN,
+    TaxiStatus TEXT,
+    CurrentSpot TEXT,
+    Amount INTEGER);
+<<<<<
+
+>>>>>
+CREATE TABLE driverkeys (
+  TaxiID SERIAL PRIMARY KEY NOT NULL UNIQUE,
+  Name TEXT,
+  Password TEXT NOT NULL
+);
+<<<<<
+
+>>>>>
+CREATE TABLE DriverStatus (
+	TaxiID SERIAL,
+	Name TEXT,
+	isAvailable BOOLEAN
+);
+
+CREATE TABLE LeaveApplications (
+	TaxiID INTEGER NOT NULL,
+	Reason TEXT
+);
+
+>>>>>
+SELECT NAME FROM driverkeys
+WHERE taxiid = 1
+AND password = crypt('adi123', password);
+<<<<<
+
+>>>>>
+INSERT INTO driverkeys (name, password) VALUES(
+'adithya',
+crypt('adi123', gen_salt('xdes'))
+);
+INSERT INTO driverkeys (name, password) VALUES(
+'sudeeep',
+crypt('sud123', gen_salt('xdes'))
+);
+INSERT INTO driverkeys (name, password) VALUES(
+'pranav',
+crypt('pra123', gen_salt('xdes'))
+);
+<<<<<
+
+>>>>>
+CREATE TABLE IF NOT EXISTS UserAccount (
+  TaxiID SERIAL PRIMARY KEY NOT NULL UNIQUE,
+  Username TEXT,
+  Password TEXT NOT NULL
+);
+INSERT INTO useraccount VALUES(DEFAULT, 'vish', 'vish9876');
+<<<<<
+
+>>>>>
+CREATE TABLE IF NOT EXISTS loginusers (
+	userID SERIAL PRIMARY KEY,
+	username TEXT,
+	Password TEXT
+);
+
+CREATE TABLE useractions (
+	actionID SERIAL PRIMARY KEY,
+	username text,
+	actions text,
+    created_at TIMESTAMP DEFAULT NOW()::TIMESTAMP(0)
+);
+
+CREATE TABLE useractions (
+	username text,
+	actions text,
+	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()::TIMESTAMP(0)
+);
+<<<<<

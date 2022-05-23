@@ -27,6 +27,22 @@ class Solution:
         TraversalUtil(root)
         return nodes
 
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        queue = []
+        if root: queue.append(root)
+        levels = []
+        while queue:
+            sz = len(queue)
+            level = []
+            for i in range(sz):
+                x = queue.pop(0)
+                level.append(x.val)
+                if x.left: queue.append(x.left)
+                if x.right: queue.append(x.right)
+            levels.append(level)
+        return levels if root else []
+
 '''	Leetcode List : https://leetcode.com/list/9n8rhk1m	'''
 # inorderTraversal : Given a binary tree root, return an inorder traversal of root as a list
 # preorderTraversal : Given a binary tree root, return a preorder traversal of root as a list

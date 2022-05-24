@@ -94,11 +94,17 @@ word2 = word1[::-1]     # python string slicing
 // char x = arr.get(j).charAt(i)    // ArrayList<String> arr = new ArrayList<>();
 // letter = arr[2][5]   # ["Geek", "Geeks", "GeeksForGeeks", "GeekWorld"]   # letter = 'F'
 
-// boolean flag = true
+// boolean flag = true;
 // bool flag = True
 
 // int tcs = Integer.parseInt(br.readLine);
 // tcs = int(input())
+
+int[] arr = new int[n]
+arr = [0] * n
+
+int sz = arr.length;
+sz = len(arr)
 
 // Arrays.sort(arr1);
 // arr1.sort()
@@ -109,25 +115,25 @@ word2 = word1[::-1]     # python string slicing
 // string1.equals(string2);
 // string1 == string2
 
-// string1.contains("abc")
+// string1.contains("abc");
 // "abc" in string1
 
-// string1.toLowerCase()
+// string1.toLowerCase();
 // string1.lower()
 
-// character1.isLowerCase()
+// character1.isLowerCase();
 // character1.islower()
 
-// Math.abs(4 - 5)
+// Math.abs(4 - 5);
 // abs(4 - 5)
 
-// Math.max(4, 5)
+// Math.max(4, 5);
 // max(4, 5)
 
-// (Character.compare('a', 'b') == 0)
+// (Character.compare('a', 'b') == 0);
 // 'a' == 'b'
 
-// int[][] arr = new int[m][n]
+// int[][] arr = new int[m][n];
 // arr = [[0] * m for _ in range(n)]
 
 // Map<Character, Integer> hp = new HashMap<>();

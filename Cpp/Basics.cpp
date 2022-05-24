@@ -2,7 +2,7 @@
 vector<int> (n, 0);
 
 // # length of the array
-let sz = arr.size()
+int sz = arr.size();
 
 // string slicing - substring
 String str1 = "HelloWorld";

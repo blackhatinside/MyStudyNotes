@@ -15,3 +15,6 @@ let arr = Array(n).fill(0)
 // # length of the array
 let sz = arr.length
 
+// # clear an array [all elements of the array are automatically deleted]
+arr.length = 0
+

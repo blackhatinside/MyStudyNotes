@@ -266,3 +266,19 @@ for (char letter : letters) {
     System.out.print(letter + " ");
 }
 // H e l l o W o r l d 
+
+// Tree Traversal Template Logic
+class Solution {
+    List<Integer> ans = new ArrayList<>();
+    public void inorderTraversalUtil(TreeNode root) {
+        if (root != null) {
+            this.inorderTraversalUtil(root.left);
+            ans.add(root.val);
+            this.inorderTraversalUtil(root.right);
+        }
+    }
+    public List<Integer> inorderTraversal(TreeNode root) {
+        this.inorderTraversalUtil(root);
+        return ans;
+    }
+}

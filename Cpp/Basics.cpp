@@ -1,8 +1,11 @@
-// # declare an array of size n with all values as 0
+// declare an array of size n with all values as 0
 vector<int> (n, 0);
 
-// # length of the array
+// length of the array
 int sz = arr.size();
+
+// accessing tree class
+this->inorderTraversalUtil(root->left);
 
 // string slicing - substring
 String str1 = "HelloWorld";

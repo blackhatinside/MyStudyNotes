@@ -31,4 +31,4 @@ var inorderTraversal = function(root) {
     ans.length = 0
     inorderTraversalUtil(root)
     return ans
-};
+}

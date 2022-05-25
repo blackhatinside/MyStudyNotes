@@ -32,3 +32,9 @@ var inorderTraversal = function(root) {
     inorderTraversalUtil(root)
     return ans
 }
+
+// # spread operator for array
+...arr
+
+// # concatenation of 2 arrays
+c = [...a,...b]

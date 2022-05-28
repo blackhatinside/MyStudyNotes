@@ -23,6 +23,7 @@ def solve():
     return solutions
 
 '''---------- https://leetcode.com/problems/n-queens/ ----------'''
+
 class Solution:
     '''
         example on the left : [1, 3, 0, 2]

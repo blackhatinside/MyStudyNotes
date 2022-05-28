@@ -1,5 +1,6 @@
 class Solution:
     def monotonicstack(self, arr, n):
+        ''' Returns the index of NGE'''
         stack = []  # monotonic stack
         nge = [0] * n
         for i in range(n - 1, -1, -1):

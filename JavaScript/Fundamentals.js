@@ -1,6 +1,9 @@
 // # use let to reassign variables
 let x = 10
 
+// # get an integer input
+let tcs = parseInt(input())
+
 // # use const to make variable constant
 const pi = 3.14
 
@@ -17,6 +20,9 @@ let sz = arr.length
 
 // # clear an array [all elements of the array are automatically deleted]
 arr.length = 0
+
+// # get an array input with space seperated (delimiter) integers
+let arr = input().split(" ").map(Number)
 
 // # technique: tree traversal
 const ans = []
@@ -55,3 +61,25 @@ var search = function(nums, target) {
     }
     return -1;
 };
+
+let fs = require("fs");
+let data = fs.readFileSync(0, "utf-8");
+let idx = 0;
+data = data.split("\n");
+function input() {
+  return data[idx++];
+}
+
+let tcs = parseInt(input());
+for (let tc = 0; tc < tcs; tc++) {
+    ;
+    let cx = arr[0], dy = arr[1], z = arr[2];
+    if (z % cx == 0 && z % dy == 0)
+        console.log("ANY")
+    else if (z % cx == 0)
+        console.log("CHICKEN")
+    else if (z % dy == 0)
+        console.log("DUCK")
+    else
+        console.log("NONE")
+}

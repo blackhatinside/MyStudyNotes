@@ -33,4 +33,10 @@ cyberkid05@Cyberkid-Swift-SF315-52G:/$
 Debian Linux - uses apt (Advanced Package Tool)
 A kernel, supporting drivers, tools and applications and packages in a distributable format make up a Linux distribution
 
+fedora's epel - extra packages for enterprise linux
+
 sudo dnf list available
+sudo dnf repolist
+sudo dnf install -y epel-release    # install from OS repository
+sudo dnf config-manager --set-enabled powertools    # powertools repo disabled by default
+sudo dnf install -y https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm   # installing from internet repository

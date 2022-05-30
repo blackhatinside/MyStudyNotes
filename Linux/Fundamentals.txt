@@ -32,3 +32,5 @@ cyberkid05@Cyberkid-Swift-SF315-52G:/$
 
 Debian Linux - uses apt (Advanced Package Tool)
 A kernel, supporting drivers, tools and applications and packages in a distributable format make up a Linux distribution
+
+sudo dnf list available

@@ -29,3 +29,6 @@ cyberkid05@Cyberkid-Swift-SF315-52G:/$
 /srv (serve): This folder holds some data related to system server functionalities (e.g., data for FTP servers).
 /var (variable): This folder holds variable data for databases, logs, and websites. For example, /var/www/html/ contains the files for the Apache web server.
 /run (runtime): This directory contains runtime system data (e.g., currently logged-in users).
+
+Debian Linux - uses apt (Advanced Package Tool)
+A kernel, supporting drivers, tools and applications and packages in a distributable format make up a Linux distribution

@@ -14,4 +14,6 @@ sudo apt update
 sudo apt install kde-plasma-desktop
 sudo apt-get install lightdm
 
-sudo dnf update
+sudo dnf update -y
+sudo dnf group install -y "Development tools"
+sudo dnf install -y elfutils-libelf-devel

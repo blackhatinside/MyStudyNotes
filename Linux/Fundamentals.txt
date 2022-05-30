@@ -34,6 +34,9 @@ Debian Linux - uses apt (Advanced Package Tool)
 A kernel, supporting drivers, tools and applications and packages in a distributable format make up a Linux distribution
 
 fedora's epel - extra packages for enterprise linux
+GNU - gnu not unix
+Linux ---> Kernel
+Linux ---> Inspired by MINIX (which was inspired by UNIX)
 
 sudo dnf list available
 sudo dnf repolist

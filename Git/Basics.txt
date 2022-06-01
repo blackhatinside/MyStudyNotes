@@ -19,3 +19,6 @@ git push -u origin main
 git branch
 git checkout -b new_branch
 git checkout new_branch
+
+// storing the github password locally (so that no need to re enter on every push/pull)
+git config --global credential.helper store

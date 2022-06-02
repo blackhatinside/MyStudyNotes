@@ -33,3 +33,12 @@ grid.sort(key = lambda x:(x[1], x[0]))  # [['banana', 20], ['grapes', 25], ['gua
 
 # inorder traversal of the binary search tree with a root node
 return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right) if root else []
+
+# if flag is true then print "YES" else print "NO"
+print("YNEOS"[not flag::2]
+
+# floor value without Math.floor
+print(5//2) # 2
+
+# ceil value without Math.ceil
+print(-(-5//2)) # 3

@@ -1,5 +1,6 @@
 # val = 5
 # flag = True
+# letters = ['p', 'r', 'o', 'j', 'e', 'c', 't', 's',]
 # arr = [1, 3, 5, 7, 8, 6, 4, 2,]
 # grid = [['apple', 30], ['guava', 25], ['grapes', 25], ['banana', 20], ['orange', 40],]
 
@@ -44,3 +45,6 @@ print(val//2) # 2
 
 # ceil value without math.ceil
 print(-(-val//2)) # 3
+
+# make hashmap out of keys array and values array
+hp = dict(zip(letters, arr))

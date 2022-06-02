@@ -17,7 +17,8 @@ input=lambda:y_in[next(y_ino)]
 
 ''' #   1.1 sec average INTEST
 import sys
-input=lambda:sys.stdin.readline().rstrip("\r\n")
+input=sys.stdin.readline
+# input=lambda:sys.stdin.readline().rstrip("\r\n")
 # '''
 
 ''' # REGION FASTIO   1.7 sec average INTEST    -   best for Codeforces

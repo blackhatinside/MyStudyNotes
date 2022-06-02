@@ -1,3 +1,4 @@
+# val = 5
 # arr = [1, 3, 5, 7, 8, 6, 4, 2,]
 # grid = [['apple', 30], ['guava', 25], ['grapes', 25], ['banana', 20], ['orange', 40],]
 
@@ -38,7 +39,7 @@ return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right) i
 print("YNEOS"[not flag::2]
 
 # floor value without math.floor
-print(5//2) # 2
+print(val//2) # 2
 
 # ceil value without math.ceil
-print(-(-5//2)) # 3
+print(-(-val//2)) # 3

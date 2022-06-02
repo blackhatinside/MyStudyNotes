@@ -85,3 +85,17 @@ for tc in range(1):
                 break
         if not found:
             print(mid if scope[mid] > q[j] else mid + 1)
+
+'''https://codeforces.com/contest/1352/problem/C'''
+for _ in range(int(input())):
+    n, k = map(int, input().split())
+    beg, end = 1, 3 * int(1e9)
+    while beg <= end:
+        mid = (beg + end) // 2
+        if mid - (mid // n) == k:
+            print(mid - 1 if mid % n == 0 else mid)
+            break
+        elif mid - (mid // n) > k:
+            end = mid - 1
+        else:
+            beg = mid + 1

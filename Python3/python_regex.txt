@@ -34,3 +34,6 @@ print(matchResults3.group())    # prints "(415)"
 
 # groups() method retrieves all the groups at once as a tuple
 ##################################################
+
+GmailRegex = re.compile(r'\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b')
+PhoneRegex = re.compile(r'(\+91|91|0)? ?([7-9]\d{9})')

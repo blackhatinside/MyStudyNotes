@@ -48,3 +48,6 @@ print(-(-val//2)) # 3
 
 # make hashmap out of keys array and values array
 hp = dict(zip(letters, arr))
+
+# 2D array
+scope = tuple(i for i in range(len(arr)) for j in range(arr[i]))  # 0 1 1 1 2 2 2 2 2 2 2 ...

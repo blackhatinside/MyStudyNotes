@@ -56,3 +56,32 @@ n_b, n_m = map(int, input().split())
 box_arr = list(map(int, input().split()))
 man_arr = list(map(int, input().split()))
 print(dist(box_arr, man_arr, n_b, n_m))
+
+'''https://codeforces.com/contest/474/problem/B'''
+for tc in range(1):
+	scope = [0,]
+	sza = int(input())
+	arr = tuple(map(int, input().split()))
+	for i in range(sza):
+		scope.append(scope[-1] + arr[i])
+	szq = int(input())
+	q = tuple(map(int, input().split()))
+	for j in range(szq):
+		found = False
+		beg, end = 0, len(scope) - 1
+		while beg <= end:
+			mid = (beg + end) // 2
+			if scope[mid] > q[j]:
+				end = mid - 1
+			elif scope[mid] < q[j]:
+				beg = mid + 1
+			else:
+				print(mid)
+				found = True
+				break
+		if not found:
+			print(mid if scope[mid] > q[j] else mid + 1)
+                found = True
+                break
+        if not found:
+            print(mid if scope[mid] > q[j] else mid + 1)

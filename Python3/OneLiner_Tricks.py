@@ -37,8 +37,8 @@ return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right) i
 # if flag is true then print "YES" else print "NO"
 print("YNEOS"[not flag::2]
 
-# floor value without Math.floor
+# floor value without math.floor
 print(5//2) # 2
 
-# ceil value without Math.ceil
+# ceil value without math.ceil
 print(-(-5//2)) # 3

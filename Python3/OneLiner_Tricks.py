@@ -1,4 +1,5 @@
 # val = 5
+# flag = True
 # arr = [1, 3, 5, 7, 8, 6, 4, 2,]
 # grid = [['apple', 30], ['guava', 25], ['grapes', 25], ['banana', 20], ['orange', 40],]
 
@@ -36,7 +37,7 @@ grid.sort(key = lambda x:(x[1], x[0]))  # [['banana', 20], ['grapes', 25], ['gua
 return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right) if root else []
 
 # if flag is true then print "YES" else print "NO"
-print("YNEOS"[not flag::2]
+print("YNEOS"[not flag::2]  # YES
 
 # floor value without math.floor
 print(val//2) # 2

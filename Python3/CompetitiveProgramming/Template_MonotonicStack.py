@@ -67,7 +67,7 @@ class Solution:
         stack = []
         ans = []
         for i in range(len(arr)):
-            while stack and arr[stack[-1]] < arr[i]:    # monotonic stack
+            while stack != [] and arr[stack[-1]] < arr[i]:    # monotonic stack
                 stack.pop()
             stack.append(i)
             while stack[0] <= i - k:    # if windows overflow, keep popping from beginning

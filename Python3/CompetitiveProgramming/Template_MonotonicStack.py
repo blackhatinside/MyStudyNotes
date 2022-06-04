@@ -59,3 +59,19 @@ class Solution:
         greater = self.monotonicstack(nums, len(nums))
         ans = [nums[greater[i]] if greater[i] != -1 else -1 for i in range(len(nums))]
         return ans
+
+'''---------- https://leetcode.com/problems/sliding-window-maximum/ ----------'''
+    
+class Solution:
+    def maxSlidingWindow(self, arr: List[int], k: int) -> List[int]:
+        stack = []
+        ans = []
+        for i in range(len(arr)):
+            while stack and arr[stack[-1]] < arr[i]:    # monotonic stack
+                stack.pop()
+            stack.append(i)
+            while stack[0] <= i - k:    # if windows overflow, keep popping from beginning
+                stack.pop(0)
+            if i >= k - 1:  # when window is full, keep finding the max element
+                ans.append(arr[stack[0]])
+        return ans

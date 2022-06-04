@@ -64,14 +64,14 @@ class Solution:
     
 class Solution:
     def maxSlidingWindow(self, arr: List[int], k: int) -> List[int]:
-        stack = []
+        queue = []
         ans = []
         for i in range(len(arr)):
-            while stack != [] and arr[stack[-1]] < arr[i]:    # monotonic stack
-                stack.pop()
-            stack.append(i)
-            while stack[0] <= i - k:    # if windows overflow, keep popping from beginning
-                stack.pop(0)
+            while queue != [] and arr[queue[-1]] < arr[i]:    # monotonic double ended queue
+                queue.pop()
+            queue.append(i)
+            while queue[0] <= i - k:    # if windows overflow, keep popping from beginning
+                queue.pop(0)
             if i >= k - 1:  # when window is full, keep finding the max element
-                ans.append(arr[stack[0]])
+                ans.append(arr[queue[0]])
         return ans

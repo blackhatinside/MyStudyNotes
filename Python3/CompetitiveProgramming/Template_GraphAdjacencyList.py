@@ -44,6 +44,19 @@ class Graph:    # complex graph using adjacency lists
             bfs_path_s2d.append(src)
             print(*bfs_path_s2d)
 
+	def dfs(self, src):
+        dfs_path = []
+        visited = [False] * self.V
+        def dfsUtil(node):
+            dfs_path.append(node)
+            visited[node] = True
+            for nbr in self.ADJ[node]:
+                if not visited[nbr]:
+                    dfsUtil(nbr)
+            return
+        dfsUtil(src)
+        print(*dfs_path)
+
     def printAdjList(self):
         for i in range(self.V):
             print("{} : {}".format(i, self.ADJ[i]))

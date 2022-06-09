@@ -1,4 +1,4 @@
-class Graph:    # simple graph using adjacency lists
+class Graph:    # complex graph using adjacency lists
     V = 0   # number of vertices (0 to v - 1 vertices)
     ADJ = []    #adjacency list
     def __init__(self, v):
@@ -9,6 +9,19 @@ class Graph:    # simple graph using adjacency lists
         self.ADJ[i].append(j)
         if undir:
             self.ADJ[j].append(i)
+
+    def bfs(self, src):
+        q = []
+        visited = [False] * self.V
+        q.append(src)
+        visited[src] = True
+        while q:
+            x = q.pop(0)
+            print(x, end = " ")
+            for nbr in self.ADJ[x]:
+                if not visited[nbr]:
+                    q.append(nbr)
+                    visited[nbr] = True
 
     def printAdjList(self):
         for i in range(self.V):

@@ -12,7 +12,7 @@ class Solution:
                 elif grid[i][j] == 0:
                     notvisited += 1 # empty square found
         
-        def isvalid(x, y):
+        def isvalid(x, y):  # edges and blockage conditions
             return (0 <= x < m and 0 <= y < n and grid[x][y] >= 0)
         
         def dfs(x, y, notvisited):

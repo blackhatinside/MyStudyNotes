@@ -37,10 +37,12 @@ class Graph:    # complex graph using adjacency lists
 
         if dest != -1:
             temp = dest
+            bfs_path_s2d = []
             while temp != src:
-                print(temp, end = " ")
+                bfs_path_s2d.append(temp)
                 temp = parent[temp]
-            print(src)
+            bfs_path_s2d.append(src)
+            print(*bfs_path_s2d)
 
     def printAdjList(self):
         for i in range(self.V):

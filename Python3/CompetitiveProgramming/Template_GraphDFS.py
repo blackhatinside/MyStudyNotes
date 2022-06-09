@@ -10,17 +10,18 @@ class Graph:	# using adjacency lists
 		if undir:	# undirected graph has both A -> B and B -> A connections
 			self.l[j].append(i)
 
-	def DFS(self, source):
-		arr = []
-		visited = [0] * self.V
-		def helperDFS(node):
-			visited[node] = 1
-			arr.append(node)
-			for ele in self.l[node]:
-				if not visited[ele]:
-					helperDFS(ele)
-		helperDFS(source)
-		return arr
+    def dfs(self, src):
+        dfs_path = []
+        visited = [False] * self.V
+        def dfsUtil(node):
+            dfs_path.append(node)
+            visited[node] = True
+            for nbr in self.ADJ[node]:
+                if not visited[nbr]:
+                    dfsUtil(nbr)
+            return
+        dfsUtil(src)
+        print(*dfs_path)
 
 def main():
 	g = Graph(7)

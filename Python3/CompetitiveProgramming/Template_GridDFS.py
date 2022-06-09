@@ -1,9 +1,7 @@
 class Solution:
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
-        self.ans = 0
-        m = len(grid)
-        n = len(grid[0])
-        notvisited = 1
+        m, n = len(grid), len(grid[0])
+        notvisited = 1  # taking source node into account
         
         for i in range(m):
             for j in range(n):
@@ -16,11 +14,12 @@ class Solution:
             return (0 <= x < m and 0 <= y < n and grid[x][y] >= 0)
         
         def dfs(x, y, notvisited):
+            nonlocal ans
             if not isvalid(x, y):
                 return
             if grid[x][y] == 2: # if ending square
                 if notvisited == 0:
-                    self.ans += 1
+                    ans += 1
                 return
             grid[x][y] = -2 # mark visited
             dfs(x - 1, y, notvisited - 1)    # left
@@ -29,8 +28,9 @@ class Solution:
             dfs(x, y + 1, notvisited - 1)    # down
             grid[x][y] = 0  # unmark visited
     
+        ans = 0
         dfs(x, y, notvisited)
-        return self.ans
+        return ans
 
 '''---------- https://leetcode.com/problems/unique-paths-iii/ ----------'''
         

@@ -1,29 +1,26 @@
-class Node:	# graph consists of nodes and its neighbours
-	name = ""	# name of the node
-	nbrs = []	# neighbours of the node
-	def __init__(self, name):
-		self.name = name
-		self.nbrs = []
+class Node:     # complex node (graph edge) class
+    NAME = ""
+    NEIGHBOURS = []
 
-from collections import defaultdict as hp	# hashmap[string_key] = node_object
+    def __init__(self, name):
+        self.NAME = name
+        self.NEIGHBOURS = []
 
-class Graph:	# using adjacency list with Node class
-	m = hp(lambda:Node())
-	def __init__(self, cities):
-		for city in cities:
-			self.m[city] = Node(city)
+class Graph:    # complex graph using adjacency lists
+    HP = dict() # hashmap[key] = node object
+    def __init__(self, cities):
+        for city in cities:
+            self.HP[city] = Node(city)
 
-	def addEdge(self, x, y, undir = False):	# directed graph
-		self.m[x].nbrs.append(y)
-		if undir:
-			self.m[y].nbrs.append(x)
+    def addEdge(self, x, y, undir = False):     # directed graph
+        self.HP[x].NEIGHBOURS.append(y)
+        if undir:
+            self.HP[y].NEIGHBOURS.append(x)
 
-	def printAdjList(self):
-		for city, node in self.m.items():	# iterate over the hashmap
-			print(city, end = "----->")	# key
-			for nbr in node.nbrs:
-				print(nbr, end = " ")	# values
-			print()
+    def printAdjList(self):
+        for city, node in self.HP.items():
+            print(city, end = "----->")
+            print("{} : {}".format(node.NAME, node.NEIGHBOURS))
 
 def main():
 	cities = ["Delhi", "London", "Paris", "New York", ]

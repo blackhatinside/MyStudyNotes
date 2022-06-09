@@ -10,18 +10,37 @@ class Graph:    # complex graph using adjacency lists
         if undir:
             self.ADJ[j].append(i)
 
-    def bfs(self, src):
+    def bfs(self, src, dest = -1):
         q = []
+        bfs_path = []
+        dist = [0] * self.V
+        parent = [0] * self.V
         visited = [False] * self.V
         q.append(src)
+        dist[src] = 0
+        parent[src] = src
         visited[src] = True
         while q:
             x = q.pop(0)
-            print(x, end = " ")
+            bfs_path.append(x)
             for nbr in self.ADJ[x]:
                 if not visited[nbr]:
                     q.append(nbr)
+                    dist[nbr] = dist[x] + 1
+                    parent[nbr] = x
                     visited[nbr] = True
+        print(*bfs_path)
+
+        # single source shortest path for undirected graph
+        # for i in range(self.V):   
+        #     print("Shortest dist to {} is {}".format(i, dist[i]))
+
+        if dest != -1:
+            temp = dest
+            while temp != src:
+                print(temp, end = " ")
+                temp = parent[temp]
+            print(src)
 
     def printAdjList(self):
         for i in range(self.V):

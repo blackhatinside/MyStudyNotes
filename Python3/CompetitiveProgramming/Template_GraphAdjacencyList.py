@@ -1,19 +1,18 @@
-class Graph:	# using adjacency lists
-	V = 0	# number of vertices
-	l = [[], ]	# adjacency list
-	def __init__(self, v = 0):	# constructor
-		self.V = v
-		self.l = [list() for _ in range(self.V)]
+class Graph:    # simple graph using adjacency lists
+    V = 0   # number of vertices (0 to v - 1 vertices)
+    ADJ = []    #adjacency list
+    def __init__(self, v):
+        self.V = v
+        self.ADJ = [[] for _ in range(self.V)]
 
-	def addEdge(self, i, j, undir = True):
-		self.l[i].append(j)
-		if undir:	# undirected graph has both A -> B and B -> A connections
-			self.l[j].append(i)
+    def addEdge(self, i, j, undir = True):
+        self.ADJ[i].append(j)
+        if undir:
+            self.ADJ[j].append(i)
 
-	def printAdjList(self):
-		for ii in range(len(self.l)):
-			x = self.l[ii]
-			print(ii, *x)
+    def printAdjList(self):
+        for i in range(self.V):
+            print("{} : {}".format(i, self.ADJ[i]))
 
 def main():
 	g = Graph(6)

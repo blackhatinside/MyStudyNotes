@@ -1,1 +1,35 @@
+# project runs in port 8000
 
+# model view template framework
+# user request -----> /app_name -----> urls.py
+#                                         ^
+#                 MVT                     | (rendered HTML)
+#                                         |
+# http response -----> def home: -----> views.py
+# http response ----> class home: ----> views.py
+# steps
+# 1. start your project
+# 2. create your first view
+# 3. user templates
+# 4. apps and modularization
+
+# start a new django project 'smartnotes' in current directory
+django-admin startproject smartnotes .
+
+# run the django project 
+python manage.py runserver
+
+# create an app 'home' in the project directory # add it to the project settings file
+django-admin startapp home
+
+# make migrations of user changes
+python manage.py makemigrations
+
+# send migration of user changes to db # classes --> makemigrations --> migrate --> db
+python manage.py migrate
+
+# create superuser for database
+python manage.py createsuperuser
+
+# handle models db content through code # alternative to django admin page
+python manage.py shell

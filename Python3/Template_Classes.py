@@ -49,3 +49,22 @@ class MaxHeap(MinHeap):
     def heapify(self, arr):
         for val in arr:
             heapq.heappush(self.h, MaxHeapObj(val))
+
+class Multiset:
+    def __init__(self):
+        self.items = []
+    def add(self, val):
+        #adds o occurrence of val from the multiset, if any
+        return self.items.append(val)
+        pass
+    def remove(self, val):
+        # removes o occurrence of val from the multiset, if any
+        if self.items.count(val) != 0:
+            return self.items.remove(val)
+        pass
+    def __contains__(self, val):
+        # returns True when val is in the multiset, else returns False
+        return val in self.items
+    def __len__(self):
+        # returns the number of elements in the multiset
+        return len(self.items)

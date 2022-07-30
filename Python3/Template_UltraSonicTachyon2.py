@@ -1,11 +1,64 @@
-# ENTER YOUR CODE HERE  -------------------->
-# sys.setrecursionlimit(1000)
+'''     // -- Template by A_*_A -- //       '''
 
-# ''' #   0.7 sec average INTEST    -   best for Codechef
+# ''' # FASTIO  BEGINS 0.34 sec
+# FASTIO  ENDS '''
+import sys;k=int(sys.stdin.readline().split()[1]);sys.stdout.write('%d'%sum(1 for x in map(int,sys.stdin.buffer) if not x%k))
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 0.37 sec
+import sys
+# FASTIO  ENDS '''
+_, k = map(int, sys.stdin.readline().split())
+count = sum(1 for x in map(int, sys.stdin.buffer) if not x % k)
+sys.stdout.write(str(count))
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 0.64 sec
+import sys
+input=sys.stdin.readline
+# FASTIO  ENDS '''
+
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 0.65 sec
+import atexit, io, os
+inputt = io.BytesIO(os.read(0, os.fstat(0).st_size)).readline
+input = lambda: inputt()   # int
+# input = lambda: inputt().decode().strip()   # str
+ss = io.BytesIO()
+_write = ss.write
+ss.write = lambda s: _write(s.encode())
+atexit.register(lambda: os.write(1, ss.getvalue()))
+# FASTIO  ENDS '''
+
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 0.87 sec
+import sys
+input=lambda:sys.stdin.readline()
+# FASTIO  ENDS '''
+
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 0.94 sec
 import atexit,io,os,sys
 ss=io.BytesIO()
 _write=ss.write
-ss.write=lambda s:_write(s.encode())
+ss.write=lambda sett:_write(sett.encode())
 atexit.register(lambda:os.write(1,ss.getvalue()))
 y_in=open(0).read().split("\n")
 def y_inf():
@@ -13,15 +66,26 @@ def y_inf():
         yield y_id
 y_ino=y_inf()
 input=lambda:y_in[next(y_ino)]
-# '''
+# FASTIO  ENDS '''
 
-''' #   1.1 sec average INTEST
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 1.08 sec
 import sys
-input=sys.stdin.readline
-# input=lambda:sys.stdin.readline().rstrip("\r\n")
-# '''
+input=lambda:sys.stdin.readline().rstrip("\r\n")
+# FASTIO  ENDS '''
 
-''' # REGION FASTIO   1.7 sec average INTEST    -   best for Codeforces
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+# ----------------------------------------------------------------
+
+# ''' # FASTIO  BEGINS 1.8 sec
 import os,sys
 from io import BytesIO,IOBase
 BUFSIZ=8192
@@ -58,7 +122,7 @@ class IOWrapper(IOBase):
         self.buffer=FastIO(file)
         self.flush=self.buffer.flush
         self.writable=self.buffer.writable
-        self.write=lambda s:self.buffer.write(s.encode("ascii"))
+        self.write=lambda sett:self.buffer.write(sett.encode("ascii"))
         self.read=lambda:self.buffer.read().decode("ascii")
         self.readline=lambda:self.buffer.readline().decode("ascii")
 if sys.version_info[0]<3:
@@ -66,21 +130,19 @@ if sys.version_info[0]<3:
 else:
     sys.stdin,sys.stdout=IOWrapper(sys.stdin),IOWrapper(sys.stdout)
 input=lambda:sys.stdin.readline().rstrip("\r\n")
-# END REGION '''
+# FASTIO  ENDS '''
 
-#   2.1 sec average INTEST
-tcs = 1
-for tc in range(tcs):
-    n, k = map(int, input().split())
-    ans = 0
-    for i in range(1, n + 1):
-        ans += (int(input()) % k == 0)
-    print(ans)
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
 
-#       <----------------------------------------
+# ----------------------------------------------------------------
 
-# ENTER YOUR NOTES HERE -------------------->
-'''
-        // -- Template by A_*_A -- //
-                                            '''
-#       <----------------------------------------
+# ''' # FASTIO  BEGINS 2.1 sec
+# FASTIO  ENDS '''
+
+y0, y1 = [int(x) for x in input().split()]
+c = sum(not int(input()) % y1 for i in range(y0))
+print(c)
+
+'''     // -- Template by A_*_A -- //       '''

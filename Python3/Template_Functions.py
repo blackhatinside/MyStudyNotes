@@ -64,3 +64,11 @@ def binarySearch(arr, key):   # search lower bound(key)
         return -1 
     else:
         return ind
+
+def findtype(nums):
+    if type(nums) == type(1):
+        return 1
+    elif type(nums) in (type([0,1]), type((0,1))):
+        return 2
+    else:
+        return 3

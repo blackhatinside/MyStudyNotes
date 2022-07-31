@@ -8,6 +8,8 @@ isor2 = lambda nums: sorted(nums, key = lambda num1: (num1[0], num1[1]))
 ilis = lambda: [int(zz) for zz in sys.stdin.readline().split()]
 hp = lambda: collections.defaultdict(lambda:0)
 lcm = lambda num1, num2: num1 * num2 // math.gcd(num1, num2)
+npr = lambda num1, num2: math.factorial(num1) // math.factorial(num1 - num2)
+ncr = lambda num1, num2: math.factorial(num1) // (math.factorial(num2) * math.factorial(num1 - num2))
 even = lambda nums: list(filter(lambda num1: num1 % 2 == 0, nums))
 oddd = lambda nums: list(filter(lambda num1: num1 % 2 != 0, nums))
 fact = lambda num1: functools.reduce(lambda num2, num3: num2 * num3, range(1, num1 + 1))

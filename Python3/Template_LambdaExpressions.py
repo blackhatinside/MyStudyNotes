@@ -26,5 +26,5 @@ grid = lambda rows, cols: [[0 for j in range(cols)] for i in range(rows)]
 onum = lambda num1: '%d'%num1
 omap = lambda num1, num2: '%d %d'%(num1,num2)
 olis = lambda nums: ' '.join((str(nums[i]) for i in range(len(nums))))
-ogrid = lambda grid: '\n'.join((' '.join(nums) for nums in grid))
+ogrid = lambda grid: '\n'.join((' '.join((str(num1) for num1 in nums)) for nums in grid))
 '''     // -- Template by A_*_A -- //       '''

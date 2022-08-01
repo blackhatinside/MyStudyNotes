@@ -22,7 +22,7 @@ lowerbound = lambda nums, key, start, stop: bisect.bisect_left(nums, key, lo=sta
 upperbound = lambda nums, key, start, stop: bisect.bisect_right(nums, key, lo=start, hi=stop)
 inorder = lambda root: inorder(root.left) + [root.val] + inorder(root.right) if root else []
 prefixsum = lambda nums: list(itertools.accumulate(nums, lambda num1, num2: num1 + num2))
-suffixsum = lambda nums: prefixsum(nums[::-1])
+suffixsum = lambda nums: prefixsum(reversed(nums))
 grid = lambda rows, cols: [[0 for j in range(cols)] for i in range(rows)]
 onum = lambda num1: '%d'%num1
 omap = lambda num1, num2: '%d %d'%(num1,num2)

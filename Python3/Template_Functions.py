@@ -72,3 +72,37 @@ def findtype(nums):
         return 2
     else:
         return 3
+
+def bfs(G, src, dest = -1):
+    q = []
+    bfs_path = []
+    dist = [0] * G.V
+    parent = [0] * G.V
+    visited = [False] * G.V
+    q.append(src)
+    dist[src] = 0
+    parent[src] = src
+    visited[src] = True
+    while q:
+        x = q.pop(0)
+        bfs_path.append(x)
+        for nbr in G.ADJ[x]:
+            if not visited[nbr]:
+                q.append(nbr)
+                dist[nbr] = dist[x] + 1
+                parent[nbr] = x
+                visited[nbr] = True
+    return bfs_path
+
+def dfs(G, src):
+    dfs_path = []
+    visited = [False] * G.V
+    def dfsUtil(node):
+        dfs_path.append(node)
+        visited[node] = True
+        for nbr in G.ADJ[node]:
+            if not visited[nbr]:
+                dfsUtil(nbr)
+        return
+    dfsUtil(src)
+    return dfs_path

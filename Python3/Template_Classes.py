@@ -21,6 +21,19 @@ class TreeNode:
         self.right = None
         self.val = data
 
+class Graph:    # complex graph using adjacency lists
+    V = 0   # number of vertices (0 to v - 1 vertices)
+    ADJ = []    #adjacency list
+    def __init__(self, v):
+        self.V = v
+        self.ADJ = [[] for _ in range(self.V)]
+    def addEdge(self, i, j, undir = True):
+        self.ADJ[i].append(j)
+        if undir:
+            self.ADJ[j].append(i)
+    def __str__(self):
+        return "\n".join(("{} : {}".format(i, self.ADJ[i]) for i in range(self.V)))
+
 class MaxHeapObj(object):
     def __init__(self, val):
         self.val = val

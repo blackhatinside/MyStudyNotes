@@ -7,6 +7,7 @@ isor = lambda: sorted(map(int, sys.stdin.readline().split()))
 isor2 = lambda nums: sorted(nums, key = lambda num1: (num1[0], num1[1]))
 ilis = lambda: [int(zz) for zz in sys.stdin.readline().split()]
 hp = lambda: collections.defaultdict(lambda:0)
+adjlist = lambda: collections.defaultdict(lambda:[])
 lcm = lambda num1, num2: num1 * num2 // math.gcd(num1, num2)
 npr = lambda num1, num2: math.factorial(num1) // math.factorial(num1 - num2)
 ncr = lambda num1, num2: math.factorial(num1) // (math.factorial(num2) * math.factorial(num1 - num2))
@@ -26,5 +27,9 @@ grid = lambda rows, cols: [[0 for j in range(cols)] for i in range(rows)]
 onum = lambda num1: '%d'%num1
 omap = lambda num1, num2: '%d %d'%(num1,num2)
 olis = lambda nums: ' '.join((str(nums[i]) for i in range(len(nums))))
+# odict = lambda nums: str(dict(nums))[1:-1]
+odict = lambda nums: "\n".join((str("%i: %s"%(num1[0], " ".join((str(num2) for num2 in num1[1])))) for num1 in zip(nums.keys(), nums.values())))
 ogrid = lambda grid: '\n'.join((' '.join((str(num1) for num1 in nums)) for nums in grid))
+input = lambda: sys.stdin.readline()
+print = lambda nums: sys.stdout.write(nums + "\n")
 '''     // -- Template by A_*_A -- //       '''

@@ -60,6 +60,9 @@ class Graph:    # complex graph using adjacency lists
     def printAdjList(self):
         for i in range(self.V):
             print("{} : {}".format(i, self.ADJ[i]))
+	
+    def __str__(self):
+        return "\n".join(("{} : {}".format(i, self.ADJ[i]) for i in range(self.V)))
 
 def main():
 	g = Graph(6)

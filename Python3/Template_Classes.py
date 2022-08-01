@@ -1,3 +1,14 @@
+class Queue:
+	queue = []
+	def __init__(self):
+		self.queue = []
+	def enqueue(self, x):
+		self.queue.append(x)
+	def dequeue(self):
+		return self.queue.pop(0)
+	def __len__(self):
+		return len(self.queue)
+
 class LinkedListNode:
     # __slots__ = ['data', 'next',]
     def __init__(self, data):

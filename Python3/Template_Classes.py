@@ -74,6 +74,19 @@ class MaxHeap(MinHeap):
         for val in arr:
             heapq.heappush(self.h, MaxHeapObj(val))
 
+class PriorityQueue:
+    ''' Minimum Priority Queue '''
+    def __init__(self):
+        self.arr = []
+    def push(self, val):
+        heapq.heappush(self.arr, val)
+    def pop(self):
+        return heapq.heappop(self.arr)
+    def isEmpty(self):
+        return not self.arr
+    def __str__(self):
+        return str(self.arr)
+
 class Multiset:
     def __init__(self):
         self.items = []

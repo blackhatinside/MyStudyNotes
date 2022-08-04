@@ -106,7 +106,7 @@ class Multiset:
         # returns the number of elements in the multiset
         return len(self.items)
 
-    class SegmentTree:
+class SegmentTree:
     def __init__(self, data, default=0, func=max):
         """initialize the segment tree with data"""
         self._default = default

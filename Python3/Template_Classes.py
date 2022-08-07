@@ -51,6 +51,41 @@ class Queue:
     def __str__(self):
         return " ".join(str(x) for x in self.queue)
 
+class Queue:
+    def __init__(self):
+        self.LinkedList = LinkedList()
+        self.length = 0
+    def enqueue(self, value):
+        if self.LinkedList.head == None:
+            self.LinkedList.head = Node(value)
+            self.LinkedList.tail = self.LinkedList.head
+        else:
+            temp = self.LinkedList.head
+            while temp.next != None:
+                temp = temp.next
+            temp.next = Node(value)
+            self.LinkedList.tail = temp.next
+        self.length += 1
+    def dequeue(self):
+        assert self.LinkedList.head != None, "Cannot pop from Empty Linked List"
+        dequeuevalue = self.LinkedList.head.value
+        self.LinkedList.head = self.LinkedList.head.next
+        self.length -= 1
+        return dequeuevalue
+    def peek(self):
+        assert self.LinkedList.head != None, "Cannot peek from Empty Linked List"
+        return self.LinkedList.head.value
+    def __len__(self):
+        return self.length
+    def __iter__(self):
+        temp = self.LinkedList.head
+        while temp != None:
+            yield temp
+            temp = temp.next
+    def __str__(self):
+        res = [str(x.value) for x in self]
+        return "linkedlist: " + "--->".join(res)
+
 class Node:
     # __slots__ = ['value', 'next',]
     def __init__(self, value = None):

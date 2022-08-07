@@ -40,7 +40,7 @@ Array
     - insertions and deletions at the beginning of the array are costly - O(n)
 
 Lists
-    - append() have Amortized Average Case for n elements
+    - append() has Amortized Average Case for n elements (since dynamic list expands its size when it's almost full)
 
 Tuples
     - are immutable, comparable and hashable

@@ -31,7 +31,7 @@ class LinkedListNode:
         self.data = data
         self.next = None
     def __str__(self):
-        return "node: " + str(self.value)
+        return "node: " + str(self.data)
 
 class LinkedList:
     def __init__(self):
@@ -44,7 +44,7 @@ class LinkedList:
             temp = temp.next
     def __str__(self):
         temp = self.head
-        res = [str(x.value) for x in self]
+        res = [str(x.data) for x in self]
         return "linkedlist: " + "--->".join(res)
 
 class TreeNode:

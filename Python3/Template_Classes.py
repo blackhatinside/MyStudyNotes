@@ -8,6 +8,8 @@ class Queue:
 		return self.queue.pop(0)
 	def __len__(self):
 		return len(self.queue)
+    def __str__(self):
+        return " ".join(str(x) for x in self.queue)
 
 class LinkedListNode:
     # __slots__ = ['data', 'next',]

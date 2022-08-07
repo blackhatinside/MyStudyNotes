@@ -1,16 +1,42 @@
 
 class Stack:
-    stack = []
     def __init__(self):
-        self.stack = []
-    def push(self, x):
-        self.stack.append(x)
-    def pop(self, x):
-        self.stack.pop()
+        self.LinkedList = LinkedList()
+        self.length = 0
+    def push(self, value):
+        if self.LinkedList.head == None:
+            self.LinkedList.head = Node(value)
+            self.LinkedList.tail = self.LinkedList.head
+        else:
+            temp = self.LinkedList.head
+            while temp.next != None:
+                temp = temp.next
+            temp.next = Node(value)
+            self.LinkedList.tail = temp.next
+        self.length += 1
+    def pop(self):
+        assert self.LinkedList.head != None, "Cannot pop from Empty Linked List"
+        temp = self.LinkedList.head
+        while temp.next.next != None:
+            temp = temp.next
+        poppedvalue = temp.next.value
+        self.LinkedList.tail = temp
+        temp.next = None
+        self.length -= 1
+        return poppedvalue
+    def peek(self):
+        assert self.LinkedList.head != None, "Cannot peek from Empty Linked List"
+        return self.LinkedList.tail.value
     def __len__(self):
-        return len(self.stack)
+        return self.length
+    def __iter__(self):
+        temp = self.LinkedList.head
+        while temp != None:
+            yield temp
+            temp = temp.next
     def __str__(self):
-        return " ".join(str(x) for x in self.stack)
+        res = [str(x.value) for x in self]
+        return "linkedlist: " + "--->".join(res)
 
 class Queue:
 	queue = []

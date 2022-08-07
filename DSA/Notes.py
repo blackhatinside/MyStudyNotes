@@ -39,6 +39,9 @@ Array
     - all the elements of n-dimensional array are stored in memory as a 1D array
     - insertions and deletions at the beginning of the array are costly - O(n)
 
+Lists
+    - append() have Amortized Average Case for n elements
+
 Tuples
     - are immutable, comparable and hashable
     - faster access than lists

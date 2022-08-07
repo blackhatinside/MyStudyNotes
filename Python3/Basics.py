@@ -132,3 +132,9 @@ class Graph:
 			print(ii, *x)
     else:
         stack.append([x, 1])
+
+# use of assert keyword in Python
+'''
+Syntax:
+    assert <condition>, <error_message>
+'''

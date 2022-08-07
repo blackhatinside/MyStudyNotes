@@ -19,6 +19,13 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+    def __str__(self):
+        temp = self.head
+        res = []
+        while temp != None:
+            res.append(str(temp.value))
+            temp = temp.next
+        return "--->".join(res)
 
 class TreeNode:
     def __init__(self, data):

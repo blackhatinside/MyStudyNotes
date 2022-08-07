@@ -14,6 +14,8 @@ class LinkedListNode:
     def __init__(self, data = None):
         self.data = data
         self.next = None
+    def __str__(self):
+        return "node: " + str(self.value)
 
 class LinkedList:
     def __init__(self):
@@ -25,7 +27,7 @@ class LinkedList:
         while temp != None:
             res.append(str(temp.value))
             temp = temp.next
-        return "--->".join(res)
+        return "linkedlist: " + "--->".join(res)
 
 class TreeNode:
     def __init__(self, data):

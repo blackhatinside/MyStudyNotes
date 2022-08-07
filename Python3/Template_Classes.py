@@ -25,26 +25,38 @@ class Queue:
     def __str__(self):
         return " ".join(str(x) for x in self.queue)
 
-class LinkedListNode:
-    # __slots__ = ['data', 'next',]
-    def __init__(self, data = None):
-        self.data = data
+class Node:
+    # __slots__ = ['value', 'next',]
+    def __init__(self, value = None):
+        self.value = value
         self.next = None
     def __str__(self):
-        return "node: " + str(self.data)
+        return "node: " + str(self.value)
 
 class LinkedList:
     def __init__(self):
-        self.head = None
-        self.tail = None
+        self.head = None;
+        self.tail = None;
+    def push(self, node):
+        if self.head == None:
+            self.head = node
+        else:
+            temp = self.head
+            while temp.next != None:
+                temp = temp.next
+            temp.next = node
+    def pop(self):
+        temp = self.head
+        while temp.next.next != None:
+            temp = temp.next
+        temp.next = None
     def __iter__(self):
         temp = self.head
         while temp != None:
             yield temp
             temp = temp.next
     def __str__(self):
-        temp = self.head
-        res = [str(x.data) for x in self]
+        res = [str(node.value) for node in self]
         return "linkedlist: " + "--->".join(res)
 
 class TreeNode:

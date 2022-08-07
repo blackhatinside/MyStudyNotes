@@ -37,12 +37,14 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
+    def __iter__(self):
+        temp = self.head
+        while temp != None:
+            yield temp
+            temp = temp.next
     def __str__(self):
         temp = self.head
-        res = []
-        while temp != None:
-            res.append(str(temp.value))
-            temp = temp.next
+        res = [str(x.value) for x in self]
         return "linkedlist: " + "--->".join(res)
 
 class TreeNode:

@@ -36,7 +36,7 @@ class Stack:
             temp = temp.next
     def __str__(self):
         res = [str(x.value) for x in self]
-        return "linkedlist: " + "--->".join(res)
+        return "stack: " + "--->".join(res)
 
 class Queue:
 	queue = []
@@ -84,7 +84,7 @@ class Queue:
             temp = temp.next
     def __str__(self):
         res = [str(x.value) for x in self]
-        return "linkedlist: " + "--->".join(res)
+        return "queue: " + "--->".join(res)
 
 class Node:
     # __slots__ = ['value', 'next',]

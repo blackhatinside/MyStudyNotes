@@ -34,6 +34,9 @@ diffarr = [abs(val - arr[i - 1]) for i, val in enumerate(arr, 0) if i > 0] # 2 2
 # sort a 2D array by its 2nd value first and then by its 1st value
 grid.sort(key = lambda x:(x[1], x[0]))  # [['banana', 20], ['grapes', 25], ['guava', 25], ['apple', 30], ['orange', 40],]
 
+# delete a range of elements from the array
+del arr[1:3]
+
 # inorder traversal of the binary search tree with a root node
 return inorderTraversal(root.left) + [root.val] + inorderTraversal(root.right) if root else []
 

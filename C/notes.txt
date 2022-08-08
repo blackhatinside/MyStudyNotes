@@ -1,1 +1,19 @@
+Variable Sized Arrays cannot be initailized in C
 
+int n;
+scanf("%d", &n);
+int arr[n] = {1, 2, 3}; // Throws Error
+
+Padding of Memory (to multiples of 4) happen inside Structures
+
+struct Node {
+  int val1;  // 4 bytes
+  float val2; // 4 bytes
+  char ch1; // 1 byte
+  char ch2; // 1 byte
+  char c1[]; // 0 bytes
+} node1; // node1 will have total 10 bytes, but paddding takes place and total bytes reserved will be 12
+
+A flexible array (arr[]) is treated as having no size in a struct, though padding between that member and previous member may still exist
+Flexible array member should be present at the end of structure
+So a struct can't have more than one flexible-array member

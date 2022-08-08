@@ -17,3 +17,5 @@ struct Node {
 A flexible array (arr[]) is treated as having no size in a struct, though padding between that member and previous member may still exist
 Flexible array member should be present at the end of structure
 So a struct can't have more than one flexible-array member
+
+#define len(arr) sizeof(arr) / sizeof(int)

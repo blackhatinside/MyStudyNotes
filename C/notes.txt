@@ -4,7 +4,7 @@ int n;
 scanf("%d", &n);
 int arr[n] = {1, 2, 3}; // Throws Error
 
-Padding of Memory (to multiples of 4) happen inside Structures
+Padding of Memory (bytes set to multiples of 4) happen inside Structures
 
 struct Node {
   int val1;  // 4 bytes

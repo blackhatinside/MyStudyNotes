@@ -23,3 +23,8 @@ So a struct can't have more than one flexible-array member
 Whenever we create any variable inside a function in the program, it is created inside the stack frame of that particular function
 Using malloc function,  variables are stored inside the heap and requires to be manually deallocated/released after use.
 
+array name itself is a pointer
+ 
+two ways to access array elements are
+  arrayptr[i]
+  *(arrayptr[i])

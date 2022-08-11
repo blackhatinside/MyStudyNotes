@@ -1,1 +1,2 @@
-
+# update GRUB after adding another entry into the booting menu (dual++ boots)
+sudo update-grub

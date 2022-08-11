@@ -24,7 +24,11 @@ CPU: INTEL Core i5 @ 1.6GHz
 GPU: NVIDIA GeForce MX150
 
 Global Theme: Sweet
-Icons: Sweet Purple
+Icons: Sweet-Purple
+Plasma Style: Sweet
+Cursor: Sweet-cursors
+Color: Sweet
+Desktop Environment: KDE Plasma
 
 Accessibility
 	Zoom - Magnify entire desktop

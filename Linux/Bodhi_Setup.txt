@@ -1,0 +1,10 @@
+# install bluetooth service
+sudo apt install bluez
+sudo service bluetooth start
+
+# turn off touchpad (acts crazy!!!)
+synclient TouchpadOff=1
+
+# refresh bluetooth service
+pactl unload-module module-bluetooth-discover
+pactl load-module module-bluetooth-discover

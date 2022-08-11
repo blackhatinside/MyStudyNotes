@@ -25,3 +25,36 @@ GPU: NVIDIA GeForce MX150
 
 Global Theme: Sweet
 Icons: Sweet Purple
+
+Accessibility
+	Zoom - Magnify entire desktop
+
+Appearance
+	Background contrast - Improve contrast, readability behind semi transparent window
+	Blur - Blur background behind semi transparent window
+	Desaturate Unresponsive Applications 
+	Fading Popups - Make popups smoothly fade in and out
+	Login - Smoothly fade to desktop when login
+	Logout - Smoothly fade to logout screen
+	Maximize - Animation for window going Maximize/Restore 
+	Morphing Popups - Cross fade animation when Tooltips or Notifications
+	Screen Edge - Highlight approaching
+	Sliding Popups - Animation for Plasma
+	Translucency - Make windows 
+	Squash - Windows minimized
+
+Focus
+	Dialog Parent - Darkens parent window of currently active dialog
+
+Show Desktop Animation
+	Window Aperture
+
+Virtual Desktop Switching Animation
+	Slide - Desktops 
+
+Window Management
+	Desktop Grid - Zoom out desktops in grid
+	Present Windows - Zoom out until
+
+Window Open/Close Animation
+	Fade - Smoothly fade in and out

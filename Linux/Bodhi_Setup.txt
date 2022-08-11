@@ -22,3 +22,6 @@ Terminal: KDE terminal
 Terminal Font: Default
 CPU: INTEL Core i5 @ 1.6GHz
 GPU: NVIDIA GeForce MX150
+
+Global Theme: Sweet
+Icons: Sweet Purple

@@ -1,3 +1,15 @@
+# My Hard Disk Structure
+1 TB:
+    Windows
+        361 GB - Windows_Home
+        215 GB - Windows_Backup
+        69 GB - Free Space
+
+    Linux
+        41 GB - / Root - Linux File System
+        8 GB - Swap 
+        307 GB - Home (General Files)
+
 Linux File System -----> ext4
 My Partitions: root, home, swaparea
 

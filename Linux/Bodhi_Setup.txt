@@ -4,6 +4,9 @@ sudo service bluetooth start
 
 # turn off touchpad (acts crazy!!!)
 synclient TouchpadOff=1
+# disable touchpad on typing
+sudo add-apt-repository ppa:atareao/atareao
+sudo apt update && sudo apt install touchpad-indicator
 
 # refresh bluetooth service
 pactl unload-module module-bluetooth-discover

@@ -29,6 +29,7 @@ Plasma Style: Sweet
 Cursor: Sweet-cursors
 Color: Sweet
 Desktop Environment: KDE Plasma
+Window Manager: Xfwm4
 
 Accessibility
 	Zoom - Magnify entire desktop

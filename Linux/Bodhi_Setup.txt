@@ -120,7 +120,7 @@ update-alternatives --list x-window-manager
 
 ##################################
 sudo apt install preload stacer bleachbit tlp tlp-rdw acpi indicator-cpufreq intel-gpu-tools cpu-checker libvirt-daemon-system libvirt-clients bridge-utils
-	# https://www.pling.com/p/1305251/
+	# https://store.kde.org/p/1284047/
 sudo cp -r Sweet-Rainbow /usr/share/icons/
 	settings >> modules >> files >> desktop icons
 

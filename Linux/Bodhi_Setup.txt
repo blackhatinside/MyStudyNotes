@@ -65,3 +65,56 @@ Window Management
 
 Window Open/Close Animation
 	Fade - Smoothly fade in and out
+	
+	
+
+
+# install bluetooth service
+sudo apt install bluez
+
+# disable touchpad
+synclient TouchpadOff=1
+
+# install firefox app
+sudo apt install firefox
+
+# uninstall bodhi-chromium
+sudo apt-get --purge remove bodhi-chromium
+
+# uninstall dependencies
+sudo apt-get autoremove
+
+# uninstall dependencies and bodhi-chromium
+sudo apt-get purge --auto-remove bodhi-chromium
+
+# remove downloaded archive files
+sudo apt-get clean
+
+# install lxqt (lubuntu based) panel (app/task bar)
+sudo apt-get install lxqt-panel
+
+# install Thunar for XFCE DE
+sudo apt-get install thunar-data thunar
+
+# change DE
+sudo update-alternatives --config x-session-manager
+
+# install preload
+sudo apt install preload
+
+# install tlp
+sudo apt install tlp tlp-rdw
+
+# install acpi
+sudo apt install acpi
+
+# change window manager
+sudo dpkg-reconfigure xfce
+
+# display current window manager
+sudo apt install wmctrl
+wmctrl -m
+
+# display all window managers
+update-alternatives --list x-window-manager
+

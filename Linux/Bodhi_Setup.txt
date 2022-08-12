@@ -30,6 +30,8 @@ Cursor: Sweet-cursors
 Color: Sweet
 Desktop Environment: KDE Plasma
 Window Manager: Xfwm4
+Panel: Xfce4
+Power Manager - Startup App
 
 Accessibility
 	Zoom - Magnify entire desktop

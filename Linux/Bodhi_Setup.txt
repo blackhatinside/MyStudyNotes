@@ -8,6 +8,10 @@ synclient TouchpadOff=1
 sudo add-apt-repository ppa:atareao/atareao
 sudo apt update && sudo apt install touchpad-indicator
 
+# bluetooth manager
+sudo apt install blueman
+blueman-manager
+
 # refresh bluetooth service
 pactl unload-module module-bluetooth-discover
 pactl load-module module-bluetooth-discover

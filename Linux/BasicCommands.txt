@@ -9,3 +9,6 @@ sudo update-grub
 
 # know the current Desktop Environment used by Linux
 echo $XDG_CURRENT_DESKTOP
+
+# forcefully delete a directory/folder and its contents
+sudo rm -rf folder_name

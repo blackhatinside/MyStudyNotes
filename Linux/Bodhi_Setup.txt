@@ -40,6 +40,17 @@ Window Manager: Xfwm4
 Panel: Xfce4
 Power Manager - Startup App
 
+
+# Garuda Linux look alike
+Global Theme -> Sweetified Plasma
+Plasma Style -> Sweet
+Application Style -> kvantum-dark
+Window Decorations -> Sweet-dark-transparent
+Colors -> Sweet
+Icons -> BeautyLine
+Cursor -> Sweet-cursors
+
+
 Accessibility
 	Zoom - Magnify entire desktop
 

@@ -1,6 +1,9 @@
 # extract a .tar.gz or .tar.bz2 file
 tar xvzf file_name.tar.gz
 
+# extract a tar.xz file
+tar -xf file_name.tar.xz
+
 # update GRUB after adding another entry into the booting menu (dual++ boots)
 sudo update-grub
 

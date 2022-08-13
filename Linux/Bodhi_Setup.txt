@@ -140,6 +140,9 @@ update-alternatives --list x-window-manager
 https://download.sublimetext.com/sublime-text_build-3211_amd64.deb
 dpkg -i filename.deb
 
+# default icon themes folder
+/usr/share/icons/
+
 ##################################
 sudo apt install preload stacer bleachbit tlp tlp-rdw acpi indicator-cpufreq intel-gpu-tools cpu-checker libvirt-daemon-system libvirt-clients bridge-utils
 	# https://store.kde.org/p/1284047/

@@ -10,10 +10,10 @@ Trees - Medium (leetcode)
 Recursion - Medium
 Graph - Medium (BFS/LevelOrder, DFS/Bipartite)
 Queue - Medium
-DP - Low
-Subarrays - Low
+DP - Medium
+Subarrays - Medium
 Bitmasking - Low
 Subsequences - Low
 Permutations - Low
 Range Queries - Low
-Algorithms - Low
+Algorithms - Medium

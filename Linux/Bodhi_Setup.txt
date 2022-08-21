@@ -143,9 +143,18 @@ dpkg -i filename.deb
 # default icon themes folder
 /usr/share/icons/
 
+# default theme folder
+/usr/share/themes/
+
 ##################################
 sudo apt install preload stacer bleachbit tlp tlp-rdw acpi indicator-cpufreq intel-gpu-tools cpu-checker libvirt-daemon-system libvirt-clients bridge-utils
 	# https://store.kde.org/p/1284047/
+	
+https://store.kde.org/p/1284047/
 sudo cp -r Sweet-Rainbow /usr/share/icons/
-	settings >> modules >> files >> desktop icons
+	settings >> modules >> files >> desktop icons >>
+
+https://www.gnome-look.org/p/1253385/
+sudo cp -r Sweet-Dark /usr/share/themes/
+	search(Application Themes) >> 
  

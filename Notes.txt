@@ -303,3 +303,6 @@ CREATE TABLE useractions (
 	created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()::TIMESTAMP(0)
 );
 <<<<<
+
+Windows Additional Features
+	I Turned on Telnet for my ACN lab (NITR)

@@ -39,6 +39,7 @@ if __name__ == '__main__':
 				if toclientdata.strip().lower() == "bye":
 					serverSocket.close()
 					stopflag = True
+					break
 		except KeyboardInterrupt:
 			print("Forced Exit...")
 			break

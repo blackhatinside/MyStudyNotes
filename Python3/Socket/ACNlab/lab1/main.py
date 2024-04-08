@@ -1,6 +1,6 @@
 import socket
 hostname = socket.gethostname()
-hostaddr = socket.gethosbyname(hostname)
+hostaddr = socket.gethostbyname(hostname)
 hostdata = socket.gethostbyaddr(hostaddr)
 
 print("Hostname: ", hostname)

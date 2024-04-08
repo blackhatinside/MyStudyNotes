@@ -74,4 +74,6 @@ if __name__ == '__main__':
 		print("Error1: ", e1)
 
 # server - socket(), bind(), listen() [TCP], accept() [TCP]
-# client - socket(), connect() [TCP], sendall(), recv()
+# client - socket(), connect() [TCP], send(), recv()
+# TCP - send(), sendall(), recv()
+# UDP - sendto(), recvfrom()

@@ -1,0 +1,58 @@
+// install git
+sudo apt install git
+
+// change current folder to local repo
+git init
+
+// connect online repo to local repo (current folder)
+git remote add origin https://github.com/blackhatinside/Mtech_FileManager.git
+
+// verify above step
+git remote -v
+
+// add all files to git watchlist
+git add .
+
+// update watchlist
+git commit -m "First Version"
+
+// verify current branch
+git branch -r
+
+// push changes from local to online
+git push -u origin master
+
+// verify above step
+git status
+
+# # # # #
+
+// install github
+sudo apt install github
+
+// setup git email, username, password in terminal
+git config --global user.email "xyz@gmail.com"
+git config --global user.name "githubuname"
+git config --global user.password "githubPAKtoken"
+
+// login to github
+gh auto login
+
+// create an online repo
+gh repo create YourGithubRepoName --public
+
+// verify if repo exists
+gh repo view YourGithubUsername/YourRepoName
+
+(copy the Repo URL from above Command's Output to paste in the URL part below for the next command)
+
+// connect local repo to online repo 
+git remote add origin https://github.com/YourGithubUsername/YourRepoName
+
+// verify if local to online connected
+git remote -v
+
+// push from local to online
+git push -u origin master
+
+

@@ -36,7 +36,7 @@ git config --global user.name "githubuname"
 git config --global user.password "githubPAKtoken"
 
 // login to github
-gh auto login
+gh auth login
 
 // create an online repo
 gh repo create YourGithubRepoName --public

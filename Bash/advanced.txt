@@ -1,0 +1,2 @@
+# to ignore logs folder from current directory in tree view
+tree -I "logs"

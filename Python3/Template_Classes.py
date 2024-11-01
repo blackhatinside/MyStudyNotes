@@ -290,3 +290,10 @@ class SegmentTree:
         while index:
             self.data[index] = self.func(self.data[2*index], self.data[2*index+1])
             index >>= 1
+
+import random
+RANDOM = random.getrandbits(32)
+class Wrapper(int):
+    ''' Wrapper Class to avoid hash collisions: avg. case O(nlogn) '''
+    def __hash__(self):
+        return super(Wrapper, self).__hash__() ^ RANDOM

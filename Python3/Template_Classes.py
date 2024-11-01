@@ -291,6 +291,56 @@ class SegmentTree:
             self.data[index] = self.func(self.data[2*index], self.data[2*index+1])
             index >>= 1
 
+class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.endOfWord = False
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        curr = self.root
+        for ch in word:
+            if ch not in curr.children:
+                curr.children[ch] = TrieNode()
+            curr = curr.children[ch]
+        curr.endOfWord = True
+
+    def search(self, word):
+        curr = self.root
+        for ch in word:
+            if ch not in curr.children:
+                return False
+            curr = curr.children[ch]
+        return curr.endOfWord
+
+    def startsWith(self, prefix):
+        curr = self.root
+        for ch in prefix:
+            if ch not in curr.children:
+                return False
+            curr = curr.children[ch]
+        return True
+
+    # def search(self, word):   # words contains match_any_char "." in them
+    #     def dfs(j, root):
+    #         curr = root
+    #         for i in range(j, len(word)):
+    #             ch = word[i]
+    #             if ch == ".":
+    #                 for child in curr.children.values():
+    #                     if dfs(i + 1, child):
+    #                         return True
+    #                 return False
+    #             else:
+    #                 if ch not in curr.children:
+    #                     return False
+    #                 curr = curr.children[ch]
+    #         return curr.endOfWord
+    #     return dfs(0, self.root)
+
 import random
 RANDOM = random.getrandbits(32)
 class Wrapper(int):

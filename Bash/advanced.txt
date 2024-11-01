@@ -1,2 +1,16 @@
 # to ignore logs folder from current directory in tree view
 tree -I "logs"
+
+# to activate anaconda environment in terminal
+source ~/anaconda3/bin/activate
+
+# to update anaconda-navigator
+conda activate base
+conda update anaconda-navigator
+
+# to install GPU driver in Linux (Ubuntu/Debian distro)
+sudo apt remove --purge '^nvidia-.*'
+sudo apt update
+sudo apt install nvidia-driver-535
+
+# 

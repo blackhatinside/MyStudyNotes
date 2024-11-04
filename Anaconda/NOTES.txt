@@ -1,0 +1,17 @@
+// backup conda environment details
+conda env export -n adi_tf > adi_conda_env_tf.yaml
+
+// recreate conva environment from backup
+conda env create -f adi_conda_env_tf.yaml
+
+// activate conda environment
+conda activate adi_tf
+
+// install conda cuda and cudnn
+conda install -c conda-forge cudatoolkit=12.3 cudnn=8.9
+
+// remove current cuda and cudnn from anaconda environment
+conda remove cudatoolkit cudnn
+
+// list all conda environments
+conda env list

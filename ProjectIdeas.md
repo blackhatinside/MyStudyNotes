@@ -9,11 +9,11 @@
 
 ## Medium Level Projects
 
-- Build Games like Chess, 2D Shooter Games
+- Build Games like Chess, 2D Shooter Games            - Done
 
 ## Hard Level Projects
 
-- Build Windows Application
-- Build 3D FPS Game
+- Build Windows Application                           - Ongoing
+- Build 3D FPS Game                                   - Ongoing
 
   

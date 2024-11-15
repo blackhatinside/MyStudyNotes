@@ -52,6 +52,11 @@ git remote add origin https://github.com/YourGithubUsername/YourRepoName
 // verify if local to online connected
 git remote -v
 
+# # # # #
+
+// update the Remote URL (when you change the repo name on Github, to make it reflect on Local repo)
+git remote set-url origin https://github.com/yourusername/Mtech_SysMoniTool
+
 // push from local to online
 git push -u origin master
 

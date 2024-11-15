@@ -12,3 +12,7 @@ echo $XDG_CURRENT_DESKTOP
 
 # forcefully delete a directory/folder and its contents
 sudo rm -rf folder_name
+
+# to activate a Python virtual environmen
+chmod +x venv/bin/activate
+source venv/bin/activate

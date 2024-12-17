@@ -36,7 +36,7 @@ git config --global user.name "githubuname"
 git config --global user.password "githubPAKtoken"
 
 // login to github
-gh auth login
+gh auto login
 
 // create an online repo
 gh repo create YourGithubRepoName --public
@@ -46,7 +46,7 @@ gh repo view YourGithubUsername/YourRepoName
 
 (copy the Repo URL from above Command's Output to paste in the URL part below for the next command)
 
-// connect local repo to online repo 
+// connect local repo to online repo
 git remote add origin https://github.com/YourGithubUsername/YourRepoName
 
 // verify if local to online connected
@@ -54,10 +54,11 @@ git remote -v
 
 # # # # #
 
-// update the Remote URL (when you change the repo name on Github, to make it reflect on Local repo)
+// update the Remote URL (when you change the repo name on Github, to make it reflect on Local repo; when you clone a repo from online, and you also create a repo of your own in online, and you want to connect the cloned repo to your new online repo)
 git remote set-url origin https://github.com/yourusername/Mtech_SysMoniTool
 
 // push from local to online
 git push -u origin master
 
-
+// to rename a branch from 'main' to 'master'
+git branch -m main master

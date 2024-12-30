@@ -33,3 +33,17 @@ python manage.py createsuperuser
 
 # handle models db content through code # alternative to django admin page
 python manage.py shell
+
+
+
+
+
+
+WHAT I LEARNT:
+
+A django project is modular in structure to encourages reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
+
+Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
+
+When adding a new app to a project, add the app to the installed_apps in the project settings, and next write the function for view, and then map the view to a domain url, and then add the list of new urls of this app to the project's url list; When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app. 
+

@@ -41,7 +41,7 @@ python manage.py shell
 
 WHAT I LEARNT:
 
-A django project is modular in structure to encourages reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
+A django project is modular in structure to encourage reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
 
 Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
 

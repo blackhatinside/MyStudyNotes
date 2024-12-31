@@ -35,6 +35,45 @@ python manage.py createsuperuser
 python manage.py shell
 
 
+project_root/
+│
+├── manage.py
+├── CallProcessor/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+└── accounts/
+   ├── migrations/
+   │   ├── __init__.py
+   │   └── 0001_initial.py
+   ├── __init__.py
+   ├── admin.py
+   ├── apps.py
+   ├── models.py
+   ├── tests.py
+   └── views.py
+
+// to start a project in the current dir (project dir)
+django-admin startproject CallProcessor .
+
+// to create a new module/app
+python manage.py startapp accounts
+
+// to run the project
+python manage.py runserver
+
+// to store the changes to make a table into a file
+python manage.py makemigrations LoginPage
+
+// to create and execute SQL statement
+python manage.py migrate
+
+// to view the executed SQL statement
+python manage.py sqlmigrate LoginPage 0001
+
 
 
 

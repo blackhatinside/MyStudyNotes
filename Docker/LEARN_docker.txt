@@ -1,0 +1,29 @@
+an Image is like a template that can spawn multiple containers (running instances of that image). Containers can be started, stopped, restarted, paused, unpaused, and removed.
+
+
+// to install an image
+docker pull image_name
+
+// to see all the installed images
+docker images
+
+// to run an image
+docker run image_name
+
+// to run an image in detached mode
+docker run -d image_name
+
+// to see all the running containers
+docker ps
+
+// to see all the running and stopped containers
+docker ps -a
+
+// to start a container
+docker start container_name
+
+// to stop a container
+docker stop container_name
+
+// to check the logs of the container
+docker logs container_name

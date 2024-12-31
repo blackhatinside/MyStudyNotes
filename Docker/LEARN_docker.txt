@@ -1,6 +1,36 @@
 an Image is like a template that can spawn multiple containers (running instances of that image). Containers can be started, stopped, restarted, paused, unpaused, and removed.
 
 
+
+
+
+Run Commands:
+-d    : Detached mode
+-p    : Port mapping (host:container)
+-e    : Environment variables
+-v    : Volume mounting
+--name: Container name
+--rm  : Remove container when stopped
+-it   : Interactive terminal
+--net : Network settings
+--env-file: Load environment variables from file
+
+Build Commands:
+-t    : Tag the image
+-f    : Specify Dockerfile path
+
+Container Resource Limits:
+--memory: Memory limit
+--cpus  : CPU limit
+
+Legend:
+-  : Single-letter flags (can be combined, e.g., -dit)
+-- : Full word flags
+
+
+
+
+
 // to install an image
 docker pull image_name
 

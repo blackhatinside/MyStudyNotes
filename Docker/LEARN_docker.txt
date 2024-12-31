@@ -31,7 +31,7 @@ Legend:
 
 
 
-// to install an image
+// to install an image (docker official image)
 docker pull image_name
 
 // to see all the installed images
@@ -57,3 +57,10 @@ docker stop container_name
 
 // to check the logs of the container
 docker logs container_name
+
+
+
+
+
+// to setup postgresql before running the image
+docker run -d -e POSTGRES_PASSWORD=your_password -p 5432:5432 --name container_postgres postgres

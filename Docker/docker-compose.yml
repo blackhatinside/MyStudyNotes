@@ -1,0 +1,8 @@
+version: '3'               # Docker Compose file format version
+services:                  # List of containers/services
+ web:                    # Service name for Django app
+   build: .             # Build using Dockerfile in current directory
+   ports:
+     - "8000:8000"      # Map container port 8000 to host port 8000
+   volumes:
+     - .:/app           # Mount current directory to /app in container for live code updates

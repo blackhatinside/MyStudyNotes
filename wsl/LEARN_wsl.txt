@@ -1,0 +1,8 @@
+# make Ubuntu the default distribution
+wsl --set-default Ubuntu
+
+# open a specific distribution
+wsl -d Ubuntu
+
+
+

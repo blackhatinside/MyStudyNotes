@@ -16,3 +16,8 @@ sudo rm -rf folder_name
 # to activate a Python virtual environmen
 chmod +x venv/bin/activate
 source venv/bin/activate
+
+# search for exe files starting from the current directory
+sudo find $(pwd) -name *.exe
+
+# 

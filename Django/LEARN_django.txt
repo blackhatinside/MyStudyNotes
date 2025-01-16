@@ -92,4 +92,6 @@ User/Client/Consumer sends the task to the application in the form of message (m
 
 so basically the exchange, binding rules, different queues are all part of message broker and the tasks are sent to appropriate queues for the workers to process them.
 
-makemigrations command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model; 
+makemigrations command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model;
+
+for every newly added app, add the app to the list of installed apps in the project settings file; include the app's urls to the project's urls file; define the views and map the urls to those views for the new app;

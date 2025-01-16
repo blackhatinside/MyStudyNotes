@@ -74,6 +74,9 @@ python manage.py migrate
 // to view the executed SQL statement
 python manage.py sqlmigrate LoginPage 0001
 
+// to list the project's migrations and their status
+python manage.py showmigrations
+
 
 
 

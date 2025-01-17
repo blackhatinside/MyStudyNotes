@@ -77,6 +77,9 @@ python manage.py sqlmigrate LoginPage 0001
 // to list the project's migrations and their status
 python manage.py showmigrations
 
+// to view the SQL queries being performed by Django
+python3 manage.py shell_plus --print-sql
+
 
 
 

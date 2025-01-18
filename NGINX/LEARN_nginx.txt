@@ -10,3 +10,6 @@ visit webapp --> req goes to --> webserver --> webserver looks for requested res
   security++
   caching++
   etc/nginx.conf
+
+
+server distinguished by the port it listens to

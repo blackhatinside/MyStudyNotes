@@ -15,3 +15,10 @@ visit webapp --> req goes to --> webserver --> webserver looks for requested res
 server distinguished by the port it listens to
 acts as a load balancer
 send req. to server with fewest active connections; round robin 
+
+nginx:
+  HTTP web serving
+  HTTP reverse proxy
+  HTTP load balancer
+  HTTP cache
+  proxy

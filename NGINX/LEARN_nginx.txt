@@ -21,4 +21,5 @@ nginx:
   HTTP reverse proxy
   HTTP load balancer
   HTTP cache
-  proxy
+  proxy (single entry point)
+

@@ -1,0 +1,12 @@
+nginx
+  gateway b/w internet and backend infra.
+                  
+req --> webserver
+
+visit webapp --> req goes to --> webserver --> webserver looks for requested resources --> sends it back as resp.
+
+  event driven arch.
+  used as reverse proxy
+  security++
+  caching++
+  etc/nginx.conf

@@ -20,4 +20,5 @@ source venv/bin/activate
 # search for exe files starting from the current directory
 sudo find $(pwd) -name *.exe
 
-# 
+# print tree view, restrict to 5 files/folders
+tree -L 5 -I '.*' --dirsfirst

@@ -22,3 +22,6 @@ sudo find $(pwd) -name *.exe
 
 # print tree view, restrict to 5 files/folders
 tree -L 5 -I '.*' --dirsfirst
+
+# restart Network Manager
+sudo systemctl restart NetworkManager

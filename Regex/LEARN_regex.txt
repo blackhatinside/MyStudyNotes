@@ -1,0 +1,2 @@
+# to check if 3 or more tables are joined together in the code (useful for denormalization)
+: [a-zA-Z]+(?:\.[a-zA-Z]+){3,} if

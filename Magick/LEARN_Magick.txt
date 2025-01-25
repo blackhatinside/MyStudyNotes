@@ -1,0 +1,2 @@
+# to get all the details of the image
+magick identify -verbose slice_sub-strokecase0065_0039.png

@@ -1,0 +1,33 @@
+# # Commands
+
+# create a tmux session
+tmux new-session -s <session_name>
+
+# show all tmux sessions
+tmux ls
+
+# attach to a session
+tmux attach -t <session_name>
+
+# to rename a session
+tmux rename-session -t <old_session_name> <new_session_name>
+(eg): tmux rename-session -t 16 Adithya
+
+# create a new window in tmux session
+tmux new-window
+
+# to rename a window in tmux session
+tmux rename-window -t <window_id> <new_window_name>
+(eg): tmux rename-window -t 1 "PythonShell"
+
+# # Keys
+
+# list all windows
+Ctrl + b w
+
+# rename a window
+Ctrl + b ,
+
+# detach from a session
+Ctrl + b d
+

@@ -3,3 +3,9 @@ openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:204
 
 # Extract public key from private key
 openssl rsa -pubout -in private_key.pem -out public_key.pem
+
+# Base64 Encode the Private Key
+openssl base64 -in private_key.pem -out private_key_base64.pem
+
+# Base64 Encode the Public Key
+openssl base64 -in public_key.pem -out public_key_base64.pem

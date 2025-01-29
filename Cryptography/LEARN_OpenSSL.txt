@@ -9,3 +9,5 @@ openssl base64 -in private_key.pem -out private_key_base64.pem
 
 # Base64 Encode the Public Key
 openssl base64 -in public_key.pem -out public_key_base64.pem
+
+# Website for Encode/Decode: https://www.base64encode.org/

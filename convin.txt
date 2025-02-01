@@ -1,0 +1,365 @@
+Leave Policy Explanation
+Bereavement Leave
+Bereavement leave will be provided for any untoward incident at home or within the immediate family of the employees. A week of bereavement leave will be provided.
+
+Leave Quota
+You are allocated a total of 5 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	5	5
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Bereavement Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for only full day of Bereavement Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+You can apply leave for a past day, but not beyond than 15 calendar days back.
+Bereavement Leave requires comment while applying leave
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+
+Earned Leave
+This leave will be paid when not used
+
+Leave Quota
+You are allocated a total of 15 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+You are allowed to have more than annual quota of leave, if you are granted additional leave manually by your management.
+
+Date	Change (days)	Balance (days)
+01-Feb-2025	1.25	2.79
+01-Jan-2025 #	0.29	1.54
+01-Jan-2025	1.25	1.25
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Leave Accrual
+While your annual quota is 15, you are not eligible to consume all of those leave right away. Leave accrue at regular intervals as defined below. Accrued leave balance are the leave available for you to consume at any time.
+
+
+As per your leave plan, Earned Leave accrues once every month on 1 st. So your leave quota of 15 leave will be accrued once every month at the rate of 1.25 days
+
+At any given time, you are limited to apply for those many leave that got accrued as of the date for which you are applying leave.
+Ex:- If you are applying for a leave on March 01 for a leave on April 12th - 15th, leave accrued as of April 12th are considered
+
+Applying for a Leave
+Earned Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for full day, half day as well as quarter day of Earned Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+You can apply leave for a past day, but not beyond than 10 calendar days back.
+Earned Leave requires comment while applying leave
+Earned Leave cannot be applied when in notice period
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+Leave balances at the end of the year (Dec 2025)
+At the end of leave calendar year which is (Dec 2025), the following policies apply.
+
+If the leave balance is more than 1 days, upto 5 days will be carried forward, and 0 days will be encashed.
+
+Negative leave balances that may have accumulated for employees who have taken leave beyond their annual quota gets nullified and balance is reset to zero
+
+
+Marriage Leave
+Leave Quota
+You are allocated a total of 10 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+You are allowed to have more than annual quota of leave, if you are granted additional leave manually by your management.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	10	10
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Marriage Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for only full day of Marriage Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+For applying a leave duration of 1 or more days, you need to apply at least 30 calendar days before of which there have to be at least 0 working days
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Marriage Leave requires comment while applying leave
+Marriage Leave cannot be applied when in notice period
+Marriage Leave cannot be applied more than 1 time (Leave Requests) in entire tenure.
+Restrictions after joining
+You are able to consume leave 30 days after joining date.
+
+Leave balances at the end of the year (Dec 2025)
+At the end of leave calendar year which is (Dec 2025), the following policies apply.
+
+All Leave balances expire or get reset.
+
+Negative leave balances that may have accumulated for employees who have taken leave beyond their annual quota gets nullified and balance is reset to zero
+
+
+Paternity Leave
+Male Employees will be granted paternity leave for 5 working days. The leave should be availed within three weeks’ time of the birth of the child. This will be applicable up to a maximum of two confinements
+
+Leave Quota
+You are allocated a total of 10 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	10	10
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Paternity Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for only full day of Paternity Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+For applying a leave duration of 1 or more days, you need to apply at least 10 calendar days before of which there have to be at least 0 working days
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Paternity Leave requires comment while applying leave
+Paternity Leave requires document proof, if leave request exceeds 0 calendar days
+Paternity Leave cannot be applied when in notice period
+Paternity Leave cannot be applied more than 2 times (Leave Requests) in entire tenure.
+Restrictions after joining
+You are able to consume leave 180 days after joining date.
+
+Holidays during leave
+Holiday accompanying leave is treated as leave when total number of leave exceed 0 calendar days and leave day is before or after or in-between a Holiday.
+
+Weekly Offs during leave
+Weekly off day accompanying leave is treated as leave when total number of leave exceed 0 calendar days and leave day is before or after or in-between a Weekly off day.
+
+
+Floater Leave
+A floating holiday provides an employee with paid time off to observe a holiday
+
+Leave Quota
+You are allocated a total of 2 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	2	2
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Floater Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for only full day of Floater Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+For applying a leave duration of 5 or more days, you need to apply at least 7 calendar days before of which there have to be at least 7 working days
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Floater Leave requires comment while applying leave
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+
+Sabbatical Leave
+Leave Quota
+You are allocated a total of 90 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+You are allowed to have more than annual quota of leave, if you are granted additional leave manually by your management.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	90	90
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Sabbatical Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for full day, as well as half-day of Sabbatical Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+For applying a leave duration of 45 or more days, you need to apply at least 60 calendar days before of which there have to be at least 60 working days
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Sabbatical Leave requires comment while applying leave
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+
+
+Sick Leave
+This is when an employee falls sick
+
+Leave Quota
+You are allocated a total of 12 days of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+You are allowed to have more than annual quota of leave, if you are granted additional leave manually by your management.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	3	3
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Leave Accrual
+While your annual quota is 12, you are not eligible to consume all of those leave right away. Leave accrue at regular intervals as defined below. Accrued leave balance are the leave available for you to consume at any time.
+
+
+As per your leave plan, Sick Leave accrues once every quarter on 1 st. So your leave quota of 12 leave will be accrued once every quarter at the rate of 3 days
+
+At any given time, you are limited to apply for those many leave that got accrued as of the date when a leave request is made and not on future day for which leave is applied.
+Ex:- If you are applying for a leave on March 01 for a leave on April 12th, leave accrued as of March 01 are considered.
+
+Applying for a Leave
+Sick Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for full day, as well as half-day of Sick Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+You can apply leave for a past day, but not beyond than 10 calendar days back.
+Sick Leave requires comment while applying leave
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+
+Special Leave
+Special leave is a paid time off to observe an event, such as employee's birthday, marriage anniversary and work anniversary
+
+Leave Quota
+You are allocated a total of 1 day of leave in a year beginning January 2025 till December 2025. You can consume this leave in the same year they are accrued/credited.
+
+You are allowed to have more than annual quota of leave, if you are granted additional leave manually by your management.
+
+Date	Change (days)	Balance (days)
+01-Jan-2025	1	1
+*- Consumed Leave Balance imported from Excel
+
+#- Carryover Leave Balance imported from Excel
+
+##- Carryover Leave Balance from year end processing
+
+%- Carryover Leave Balance from another leave type
+
+^- Leave expired because of expiration policy
+
+@- Earned Leave Carryover imported from Excel
+
+$- Earned Leave Accrual Imported using Excel
+
+Applying for a Leave
+Special Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for only full day of Special Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Special Leave requires comment while applying leave
+You cannot have more than 1 leave requests in a leave calendar year
+Restrictions after joining
+You are able to consume leave 0 days after joining date.
+
+
+Unpaid Leave
+Loss of pay
+
+Leave Quota
+You have no upper limit on available annual leave quota
+
+Applying for a Leave
+Unpaid Leave can be applied by you on your own or a manager can apply on your behalf.
+
+You can apply for full day, as well as half-day of Unpaid Leave.
+
+Restriction for Applying Leave
+The following restrictions are enforced that can prevent you from applying a leave
+
+You are not allowed to apply past day leave. Your manager or HR manager can apply on your behalf
+Unpaid Leave requires comment while applying leave
+Restrictions after joining
+You are able to consume leave 0 days after joining date.

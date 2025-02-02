@@ -1,4 +1,4 @@
-# Comprehensive 3-Day CDOT Interview Preparation Guide
+# Comprehensive 3-Day CDOT Scientist B (CSE) Interview Preparation Guide
 
 ## DAY 1: CORE COMPUTER SCIENCE FUNDAMENTALS
 

@@ -443,6 +443,126 @@
 7. Database management
 8. API development
 
+### OOP Concepts Deep Dive
+
+#### 1. Core OOP Concepts
+- Encapsulation
+  * Access modifiers (public, private, protected)
+  * Information hiding
+  * Data abstraction
+
+- Inheritance
+  * Single inheritance
+  * Multiple inheritance (C++)
+  * Multi-level inheritance
+  * Virtual inheritance
+  * Method overriding
+  * super()/base class calling
+
+- Polymorphism
+  * Static (compile-time)
+    - Function overloading
+    - Operator overloading
+  * Dynamic (runtime)
+    - Virtual functions
+    - Pure virtual functions
+    - Abstract classes
+
+- Abstraction
+  * Abstract classes
+  * Interfaces
+  * Pure virtual functions
+
+#### 2. C++ Specific
+- Class Fundamentals
+  * Constructors (default, parameterized, copy)
+  * Destructors
+  * Virtual destructors
+  * Construction order
+  * Initialization lists
+
+- Friend Functions/Classes
+  * Friend function declaration
+  * Friend class implementation
+  * Access privileges
+
+- Operator Overloading
+  * Binary operators
+  * Unary operators
+  * Assignment operator
+  * Type conversion operators
+
+- Memory Management
+  * new/delete operators
+  * Placement new
+  * Smart pointers
+  * RAII principle
+
+- Templates
+  * Class templates
+  * Function templates
+  * Template specialization
+  * Parameter packs
+
+#### 3. Python Specific
+- Class Creation
+  * __init__ method
+  * Class attributes vs Instance attributes
+  * Class methods vs Static methods
+
+- Magic Methods
+  * __str__, __repr__
+  * __len__, __iter__
+  * __get__, __set__, __delete__
+  * __call__
+
+- Decorators
+  * @property
+  * @classmethod
+  * @staticmethod
+  * Custom decorators
+  * Function decorators
+  * Class decorators
+
+- Property Access
+  * @property getter
+  * @property.setter
+  * @property.deleter
+  * Managed attributes
+
+#### 4. Advanced Concepts
+- Multiple Inheritance
+  * Diamond problem
+  * MRO (Method Resolution Order)
+  * Virtual inheritance
+
+- Design Patterns
+  * Singleton
+  * Factory
+  * Observer
+  * Strategy
+  * Decorator
+
+- Exception Handling
+  * Try-catch blocks
+  * Custom exceptions
+  * Exception hierarchies
+  * RAII in C++
+
+#### 5. Best Practices
+- SOLID Principles
+  * Single Responsibility
+  * Open-Closed
+  * Liskov Substitution
+  * Interface Segregation
+  * Dependency Inversion
+
+- Clean Code Guidelines
+  * Naming conventions
+  * Method size
+  * Class cohesion
+  * Coupling reduction
+
 ## Essential Practice Points:
 1. Code implementation of data structures
 2. Network protocol analysis

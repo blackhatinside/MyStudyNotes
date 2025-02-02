@@ -450,7 +450,6 @@
   * Access modifiers (public, private, protected)
   * Information hiding
   * Data abstraction
-  * Friend Functions
 
 - Inheritance
   * Single inheritance

@@ -31,7 +31,7 @@ class Car:
 
 my_car = Car()
 my_car.accelerate(20)
-print(my_car.get_speed())  # Output: 20
+print(my_car.get_speed())  # Output: 20'
 ```
 
 ---
@@ -147,6 +147,126 @@ class Bike(Vehicle):
 car = Car()
 print(car.start())  # Output: Car started
 ```
+
+A **friend function** is a concept in C++ that allows a function to access the private and protected members of a class. It is not a member function of the class but is declared as a "friend" inside the class definition. This gives the function special access privileges to the class's private and protected data.
+
+### **Key Points About Friend Functions:**
+1. **Not a Member Function:** A friend function is not a member of the class, but it can access private and protected members of the class.
+2. **Declared Inside the Class:** It is declared inside the class with the `friend` keyword.
+3. **Does Not Belong to the Class Scope:** It is defined outside the class, just like a normal function.
+4. **Can Be a Regular Function or a Member of Another Class:** A friend function can be a standalone function or a member function of another class.
+
+### **Why Use Friend Functions?**
+- They allow external functions to access private or protected data of a class without being a member of the class.
+- Useful for operator overloading or when two classes need to share private data.
+
+### **Topic:**
+Friend functions fall under the topic of **Encapsulation** in Object-Oriented Programming (OOP). While encapsulation is about restricting access to data, friend functions are an exception to this rule, allowing controlled access to private and protected members.
+
+---
+
+### **Syntax:**
+```cpp
+class ClassName {
+private:
+    int privateData;
+
+public:
+    // Declare friend function
+    friend void friendFunction(ClassName obj);
+};
+
+// Define friend function
+void friendFunction(ClassName obj) {
+    // Access private data
+    cout << "Private data: " << obj.privateData << endl;
+}
+```
+
+---
+
+### **Example:**
+```cpp
+#include <iostream>
+using namespace std;
+
+class Box {
+private:
+    int length;
+
+public:
+    Box(int l) : length(l) {}
+
+    // Declare friend function
+    friend void printLength(Box b);
+};
+
+// Define friend function
+void printLength(Box b) {
+    // Access private member
+    cout << "Length of box: " << b.length << endl;
+}
+
+int main() {
+    Box b(10);
+    printLength(b);  // Output: Length of box: 10
+    return 0;
+}
+```
+
+---
+
+### **Key Characteristics:**
+1. **Access to Private/Protected Members:**
+   - A friend function can access private and protected members of the class.
+
+2. **No `this` Pointer:**
+   - Since it is not a member function, it does not have a `this` pointer.
+
+3. **Cannot Inherit Friendship:**
+   - Friendship is not inherited. If a class is derived from a base class, the derived class does not automatically become a friend of the base class's friends.
+
+4. **Not Symmetric:**
+   - If `ClassA` declares `ClassB` as a friend, `ClassA` does not automatically become a friend of `ClassB`.
+
+---
+
+### **Friend Classes:**
+A **friend class** is a class whose member functions can access private and protected members of another class. It is declared using the `friend` keyword.
+
+#### Example:
+```cpp
+class ClassA {
+private:
+    int secret;
+
+public:
+    friend class ClassB;  // Declare ClassB as a friend
+};
+
+class ClassB {
+public:
+    void accessSecret(ClassA& a) {
+        cout << "Accessing secret: " << a.secret << endl;
+    }
+};
+```
+
+---
+
+### **When to Use Friend Functions?**
+- **Operator Overloading:** Friend functions are often used to overload operators for classes, especially when the operator needs to access private data.
+- **Utility Functions:** When a function needs to work with private data of multiple classes.
+- **Breaking Encapsulation (Carefully):** When you need to allow specific external functions to access private data without exposing it to the entire world.
+
+---
+
+### **Common Interview Questions:**
+1. What is a friend function, and why is it used?
+2. Can a friend function access private members of a class?
+3. What is the difference between a friend function and a member function?
+4. Can a friend function be inherited?
+5. What is a friend class, and how is it different from a friend function?
 
 ---
 

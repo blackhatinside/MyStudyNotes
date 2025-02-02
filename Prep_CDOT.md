@@ -175,8 +175,7 @@
   * Shared memory
   * Message passing
   * Message Queues
-
- - Threads and Synchronization
+- Threads and Synchronization
   * Thread vs Process, multithreading.
   * Synchronization mechanisms (mutex, semaphores, monitors).
   * Deadlock (conditions, prevention, avoidance, detection).

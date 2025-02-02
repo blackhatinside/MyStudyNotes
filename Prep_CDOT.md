@@ -7,7 +7,7 @@
 - Implementation techniques
   * Dynamic arrays
   * Multi-dimensional arrays
-  * String manipulation algorithms
+  * String manipulation algorithms (palindromes, anagrams, substring search)
 - Common operations
   * Insertion, deletion, searching
   * Sorting techniques
@@ -16,6 +16,14 @@
 - Space optimization
   * In-place algorithms
   * Memory efficient implementations
+
+#### Stacks & Queues
+- Types
+  * Monotonic Stack
+  * Priority Queue
+- Applications
+  * Infix to Postfix Conversion
+  * Balancing Parenthesis
 
 #### Linked Lists
 - Types and implementations
@@ -26,7 +34,7 @@
   * Insertion (start, end, middle)
   * Deletion (start, end, middle)
   * Reversal
-  * Loop detection
+  * Loop/Cycle detection
   * Merging
 - Applications
   * Memory allocation
@@ -89,6 +97,7 @@
   * Double hashing
 - Load factor analysis
 - Applications
+  * Hashmaps/Hashsets
   * Caching
   * Symbol tables
   * Database indexing
@@ -128,6 +137,7 @@
   * Overlapping subproblems
   * Memoization vs Tabulation
 - Classic problems
+  * Fibonacci
   * 0/1 Knapsack
   * Longest Common Subsequence
   * Matrix Chain Multiplication
@@ -160,10 +170,16 @@
   * SJF
   * Round Robin
   * Priority scheduling
-- Inter-process communication
+- Inter-process communication (IPC)
   * Pipes
   * Shared memory
   * Message passing
+  * Message Queues
+
+ - Threads and Synchronization
+  * Thread vs Process, multithreading.
+  * Synchronization mechanisms (mutex, semaphores, monitors).
+  * Deadlock (conditions, prevention, avoidance, detection).
 
 #### Memory Management
 - Memory hierarchy
@@ -173,7 +189,7 @@
   * Paging
   * Segmentation
 - Virtual memory
-  * Page replacement algorithms
+  * Page replacement algorithms (FIFO, LRU, Optimal)
   * Thrashing
   * Working set model
 - Cache management

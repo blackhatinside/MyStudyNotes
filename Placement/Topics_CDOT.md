@@ -1,0 +1,956 @@
+Key Technical Areas to Focus On (Priority-wise):
+
+1. Data Structures and Algorithms (Day 1)
+- Complete review of fundamental data structures:
+  * Arrays, Strings, Linked Lists
+  * Stacks, Queues, Hash Tables
+  * Trees (Binary, BST, AVL, Red-Black)
+  * Graphs (DFS, BFS, Shortest Paths, MST)
+  * Heaps
+- Algorithm paradigms:
+  * Sorting algorithms (Quick, Merge, Heap)
+  * Searching algorithms (Binary Search, Linear Search)
+  * Dynamic Programming basics
+  * Greedy Algorithms
+  * Divide and Conquer
+- Time and Space Complexity Analysis
+- Problem-solving practice with coding
+
+2. Operating Systems (Day 2 Morning)
+- Process Management:
+  * Process states, scheduling algorithms
+  * Threads and multithreading
+  * Process synchronization (mutex, semaphores)
+  * Deadlocks and prevention
+- Memory Management:
+  * Paging, segmentation
+  * Virtual memory
+  * Page replacement algorithms
+- File Systems:
+  * File allocation methods
+  * Directory structures
+  * File system implementation
+- Linux specific concepts:
+  * Basic commands and shell scripting
+  * Process management in Linux
+  * File permissions and user management
+
+3. Computer Networks (Day 2 Evening)
+- OSI and TCP/IP models in detail
+- Network protocols:
+  * TCP/UDP differences and use cases
+  * IP addressing and subnetting
+  * HTTP/HTTPS
+  * DNS, DHCP
+- Network security basics:
+  * Cryptography fundamentals
+  * SSL/TLS
+  * Basic security protocols
+- Socket Programming concepts
+- Network troubleshooting tools:
+  * Wireshark basics
+  * Basic networking commands
+
+4. Database Management Systems (Day 3 Morning)
+- ACID properties
+- Normalization (1NF to BCNF)
+- SQL queries:
+  * Basic to advanced queries
+  * Joins and their types
+  * Aggregation functions
+  * Indexes and their importance
+- Transaction management:
+  * Concurrency control
+  * Recovery mechanisms
+- NoSQL databases:
+  * Basic concepts
+  * Types (Document, Key-value, Graph)
+  * MongoDB basics
+
+5. Modern Technologies (Day 3 Evening)
+- Cloud Computing:
+  * Basic concepts
+  * Service models (IaaS, PaaS, SaaS)
+  * Basic understanding of AWS/Azure
+- Containerization:
+  * Docker basics
+  * Kubernetes basic concepts
+- DevOps:
+  * CI/CD pipeline understanding
+  * Basic DevOps tools awareness
+
+6. Programming Languages (Day 4 Morning)
+- C++:
+  * OOP concepts
+  * STL containers
+  * Memory management
+  * Exception handling
+- Java:
+  * Core concepts
+  * Collections framework
+  * Multithreading basics
+- Python:
+  * Basic syntax
+  * Libraries (NumPy, Pandas basics)
+  * File handling
+
+7. Software Engineering (Day 4 Evening)
+- SDLC models
+- Design Patterns:
+  * Creational patterns
+  * Structural patterns
+  * Behavioral patterns
+- Microservices architecture:
+  * Basic concepts
+  * Advantages and disadvantages
+- REST API concepts
+- Version control (Git basics)
+
+8. Current Technologies (Day 5 Morning)
+- AI/ML basic concepts
+- 5G technology overview
+- Cybersecurity fundamentals
+- Latest trends in technology
+- CDOT's current projects and contributions
+
+9. Soft Skills Preparation (Day 5 Evening)
+- Review your projects in detail
+- Prepare for behavioral questions
+- Research about CDOT:
+  * Organization history
+  * Major achievements
+  * Current projects
+- Prepare questions to ask interviewers
+
+Important Tips:
+1. Focus on fundamentals rather than advanced topics
+2. Practice coding problems daily
+3. Review your MTech project thoroughly
+4. Prepare 2-3 real-world examples for each concept
+5. Create a small portfolio of coding samples
+6. Read about CDOT's latest developments
+7. Practice explaining technical concepts clearly
+
+Keep handy:
+- Your resume and all project details
+- A small notebook with key points
+- Any certificates or achievements
+- Portfolio of your work (if any)
+
+Remember to:
+- Take short breaks during preparation
+- Get enough sleep before the interview
+- Dress professionally
+- Carry all required documents
+- Reach venue early
+
+This plan covers most aspects mentioned in the JD. Focus more on your strengths while ensuring basic understanding of all topics. Good luck!
+
+
+
+
+# Comprehensive 3-Day CDOT Scientist B (CSE) Interview Preparation Guide
+
+## DAY 1: CORE COMPUTER SCIENCE FUNDAMENTALS
+
+### 1. Data Structures (3 hours)
+#### Arrays & Strings
+- Implementation techniques
+  * Dynamic arrays
+  * Multi-dimensional arrays
+  * String manipulation algorithms (palindromes, anagrams, substring search)
+- Common operations
+  * Insertion, deletion, searching
+  * Sorting techniques
+  * Two-pointer approach
+  * Sliding window
+- Space optimization
+  * In-place algorithms
+  * Memory efficient implementations
+
+#### Stacks & Queues
+- Types
+  * Monotonic Stack
+  * Priority Queue
+- Applications
+  * Infix to Postfix Conversion
+  * Balancing Parenthesis
+
+#### Linked Lists
+- Types and implementations
+  * Singly linked
+  * Doubly linked
+  * Circular linked
+- Operations
+  * Insertion (start, end, middle)
+  * Deletion (start, end, middle)
+  * Reversal
+  * Loop/Cycle detection
+  * Merging
+- Applications
+  * Memory allocation
+  * Hash chaining
+  * Stack/Queue implementation
+
+#### Trees
+- Binary Trees
+  * Complete binary trees
+  * Perfect binary trees
+  * Full binary trees
+- Binary Search Trees
+  * Insertion
+  * Deletion
+  * Searching
+  * Balancing
+- AVL Trees
+  * Rotations
+  * Self-balancing mechanisms
+- Red-Black Trees
+  * Properties
+  * Operations
+- Tree Traversals
+  * Inorder
+  * Preorder
+  * Postorder
+  * Level order
+- Applications
+  * Expression evaluation
+  * Directory structures
+  * Network routing
+
+#### Graphs
+- Representations
+  * Adjacency matrix
+  * Adjacency list
+  * Edge list
+- Traversals
+  * Depth First Search (DFS)
+  * Breadth First Search (BFS)
+  * Topological sort
+- Algorithms
+  * Shortest path (Dijkstra, Bellman-Ford)
+  * Minimum spanning tree (Prim, Kruskal)
+  * Strongly connected components
+  * Cycle detection
+- Applications
+  * Network routing
+  * Social networks
+  * Dependency resolution
+
+#### Hash Tables
+- Hash functions
+  * Division method
+  * Multiplication method
+  * Universal hashing
+- Collision resolution
+  * Chaining
+  * Open addressing
+  * Double hashing
+- Load factor analysis
+- Applications
+  * Hashmaps/Hashsets
+  * Caching
+  * Symbol tables
+  * Database indexing
+
+### 2. Algorithms (3 hours)
+#### Sorting Algorithms
+- Comparison based
+  * QuickSort
+  * MergeSort
+  * HeapSort
+  * Selection Sort
+  * Insertion Sort
+- Non-comparison based
+  * Counting Sort
+  * Radix Sort
+  * Bucket Sort
+- Analysis
+  * Time complexity
+  * Space complexity
+  * Stability
+  * In-place vs out-of-place
+
+#### Searching
+- Binary Search variations
+  * Regular binary search
+  * Lower/upper bound
+  * Modified binary search
+- Pattern Searching
+  * KMP algorithm
+  * Rabin-Karp
+  * Boyer-Moore
+- Text searching algorithms
+
+#### Dynamic Programming
+- Concepts
+  * Optimal substructure
+  * Overlapping subproblems
+  * Memoization vs Tabulation
+- Classic problems
+  * Fibonacci
+  * 0/1 Knapsack
+  * Longest Common Subsequence
+  * Matrix Chain Multiplication
+  * Longest Increasing Subsequence
+  * Edit Distance
+
+#### Greedy Algorithms
+- Concepts
+  * Greedy choice property
+  * Optimal substructure
+- Problems
+  * Activity Selection
+  * Huffman Coding
+  * Fractional Knapsack
+  * Minimum Spanning Trees
+  * Job Scheduling
+
+### 3. Operating Systems (3 hours)
+#### Process Management
+- Process concepts
+  * States
+  * PCB
+  * Context switching
+- Scheduling
+  * Short-term scheduling
+  * Long-term scheduling
+  * Medium-term scheduling
+- Scheduling algorithms
+  * FCFS
+  * SJF
+  * Round Robin
+  * Priority scheduling
+- Inter-process communication (IPC)
+  * Pipes
+  * Shared memory
+  * Message passing
+  * Message Queues
+- Threads and Synchronization
+  * Thread vs Process, multithreading.
+  * Synchronization mechanisms (mutex, semaphores, monitors).
+  * Deadlock (conditions, prevention, avoidance, detection).
+
+#### Memory Management
+- Memory hierarchy
+- Address binding
+- Memory allocation
+  * Contiguous
+  * Paging
+  * Segmentation
+- Virtual memory
+  * Page replacement algorithms (FIFO, LRU, Optimal)
+  * Thrashing
+  * Working set model
+- Cache management
+  * Cache coherence
+  * Cache replacement policies
+
+#### File Systems
+- File concepts
+  * Attributes
+  * Operations
+  * Access methods
+- Directory structure
+  * Single-level
+  * Two-level
+  * Hierarchical
+- Allocation methods
+  * Contiguous
+  * Linked
+  * Indexed
+- Free space management
+
+#### Linux Specific
+- Basic commands
+  * File operations
+  * Process management
+  * Network commands
+- Shell scripting
+  * Variables
+  * Control structures
+  * Functions
+- System calls
+- File permissions
+- Process management
+
+## DAY 2: ADVANCED TOPICS
+
+### 4. Computer Networks (3 hours)
+#### Network Fundamentals
+- OSI Model
+  * Physical layer
+  * Data link layer
+  * Network layer
+  * Transport layer
+  * Session layer
+  * Presentation layer
+  * Application layer
+- TCP/IP Model
+  * Network access layer
+  * Internet layer
+  * Transport layer
+  * Application layer
+
+#### Protocols
+- TCP/UDP
+  * Connection management
+  * Flow control
+  * Congestion control
+  * Error control
+- IP
+  * Addressing
+  * Routing
+  * Fragmentation
+- Application layer protocols
+  * HTTP/HTTPS
+  * FTP
+  * SMTP
+  * DNS
+  * DHCP
+
+#### Network Security
+- Cryptography
+  * Symmetric encryption
+  * Asymmetric encryption
+  * Hash functions
+- Security protocols
+  * SSL/TLS
+  * IPSec
+  * SSH
+- Network security tools
+  * Firewalls
+  * IDS/IPS
+  * VPN
+
+#### Networking Tools
+- Wireshark
+  * Packet capture
+  * Protocol analysis
+  * Filtering
+- tcpdump
+- netstat
+- ping
+- traceroute
+
+### 5. Database Management Systems (3 hours)
+#### RDBMS Concepts
+- ACID properties
+- Normalization
+  * 1NF to BCNF
+  * Decomposition
+- Transaction management
+  * Concurrency control
+  * Recovery
+- Query optimization
+
+#### SQL
+- DDL commands
+- DML commands
+- Complex queries
+  * Joins
+  * Subqueries
+  * Views
+- Indexes
+  * B-tree
+  * Hash indexes
+- Stored procedures
+- Triggers
+
+#### NoSQL Databases
+- Types
+  * Document stores
+  * Key-value stores
+  * Column-family stores
+  * Graph databases
+- MongoDB
+  * CRUD operations
+  * Aggregation
+  * Indexing
+- Redis
+  * Data types
+  * Operations
+  * Use cases
+
+### 6. Modern Technologies (3 hours)
+#### Cloud Computing
+- Service models
+  * IaaS
+  * PaaS
+  * SaaS
+- AWS services
+  * EC2
+  * S3
+  * RDS
+  * Lambda
+- Azure basics
+- Cloud security
+
+#### Containerization
+- Docker
+  * Architecture
+  * Commands
+  * Dockerfile
+  * Networking
+- Container orchestration
+  * Kubernetes architecture
+  * Pods
+  * Services
+  * Deployments
+  * StatefulSets
+
+#### DevOps
+- CI/CD
+  * Jenkins
+  * GitLab CI
+  * GitHub Actions
+- Infrastructure as Code
+  * Terraform
+  * Ansible
+- Monitoring
+  * Prometheus
+  * Grafana
+
+## DAY 3: CDOT SPECIFIC PREPARATION
+
+### 7. Programming Languages (2 hours)
+#### C++
+- STL
+  * Containers
+  * Algorithms
+  * Iterators
+- Memory management
+  * New/Delete
+  * Smart pointers
+- OOPS concepts
+- Templates
+- Exception handling
+
+#### Java
+- Collections framework
+- Multithreading
+- Exception handling
+- JVM architecture
+- Garbage collection
+
+#### Python
+- Data structures
+- File handling
+- Libraries
+  * NumPy
+  * Pandas
+  * Requests
+
+### 8. Software Architecture & Design (2 hours)
+#### Design Patterns
+- Creational patterns
+- Structural patterns
+- Behavioral patterns
+
+#### Microservices
+- Architecture
+- Service discovery
+- API gateway
+- Load balancing
+- Circuit breakers
+
+#### System Design
+- Scalability
+- Reliability
+- Availability
+- Consistency patterns
+- Caching strategies
+
+### 9. CDOT Specific Topics (2 hours)
+#### 5G Technology
+- Architecture
+- Protocol stack
+- Security features
+- Network slicing
+- Edge computing
+
+#### Telecom Protocols
+- SIP
+- Diameter
+- GTP
+- SCTP
+
+#### Current Projects
+- Indigenous developments
+- Research areas
+- Technical achievements
+
+### 10. Interview Preparation (2 hours)
+#### Technical
+- Problem solving practice
+- System design questions
+- Code optimization
+- Debugging approaches
+
+#### Projects
+- MTech thesis
+- Key achievements
+- Technical challenges
+- Solutions implemented
+
+#### Behavioral
+- Leadership examples
+- Team collaboration
+- Conflict resolution
+- Project management
+
+## Important Focus Areas from JD:
+1. 4G/5G protocols and architecture
+2. Cloud and virtualization
+3. Linux systems and networking
+4. Software testing and validation
+5. DevOps and CI/CD
+6. Security implementations
+7. Database management
+8. API development
+
+### OOP Concepts Deep Dive
+
+#### 1. Core OOP Concepts
+- Encapsulation
+  * Access modifiers (public, private, protected)
+  * Information hiding
+  * Data abstraction
+
+- Inheritance
+  * Single inheritance
+  * Multiple inheritance (C++)
+  * Multi-level inheritance
+  * Virtual inheritance
+  * Method overriding
+  * super()/base class calling
+
+- Polymorphism
+  * Static (compile-time)
+    - Function overloading
+    - Operator overloading
+  * Dynamic (runtime)
+    - Virtual functions
+    - Pure virtual functions
+    - Abstract classes
+
+- Abstraction
+  * Abstract classes
+  * Interfaces
+  * Pure virtual functions
+
+#### 2. C++ Specific
+- Class Fundamentals
+  * Constructors (default, parameterized, copy)
+  * Destructors
+  * Virtual destructors
+  * Construction order
+  * Initialization lists
+
+- Friend Functions/Classes
+  * Friend function declaration
+  * Friend class implementation
+  * Access privileges
+
+- Operator Overloading
+  * Binary operators
+  * Unary operators
+  * Assignment operator
+  * Type conversion operators
+
+- Memory Management
+  * new/delete operators
+  * Placement new
+  * Smart pointers
+  * RAII principle
+
+- Templates
+  * Class templates
+  * Function templates
+  * Template specialization
+  * Parameter packs
+
+#### 3. Python Specific
+- Class Creation
+  * __init__ method
+  * Class attributes vs Instance attributes
+  * Class methods vs Static methods
+
+- Magic Methods
+  * __str__, __repr__
+  * __len__, __iter__
+  * __get__, __set__, __delete__
+  * __call__
+
+- Decorators
+  * @property
+  * @classmethod
+  * @staticmethod
+  * Custom decorators
+  * Function decorators
+  * Class decorators
+
+- Property Access
+  * @property getter
+  * @property.setter
+  * @property.deleter
+  * Managed attributes
+
+#### 4. Advanced Concepts
+- Multiple Inheritance
+  * Diamond problem
+  * MRO (Method Resolution Order)
+  * Virtual inheritance
+
+- Design Patterns
+  * Singleton
+  * Factory
+  * Observer
+  * Strategy
+  * Decorator
+
+- Exception Handling
+  * Try-catch blocks
+  * Custom exceptions
+  * Exception hierarchies
+  * RAII in C++
+
+#### 5. Best Practices
+- SOLID Principles
+  * Single Responsibility
+  * Open-Closed
+  * Liskov Substitution
+  * Interface Segregation
+  * Dependency Inversion
+
+- Clean Code Guidelines
+  * Naming conventions
+  * Method size
+  * Class cohesion
+  * Coupling reduction
+
+## Essential Practice Points:
+1. Code implementation of data structures
+2. Network protocol analysis
+3. Linux command practice
+4. Database query optimization
+5. System design problems
+6. Cloud architecture scenarios
+
+Remember to:
+- Review each topic briefly even if familiar
+- Focus more time on weaker areas
+- Practice explaining complex concepts
+- Prepare relevant examples
+- Keep notes handy for quick review
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#*#*#*#*#*#
+
+
+
+
+
+
+
+
+
+
+
+
+
+Below is a **detailed 3-day preparation plan** covering all the importanttopicsy I need to focus on. The plan is divided into **Day 1, Day 2, and Day 3**, with each day focusing on specific subjects and topics.
+
+---
+
+### **Day 1: Core Computer Science Fundamentals**
+This day will focus on **core Computer Science topics** that are essential for any technical interview. These topics are foundational and will help you answer both theoretical and practical questions.
+
+#### **1. Data Structures and Algorithms (DSA)**
+- **Arrays, Strings, and Linked Lists**:
+  - Array manipulation, searching, sorting (Binary Search, Merge Sort, Quick Sort).
+  - String manipulation (palindromes, anagrams, substring search).
+  - Linked List operations (insertion, deletion, reversal, cycle detection).
+  
+- **Stacks and Queues**:
+  - Implementation using arrays and linked lists.
+  - Applications (e.g., balancing parentheses, infix to postfix conversion).
+  
+- **Trees and Graphs**:
+  - Binary Trees, Binary Search Trees (BST), AVL Trees.
+  - Tree traversals (Inorder, Preorder, Postorder, Level Order).
+  - Graph representations (Adjacency Matrix, Adjacency List).
+  - Graph traversals (BFS, DFS), Shortest Path Algorithms (Dijkstra’s, Bellman-Ford).
+  
+- **Hashing**:
+  - Hash functions, collision resolution techniques (chaining, open addressing).
+  - Applications of hashing (e.g., hash maps, hash sets).
+  
+- **Dynamic Programming (DP)**:
+  - Basics of DP (memoization, tabulation).
+  - Classic problems (Fibonacci, Knapsack, Longest Common Subsequence, Matrix Chain Multiplication).
+
+#### **2. Operating Systems (OS)**
+- **Process Management**:
+  - Process states, context switching, process scheduling algorithms (FCFS, SJF, Round Robin).
+  - Inter-process communication (IPC) mechanisms (pipes, shared memory, message queues).
+  
+- **Memory Management**:
+  - Paging, segmentation, virtual memory.
+  - Page replacement algorithms (FIFO, LRU, Optimal).
+  
+- **File Systems**:
+  - File allocation methods (contiguous, linked, indexed).
+  - Disk scheduling algorithms (FCFS, SSTF, SCAN, C-SCAN).
+  
+- **Threads and Synchronization**:
+  - Thread vs Process, multithreading.
+  - Synchronization mechanisms (mutex, semaphores, monitors).
+  - Deadlock (conditions, prevention, avoidance, detection).
+
+#### **3. Database Management Systems (DBMS)**
+- **Relational Database Concepts**:
+  - ACID properties, normalization (1NF, 2NF, 3NF, BCNF).
+  - SQL queries (SELECT, JOIN, GROUP BY, HAVING, subqueries).
+  
+- **Indexing and Hashing**:
+  - B-trees, B+ trees, hash indexing.
+  
+- **Transactions and Concurrency Control**:
+  - Transaction states, serializability, locking protocols.
+  - Concurrency control techniques (2-phase locking, timestamp ordering).
+  
+- **NoSQL Databases**:
+  - Basics of MongoDB, Cassandra, Redis.
+
+#### **4. Computer Networks**
+- **OSI and TCP/IP Models**:
+  - Layers and their functions (Physical, Data Link, Network, Transport, Application).
+  
+- **Network Protocols**:
+  - IP, TCP, UDP, HTTP, FTP, DNS, DHCP.
+  - TCP vs UDP, TCP congestion control (slow start, congestion avoidance).
+  
+- **Routing and Switching**:
+  - Routing algorithms (Dijkstra’s, Bellman-Ford).
+  - Switching techniques (circuit switching, packet switching).
+  
+- **Network Security**:
+  - Basics of firewalls, VPNs, SSL/TLS, encryption (symmetric vs asymmetric).
+
+---
+
+### **Day 2: Programming and Problem Solving**
+This day will focus on **programming skills** and **problem-solving techniques**. You’ll practice coding problems and learn how to approach them systematically.
+
+#### **1. Programming Languages**
+- **C/C++**:
+  - Pointers, dynamic memory allocation, function pointers.
+  - Object-Oriented Programming (OOP) concepts (classes, inheritance, polymorphism).
+  
+- **Python**:
+  - Data structures (lists, tuples, dictionaries, sets).
+  - Libraries (NumPy, Pandas, Matplotlib).
+  - File handling, exception handling.
+  
+- **Java**:
+  - OOP concepts (abstraction, encapsulation, inheritance, polymorphism).
+  - Collections framework (ArrayList, HashMap, HashSet).
+  - Multithreading (Thread class, Runnable interface).
+
+#### **2. Problem-Solving Techniques**
+- **Approach to Problem Solving**:
+  - Understand the problem, break it down, and identify the optimal solution.
+  - Time and space complexity analysis (Big-O notation).
+  
+- **Practice Problems**:
+  - Solve problems from platforms like **LeetCode**, **HackerRank**, or **GeeksforGeeks**.
+  - Focus on **arrays, strings, linked lists, trees, and dynamic programming** problems.
+  
+- **Coding Practice**:
+  - Write code for common algorithms (e.g., sorting, searching, graph traversals).
+  - Practice writing clean, efficient, and bug-free code.
+
+#### **3. System Design Basics**
+- **Scalability and Load Balancing**:
+  - Horizontal vs vertical scaling, load balancers.
+  
+- **Database Design**:
+  - Schema design, indexing, sharding.
+  
+- **Caching**:
+  - Basics of caching (LRU cache, Redis).
+  
+- **Microservices Architecture**:
+  - Basics of microservices, REST APIs, API gateways.
+
+---
+
+### **Day 3: Telecom and Advanced Topics**
+Since C-DOT is a telecom research organization, you need to be prepared for **telecom-related questions** and **advanced topics** in Computer Science.
+
+#### **1. Telecom Basics**
+- **4G/5G Technologies**:
+  - Basics of 4G (LTE) and 5G (NR) networks.
+  - Key differences between 4G and 5G (speed, latency, frequency bands).
+  
+- **RAN (Radio Access Network)**:
+  - Components of RAN (eNB, gNB).
+  - Protocols and interfaces (S1, X2, F1).
+  
+- **Core Network**:
+  - EPC (Evolved Packet Core) in 4G, 5GC (5G Core) in 5G.
+  - Key components (MME, SGW, PGW, AMF, SMF).
+  
+- **O-RAN (Open RAN)**:
+  - Basics of O-RAN architecture and its components.
+  - Importance of O-RAN in 5G networks.
+
+#### **2. Advanced Topics**
+- **Cloud Computing**:
+  - Basics of cloud computing (IaaS, PaaS, SaaS).
+  - Cloud providers (AWS, Azure, GCP).
+  - Containerization (Docker, Kubernetes).
+  
+- **Machine Learning (ML) and Artificial Intelligence (AI)**:
+  - Basics of ML (supervised, unsupervised learning).
+  - Common algorithms (linear regression, decision trees, k-means clustering).
+  - Applications of AI in telecom (network optimization, predictive maintenance).
+  
+- **Cybersecurity**:
+  - Basics of network security (firewalls, VPNs, encryption).
+  - Common attacks (DDoS, phishing, SQL injection).
+  - Security protocols (SSL/TLS, IPsec).
+
+#### **3. Recent Trends in Telecom**
+- **IoT (Internet of Things)**:
+  - Basics of IoT, protocols (MQTT, CoAP).
+  - Applications of IoT in telecom (smart cities, connected vehicles).
+  
+- **Edge Computing**:
+  - Basics of edge computing and its importance in 5G.
+  
+- **Quantum Communication**:
+  - Basics of quantum key distribution (QKD) and its applications in secure communication.
+
+---
+
+### **Conclusion**
+This 3-day plan is designed to cover all the essential topicsfory my C-DOT Scientist B interview.

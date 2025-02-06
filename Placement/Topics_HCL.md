@@ -694,3 +694,94 @@ KEY PROBLEMS TO PRACTICE:
    - Course Schedule
    - Word Ladder
    - Clone Graph
+
+
+#*#*#
+
+
+STUDY PLAN FOR ML ROLE AT HCL
+
+1. CORE PROGRAMMING
+   - Python
+     * Advanced concepts (decorators, generators, context managers)
+     * OOP principles
+     * Memory management
+     * Multithreading/Multiprocessing
+   - Data Structures
+     * Arrays, Linked Lists
+     * Trees, Graphs
+     * Hash Tables
+   - Algorithms
+     * Sorting, Searching
+     * Dynamic Programming
+     * Graph algorithms
+
+2. MATHEMATICS & STATISTICS
+   - Linear Algebra
+     * Matrices, Vectors
+     * Eigenvalues/Eigenvectors
+   - Statistics
+     * Probability distributions
+     * Hypothesis testing
+     * Correlation/Regression
+   - Calculus
+     * Derivatives
+     * Gradient descent
+
+3. MACHINE LEARNING
+   - Fundamentals
+     * Supervised/Unsupervised Learning
+     * Model evaluation metrics
+     * Cross-validation
+   - Algorithms
+     * Linear/Logistic Regression
+     * Decision Trees, Random Forests
+     * Neural Networks basics
+     * Clustering (K-means, Hierarchical)
+   - Tools
+     * NumPy, Pandas
+     * Scikit-learn
+     * TensorFlow/PyTorch basics
+
+4. BACKEND DEVELOPMENT
+   - APIs
+     * REST principles
+     * FastAPI/Flask
+     * API security
+   - Databases
+     * SQL fundamentals
+     * MongoDB basics
+     * Database design
+   - System Design
+     * Scalability
+     * Microservices
+     * Caching strategies
+
+5. DEVOPS & DEPLOYMENT
+   - Linux
+     * Shell scripting
+     * System administration
+   - Version Control
+     * Git workflows
+     * Branching strategies
+   - Docker basics
+   - CI/CD fundamentals
+
+6. PROJECT PORTFOLIO
+   - ML Projects
+     * Classification project
+     * Regression project
+     * Clustering analysis
+   - Backend Projects
+     * RESTful API service
+     * Database integration
+     * Authentication system
+
+WEEKLY SCHEDULE:
+- Week 1-2: Python & DSA
+- Week 3-4: Math & Statistics
+- Week 5-8: ML Fundamentals & Tools
+- Week 9-10: Backend Development
+- Week 11-12: Projects & Practice Interviews
+
+Want me to elaborate on any section or provide specific resources?

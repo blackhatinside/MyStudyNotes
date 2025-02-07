@@ -1,5 +1,5 @@
 PROCESSES AND THREADS
-
+```txt
   Process: Program in execution
   Threads: Lightweight, Faster, Share resources, Single unit of execution
     Threads share: Code section, Data section, Heap memory
@@ -15,7 +15,7 @@ PROCESSES AND THREADS
   
   User level threads: managed by applications, if one blocked then all blocked
   Kernel level threads: managed by OS, if one blocked then others not blocked
-
+```
 
 
 Here are the equivalent Python implementations:

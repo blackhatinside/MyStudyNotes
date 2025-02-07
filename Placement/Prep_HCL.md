@@ -24,6 +24,26 @@ Conditions for Deadlock:
   Circular Wait: Circular chain of processes waiting for resources
 ```
 
+```
+1NF (First Normal Form):
+
+Single value in each cell
+Unique column names
+Each row uniquely identifiable by primary key
+
+2NF (Second Normal Form):
+
+Must be in 1NF
+No partial dependencies (non-key attributes must depend on entire primary key)
+
+3NF (Third Normal Form):
+
+Must be in 2NF
+No transitive dependencies (non-key attributes cannot depend on other non-key attributes)
+```
+
+
+
 
 Here are the equivalent Python implementations:
 

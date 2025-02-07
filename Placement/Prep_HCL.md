@@ -15,6 +15,13 @@ PROCESSES AND THREADS
   
   User level threads: managed by applications, if one blocked then all blocked
   Kernel level threads: managed by OS, if one blocked then others not blocked
+
+Deadlock occurs when two or more threads/processes are waiting indefinitely for resources held by each other.
+Conditions for Deadlock:
+  Mutual Exclusion: Resources can't be shared
+  Hold and Wait: Process holds resources while waiting for others
+  No Preemption: Resources can't be forcibly taken
+  Circular Wait: Circular chain of processes waiting for resources
 ```
 
 

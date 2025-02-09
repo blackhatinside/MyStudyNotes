@@ -62,3 +62,9 @@ git push -u origin master
 
 // to rename a branch from 'main' to 'master'
 git branch -m main master
+
+
+# # # # #
+
+// Shows branches sorted by last commit date
+git branch --sort=-committerdate

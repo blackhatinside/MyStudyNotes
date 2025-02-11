@@ -110,3 +110,27 @@ Design a Call taxi booking application
 
 pykid05@gmail.com
 PyPy3K!dd0
+
+
+
+
+
+Below is an aggregated evaluation of the three offers, taking into account factors such as CTC, growth, job stability, ease of switching, promotions, perks, work–life balance, and the difficulty of the job. (Note that the scores and rankings are based on qualitative assessments and may vary according to personal priorities.)
+
+Estimated Ratings (Out of 5)
+Factor	HCL Software (Full‑Stack SSE)	Convin.ai (Backend Developer)	C‑DOT (Scientist B)
+CTC	5 (20 LPA – top-tier corporate)	5 (20 LPA – competitive startup)	5 (20 LPA – premium for role)
+Growth	3 (Structured, moderate pace)	4.5 (Fast‑paced, high potential)	2 (Steady but slow)
+Job Stability	4 (High – MNC backed)	3 (Moderate – inherent startup risk)	5 (Very high – public sector)
+Switch/Mobility	4 (Strong brand aids switching)	3 (Somewhat flexible, but riskier externally)	2 (Low mobility)
+Promotions	3 (Standard, gradual)	4 (Potentially rapid if growth succeeds)	2 (Slow, bureaucratic)
+Perks	3.5 (Good corporate benefits)	4 (Attractive perks like course reimbursements, travel allowance)	3.5 (Solid public sector benefits)
+Work–Life Balance	3.5 (Moderate to good)	2.5 (Often demanding, startup culture)	5 (Excellent balance)
+Difficulty of Job	3 (Moderate – enterprise-scale challenges)	2 (High – fast-paced, high pressure)	3 (Moderate – research‑oriented)
+(Each factor is scored out of 5; a higher score is better.)
+
+Cumulative Scores
+HCL Software: 5 + 3 + 4 + 4 + 3 + 3.5 + 3.5 + 3 = 29/40
+Convin.ai: 5 + 4.5 + 3 + 3 + 4 + 4 + 2.5 + 2 = 28/40
+C‑DOT: 5 + 2 + 5 + 2 + 2 + 3.5 + 5 + 3 = 27.5/40
+

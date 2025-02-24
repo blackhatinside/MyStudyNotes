@@ -129,6 +129,10 @@ Work–Life Balance	3.5 (Moderate to good)	2.5 (Often demanding, startup culture
 Difficulty of Job	3 (Moderate – enterprise-scale challenges)	2 (High – fast-paced, high pressure)	3 (Moderate – research‑oriented)
 (Each factor is scored out of 5; a higher score is better.)
 
+Cumulative Scores
+HCL Software: 5 + 3 + 4 + 4 + 3 + 3.5 + 3.5 + 3 = 29/40
+Convin.ai: 5 + 4.5 + 3 + 3 + 4 + 4 + 2.5 + 2 = 28/40
+C‑DOT: 5 + 2 + 5 + 2 + 2 + 3.5 + 5 + 3 = 27.5/40
 
 
 
@@ -156,7 +160,10 @@ Difficulty of Job	3 (Moderate – enterprise-scale challenges)	2 (High – fast-
 
 
 
-@/src/  I need a complete implementation of a Multi User (Pub-Sub type) collaborative diagrammatic environment using CRDT (use Array of Maps Shared Type in Yjs (use p_py for python bindings)). There are going to be nodes (JSON) and edges (JSON), and its going to be a 2D plane, nodes can be placed (using [x,y] coordinates stored as a field in the JSON). Node data (JSON) has configurations which can be edited. Multiple peers can edit the same node at the same time (distributed environment). There can be edges (JSON) too across any 2 nodes. Edges are used for connecting nodes. Even Edges can be updated to point to different nodes. Nodes denote parameters, and edges denote boolean operators (either OR or AND). Make a prototype for now to check for Eventual Consistency. I should be able to simulate different pubs subscribing to the same URL and be able to edit the configuration of the json_objects/blocks/parameters and also the configuration of the edges. Also make sure there's no orthogonal conflict (2D plane conflict when multiple people try to drag and replace position of same block at the same time). Also note that I have already run "pip install ypy-websocket" and  "pip install y-py" in the python virtual environment venv which I have setup in this project, so you don't have to install those libraries again for this task. You can use the src folder for this project, create any files you want for the project, edit existing files. Make sure the code doesn't break when it's run. I am also sharing a sample collaborative diagram's code below for your understanding and reference:
+
+
+
+@/src/  I need a complete implementation of a Multi User (Pub-Sub type) collaborative diagrammatic environment using CRDT (use Array of Maps Shared Type in Yjs (use p_py for python bindings)). There are going to be nodes (JSON) and edges (JSON), and its going to be a 2D plane, nodes can be placed (using [x,y] coordinates stored as a field in the JSON). Node data (JSON) has configurations which can be edited. Multiple peers can edit the same node at the same time (distributed environment). There can be edges (JSON) too across any 2 nodes. Edges are used for connecting nodes. Even Edges can be updated to point to different nodes. Nodes denote parameters, and edges denote boolean operators (either OR or AND). Make a prototype for now to check for Eventual Consistency. I should be able to simulate different pubs subscribing to the same URL and be able to edit the configuration of the json_objects/blocks/parameters and also the configuration of the edges. Also make sure there's no orthogonal conflict (2D plane conflict when multiple people try to drag and replace position of same block at the same time). Also note that I have already run "pip install ypy-websocket" and  "pip install y-py" in the python virtual environment venv which I have setup in this project, so you don't have to install those libraries again for this task. You can use the src folder for this project, create any files you want for the project, edit existing files. Make sure the code doesn't break when it's run. Currently there's only a single main.py file with FastAPI implementation. But I need the implementation in Django so replace all the content accordingly. Also make sure when the project is run the user is able to visit an URL and create/update/delete edges and nodes through the help of a GUI or at least something like a Django DRF which makes CRUD easier, this should be possible for multiple users at the same time making the environment truly distributed. Overall, the project should be something similar to Excalidraw or Figma environment with implementation in Python binding of Yjs. If any of these tasks above is already done, then don't change that part of the code, keep adding new features/code. I am also sharing a sample collaborative diagram's code below for your understanding and reference:
 
 
 {
@@ -512,8 +519,4 @@ Difficulty of Job	3 (Moderate – enterprise-scale challenges)	2 (High – fast-
     "updated_at": "1740370752"
 
 }
-Cumulative Scores
-HCL Software: 5 + 3 + 4 + 4 + 3 + 3.5 + 3.5 + 3 = 29/40
-Convin.ai: 5 + 4.5 + 3 + 3 + 4 + 4 + 2.5 + 2 = 28/40
-C‑DOT: 5 + 2 + 5 + 2 + 2 + 3.5 + 5 + 3 = 27.5/40
 

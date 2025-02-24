@@ -716,3 +716,231 @@ C‑DOT: 5 + 2 + 5 + 2 + 2 + 3.5 + 5 + 3 = 27.5/40
 - **Hybrid OT-CRDT** resolves positional conflicts with minimal user disruption.
 - **Awareness API + UndoManager** provides real-time collaboration and revert capabilities.
 - **Django Channels + ypy-websocket** enables scalable WebSocket integration.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Due to technical issues, the search service is temporarily unavailable.)
+
+Here's a minimal working prototype for a collaborative diagram editor with 3 peers using Django + Yjs:
+
+```python
+# diagram/consumers.py
+from channels.generic.websocket import AsyncWebsocketConsumer
+from ypy_websocket.websocket_server import YRoom
+
+class DiagramConsumer(AsyncWebsocketConsumer):
+    rooms = {}
+
+    async def connect(self):
+        self.room_name = "default_room"
+        if self.room_name not in self.rooms:
+            self.rooms[self.room_name] = YRoom()
+        self.room = self.rooms[self.room_name]
+        await self.accept()
+        await self.room.connect(self)
+
+    async def receive(self, text_data):
+        await self.room.receive(text_data, self)
+
+    async def disconnect(self, close_code):
+        await self.room.disconnect(self)
+```
+
+```python
+# diagram/views.py
+from django.shortcuts import render
+
+def editor(request):
+    return render(request, 'diagram/editor.html')
+```
+
+```python
+# diagram/urls.py
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('editor/', views.editor, name='editor'),
+]
+```
+
+```html
+<!-- templates/diagram/editor.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Collaborative Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/y-websocket@1.3.15/bin/y-websocket.js"></script>
+</head>
+<body>
+    <svg id="canvas" width="800" height="600" style="border:1px solid black"></svg>
+    
+    <script>
+        const wsProvider = new yws.WebsocketProvider(
+            'ws://localhost:8000/ws/diagram/',
+            'diagram-room',
+            new Y.Doc()
+        )
+
+        const yDoc = wsProvider.doc
+        const yNodes = yDoc.getMap('nodes')
+        const yEdges = yDoc.getArray('edges')
+
+        // Render loop
+        function render() {
+            const svg = document.getElementById('canvas')
+            svg.innerHTML = ''
+
+            // Render nodes
+            yNodes.forEach((node, id) => {
+                const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
+                circle.setAttribute('cx', node.x)
+                circle.setAttribute('cy', node.y)
+                circle.setAttribute('r', 20)
+                circle.setAttribute('fill', '#2196f3')
+                circle.setAttribute('data-id', id)
+                
+                // Make draggable
+                circle.addEventListener('mousedown', startDrag)
+                svg.appendChild(circle)
+            })
+
+            // Render edges
+            yEdges.forEach(edge => {
+                const sourceNode = yNodes.get(edge.source)
+                const targetNode = yNodes.get(edge.target)
+                
+                const line = document.createElementNS("http://www.w3.org/2000/svg", "line")
+                line.setAttribute('x1', sourceNode.x)
+                line.setAttribute('y1', sourceNode.y)
+                line.setAttribute('x2', targetNode.x)
+                line.setAttribute('y2', targetNode.y)
+                line.setAttribute('stroke', 'black')
+                svg.appendChild(line)
+            })
+        }
+
+        // Drag handling
+        let draggedNode = null
+        function startDrag(e) {
+            draggedNode = e.target
+            document.addEventListener('mousemove', drag)
+            document.addEventListener('mouseup', stopDrag)
+        }
+
+        function drag(e) {
+            const rect = document.getElementById('canvas').getBoundingClientRect()
+            const x = e.clientX - rect.left
+            const y = e.clientY - rect.top
+            
+            yNodes.set(draggedNode.getAttribute('data-id'), {
+                x: x,
+                y: y,
+                config: {}
+            })
+        }
+
+        function stopDrag() {
+            document.removeEventListener('mousemove', drag)
+            draggedNode = null
+        }
+
+        // Add node button
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'n') {
+                const nodeId = Date.now().toString()
+                yNodes.set(nodeId, {x: 100, y: 100, config: {}})
+            }
+        })
+
+        // Update render on changes
+        yNodes.observe(render)
+        yEdges.observe(render)
+        setInterval(render, 100)
+    </script>
+</body>
+</html>
+```
+
+```python
+# project/asgi.py
+import os
+from django.core.asgi import get_asgi_application
+from channels.routing import ProtocolTypeRouter, URLRouter
+from diagram import routing
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
+
+application = ProtocolTypeRouter({
+    "http": get_asgi_application(),
+    "websocket": URLRouter(
+        routing.websocket_urlpatterns
+    ),
+})
+```
+
+```python
+# project/routing.py
+from django.urls import re_path
+from diagram.consumers import DiagramConsumer
+
+websocket_urlpatterns = [
+    re_path(r'ws/diagram/$', DiagramConsumer.as_asgi()),
+]
+```
+
+To run:
+
+1. Install requirements:
+```bash
+pip install django channels ypy-websocket y-py
+```
+
+2. Run migrations:
+```bash
+python manage.py migrate
+```
+
+3. Start server:
+```bash
+python manage.py runserver
+```
+
+Features:
+1. Open 3 browser tabs at http://localhost:8000/editor/
+2. Press 'n' to create new nodes
+3. Drag nodes around - positions sync across all peers
+4. Automatic conflict resolution using Yjs CRDTs
+5. Basic edge rendering between nodes (connect nodes by ID)
+
+To test eventual consistency:
+1. Open 3 tabs
+2. In tab 1: Create 3 nodes
+3. In tab 2: Move all nodes while offline
+4. In tab 3: Create 2 new nodes while offline
+5. Reconnect all tabs - state should converge automatically
+
+The system uses:
+- Y.Map for node positions (LWW conflict resolution)
+- Y.Array for edges
+- WebsocketProvider for network synchronization
+- Basic SVG rendering for visualization
+
+This is a minimal prototype that can be extended with:
+1. Edge creation UI
+2. Node configuration forms
+3. Undo/redo using Y.UndoManager
+4. Awareness indicators
+5. Snapshot system

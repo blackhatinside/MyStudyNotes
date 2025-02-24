@@ -520,3 +520,199 @@ C‑DOT: 5 + 2 + 5 + 2 + 2 + 3.5 + 5 + 3 = 27.5/40
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Due to technical issues, the search service is temporarily unavailable.)
+
+**In-Depth Analysis Report**
+
+---
+
+### 1. **Shared Types in Yjs for the Use Case**
+
+#### **Y.Map**
+- **Role**: Ideal for storing individual **node/edge configurations** (e.g., `{ id: "node1", x: 100, y: 200, type: "parameter" }`).
+- **Conflict Resolution**: Uses Last-Write-Wins (LWW) for scalar values (e.g., node positions), but nested structures require careful handling.
+- **Implementation**:
+  ```python
+  from y_py import YDoc
+
+  doc = YDoc()
+  nodes = doc.get_map("nodes")
+  # Add a node
+  with doc.begin_transaction() as txn:
+      nodes.set(txn, "node1", {"x": 100, "y": 200, "config": {"color": "red"}})
+  ```
+
+#### **Y.Array**
+- **Role**: Store ordered collections of nodes/edges (e.g., `[node1, node2, edge1]`).
+- **Conflict Resolution**: Sequence CRDT ensures order consistency across peers.
+- **Implementation**:
+  ```python
+  edges = doc.get_array("edges")
+  with doc.begin_transaction() as txn:
+      edges.append(txn, {"source": "node1", "target": "node2", "type": "AND"})
+  ```
+
+#### **Y.Text**
+- **Role**: Optional for text-heavy node configurations (e.g., labels).
+- **Implementation**:
+  ```python
+  text = doc.get_text("node1_label")
+  with doc.begin_transaction() as txn:
+      text.insert(txn, 0, "Parameter 1")
+  ```
+
+#### **Y.XmlFragment/Y.XmlElement**
+- **Not Required**: The use case focuses on JSON-based nodes/edges, making XML types redundant.
+
+---
+
+### 2. **Retaining Active States of Objects**
+
+#### **Awareness API**
+- **Mechanism**: Track active users editing nodes/edges using Yjs's built-in awareness.
+- **Implementation**:
+  ```python
+  awareness = doc.get_awareness()
+
+  # Update client's active state
+  awareness.set_local_state({"user": "peer1", "selected_node": "node1"})
+
+  # Subscribe to changes
+  def awareness_callback(changes):
+      print("Active users:", awareness.get_states())
+  awareness.observe(awareness_callback)
+  ```
+
+#### **UI Integration**
+- **Visual Cursors**: Render colored cursors/overlays in the GUI using awareness data.
+- **Locking**: Prevent concurrent edits by marking nodes/edges as `locked` in their Y.Map entries.
+
+---
+
+### 3. **Backup, Revert, and Undo Mechanisms**
+
+#### **Snapshots (Backup)**
+- **Mechanism**: Use `Y.Snapshot` to capture document states at intervals.
+- **Implementation**:
+  ```python
+  from y_py import Snapshot
+
+  snapshot = Snapshot.create_snapshot(doc)
+  # Restore from snapshot
+  Snapshot.restore_snapshot(doc, snapshot)
+  ```
+
+#### **UndoManager (Revert)**
+- **Mechanism**: Track changes with `Y.UndoManager` for granular undo/redo.
+- **Implementation**:
+  ```python
+  undo_manager = UndoManager(nodes, tracked_origins={"user1"})
+
+  # Undo last change
+  undo_manager.undo()
+
+  # Capture specific transactions
+  def on_update(event):
+      if event.origin == "user_drag":
+          undo_manager.add_to_stack(event)
+  nodes.observe(on_update)
+  ```
+
+#### **Versioned Parent States**
+- **Branching**: Use `Yjs` snapshots to create version trees. Store snapshots in Django models:
+  ```python
+  class DiagramVersion(models.Model):
+      diagram = models.ForeignKey(Diagram, on_delete=models.CASCADE)
+      snapshot = models.BinaryField()  # Serialized Y.Snapshot
+      timestamp = models.DateTimeField(auto_now_add=True)
+  ```
+
+---
+
+### **Conflict Resolution for 2D Positions**
+
+#### **Custom Merge Strategy**
+- **Problem**: LWW causes abrupt jumps if two users drag the same node.
+- **Solution**: Use **Operational Transformation (OT)** for position updates:
+  ```python
+  def transform_position(change, existing):
+      # Prioritize newer updates but average positions during overlaps
+      if existing["timestamp"] > change["timestamp"]:
+          return existing
+      else:
+          return {
+              "x": (existing["x"] + change["x"]) / 2,
+              "y": (existing["y"] + change["y"]) / 2,
+              "timestamp": max(existing["timestamp"], change["timestamp"])
+          }
+  ```
+
+#### **Hybrid CRDT-OT Workflow**
+1. **CRDT Baseline**: Use Y.Map for node storage.
+2. **OT Layer**: Intercept position updates and apply transformations before committing to Yjs.
+
+---
+
+### **Django Integration**
+
+#### **WebSocket Setup**
+- Use **Django Channels** with `ypy-websocket`:
+  ```python
+  # consumers.py
+  from ypy_websocket.websocket_server import YRoom
+
+  class DiagramConsumer(AsyncWebsocketConsumer):
+      async def connect(self):
+          self.room = YRoom("diagram1")
+          await self.accept()
+
+      async def receive(self, text_data):
+          await self.room.receive(text_data)
+  ```
+
+#### **DRF Endpoints**
+- Expose CRUD for snapshots/versions:
+  ```python
+  # views.py
+  class DiagramVersionViewSet(viewsets.ModelViewSet):
+      queryset = DiagramVersion.objects.all()
+      serializer_class = DiagramVersionSerializer
+  ```
+
+---
+
+### **Simulation & Testing**
+
+1. **Multi-Client Drag Test**:
+   - Use Selenium or Playwright to simulate concurrent drags.
+   - Verify final positions are consistent across clients.
+
+2. **Concurrent Edges Test**:
+   - Two users update an edge’s source/target simultaneously.
+   - Ensure edge endpoints resolve without splits.
+
+---
+
+### **Conclusion**
+
+- **CRDTs (Y.Map/Y.Array)** handle most use cases (nodes/edges, configurations).
+- **Hybrid OT-CRDT** resolves positional conflicts with minimal user disruption.
+- **Awareness API + UndoManager** provides real-time collaboration and revert capabilities.
+- **Django Channels + ypy-websocket** enables scalable WebSocket integration.

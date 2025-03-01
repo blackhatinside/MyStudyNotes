@@ -1,3 +1,5 @@
+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
+
 testschema.testtable
 
 Hierarchical and recursive queries in SQL

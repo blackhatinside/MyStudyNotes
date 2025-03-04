@@ -18,12 +18,14 @@ mkdir server
 cd server
 npm init -y
 npm install express ws y-websocket
+node index.js
 ```
 
 ``` client-side setup
 npx create-react-app client
 cd client
 npm install yjs y-websocket y-indexeddb
+npm start
 ```
 
 

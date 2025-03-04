@@ -8,3 +8,23 @@ npm i <packagename>
     npm i y-websocket
     npm i y-indexeddb
     npm i y-protocols
+
+
+Basic Client-Server Architecture Setup (using React):
+Note: It is not always necessary that the client and server be using the same techstack or libraries, so there's need to keep seperate node_modules for both
+
+``` server-side setup
+mkdir server
+cd server
+npm init -y
+npm install express ws y-websocket
+```
+
+``` client-side setup
+npx create-react-app client
+cd client
+npm install yjs y-websocket
+```
+
+
+

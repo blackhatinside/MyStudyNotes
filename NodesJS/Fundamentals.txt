@@ -1,1 +1,9 @@
+npm - NodeJS package manager for Javascript
 
+# to install an npm package
+npm i <packagename>
+
+(eg)
+    npm i reactflow
+    npm i y-websocket
+    npm i y-indexeddb

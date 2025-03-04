@@ -7,3 +7,4 @@ npm i <packagename>
     npm i reactflow
     npm i y-websocket
     npm i y-indexeddb
+    npm i y-protocols

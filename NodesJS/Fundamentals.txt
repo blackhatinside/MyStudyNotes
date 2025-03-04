@@ -23,7 +23,7 @@ npm install express ws y-websocket
 ``` client-side setup
 npx create-react-app client
 cd client
-npm install yjs y-websocket
+npm install yjs y-websocket y-indexeddb
 ```
 
 

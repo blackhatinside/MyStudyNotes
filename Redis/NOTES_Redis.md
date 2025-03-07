@@ -8,11 +8,6 @@ Check Redis version
 redis-server --version
 ```
 
-Check status of Redis
-```bash
-systemctl status redis
-```
-
 Test the connection to Redis using redis-cli
 ```bash
 redis-cli ping

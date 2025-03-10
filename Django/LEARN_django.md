@@ -17,13 +17,13 @@ for every newly added app, add the app to the list of installed apps in the proj
 ## MIGRATIONS:
 * Can be considered as a VCS for our Database Schema;
 
-- ```makemigrations``` command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model;
+    - ```makemigrations``` command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model;
 
-- ```migrate``` command is responsible for applying and unapplying migrations;
+    - ```migrate``` command is responsible for applying and unapplying migrations;
 
-- ```showmigrations``` command lists a project's migrations and their status;
+    - ```showmigrations``` command lists a project's migrations and their status;
 
-- ```sqlmigrate``` command displays the SQL commands for a migration;
+    - ```sqlmigrate``` command displays the SQL commands for a migration;
 
 ## CELERY:
 

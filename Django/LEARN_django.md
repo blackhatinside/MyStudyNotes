@@ -16,6 +16,11 @@
     - instance has primary key: django performs UPDATE operation
     - instance doesn't have primary key: django performs CREATE operation 
 
+* Django uses request and response objects to pass state through the system.
+    - When a page is requested django creates an HTTPRequest object that contains metadata about the request
+    - Each view is reponsible for returning an HTTPResponse object
+    
+
 ## MIGRATIONS:
 * Can be considered as a VCS for our Database Schema;
 

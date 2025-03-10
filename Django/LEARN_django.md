@@ -8,9 +8,9 @@
 * When adding a new app to a project:
     - add the app to the installed_apps in the project settings file
     - and for every view:
-        - write the function for view
-        - map the view to a domain url
-    - add the list of new urls of this app to the project's urls file (When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app)
+        - write the function for view (urls.py)
+        - map the view to a domain url (views.py)
+    - add the list of new urls of this app to the project's urls file (```path('', include('app_name.urls'))```) (When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app)
 
     - ```<model_instance_name>.save()``` when save() is called, Django checks if the instance has a primary key;
         - instance has primary key: django performs UPDATE operation

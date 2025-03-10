@@ -1,18 +1,22 @@
 # WHAT I LEARNT:
 
 ## DJANGO PROJECT:
-A django project is modular in structure to encourage reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
+- A django project is modular in structure to encourage reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
 
 Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
 
 When adding a new app to a project, add the app to the installed_apps in the project settings, and next write the function for view, and then map the view to a domain url, and then add the list of new urls of this app to the project's url list; When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app;
 
 ## MIGRATIONS:
-Can be considered as a VCS for our Database Schema
+- Can be considered as a VCS for our Database Schema;
 
 ```makemigrations``` command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model;
 
 ```migrate``` command is responsible for applying and unapplying migrations;
+
+```showmigrations``` command lists a project's migrations and their status;
+
+```sqlmigrate``` command displays the SQL commands for a migration;
 
 for every newly added app, add the app to the list of installed apps in the project settings file; include the app's urls to the project's urls file; define the views and map the urls to those views for the new app;
 

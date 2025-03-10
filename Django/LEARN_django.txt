@@ -85,7 +85,7 @@ python3 manage.py shell_plus --print-sql
 
 
 WHAT I LEARNT:
-
+```
 A django project is modular in structure to encourage reuse; Each module is called an app and has its own set of files; Django project has a subfolder with same name as the project and it contains the config files;
 
 Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
@@ -101,3 +101,4 @@ so basically the exchange, binding rules, different queues are all part of messa
 makemigrations command is run to generate SQL commands for the tables in the database; this command is run when changes are done to the model;
 
 for every newly added app, add the app to the list of installed apps in the project settings file; include the app's urls to the project's urls file; define the views and map the urls to those views for the new app;
+```

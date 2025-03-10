@@ -101,3 +101,20 @@
     - 500: Internal Server Error
     - 502: Bad Gateway
     - 503: Service Unavailable
+
+### Class based views
+* CRUD operations for APIs are implemented in REST framework's mixin classes
+     - ListModelMixin
+        ```.list()``` for GET
+     
+     - CreateModelMixin
+        ```.create()``` for POST
+
+* REST framework provides a set of mixed-in generic views
+    - ListCreateAPIView
+        - ListModelMixin
+        - CreateModelMixin
+    - RetrieveUpdateDestroyAPIView
+        - RetrieveModelMixin
+        - UpdateModelMixin
+        - DestroyModelMixin

@@ -5,7 +5,14 @@
 
 Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
 
-When adding a new app to a project, add the app to the installed_apps in the project settings, and next write the function for view, and then map the view to a domain url, and then add the list of new urls of this app to the project's url list; When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app;
+When adding a new app to a project, add the app to the installed_apps in the project settings; And for every view:
+    - write the function for view
+    - map the view to a domain url
+    - add the list of new urls of this app to the project's url list
+
+When renaming a project, make sure to update the url lists, and also the app name in apps.py of that app;
+
+for every newly added app, add the app to the list of installed apps in the project settings file; include the app's urls to the project's urls file; define the views and map the urls to those views for the new app;
 
 ## MIGRATIONS:
 - Can be considered as a VCS for our Database Schema;
@@ -17,8 +24,6 @@ When adding a new app to a project, add the app to the installed_apps in the pro
 ```showmigrations``` command lists a project's migrations and their status;
 
 ```sqlmigrate``` command displays the SQL commands for a migration;
-
-for every newly added app, add the app to the list of installed apps in the project settings file; include the app's urls to the project's urls file; define the views and map the urls to those views for the new app;
 
 ## CELERY:
 

@@ -80,3 +80,24 @@
             name = request.data.get('name')
             return Response({'message': f'Hello, {name}'}, status=status.HTTP_200_OK)
     ```
+
+* HTTP codes for CRUD operations:
+
+    **2xx Success**
+    - 200: OK (GET, PUT)
+    - 201: Created (POST)
+    - 204: No Content (DELETE)
+
+    **4xx Client Errors**
+    - 400: Bad Request
+    - 401: Unauthorized
+    - 403: Forbidden
+    - 404: Not Found
+    - 405: Method Not Allowed
+    - 409: Conflict
+    - 422: Unprocessable Entity
+
+    **5xx Server Errors**
+    - 500: Internal Server Error
+    - 502: Bad Gateway
+    - 503: Service Unavailable

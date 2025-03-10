@@ -40,3 +40,9 @@
     - Serialization: Complex Model Instances -----> Python datatypes -----> JSON/XML
 
     - Deserialization: Stream -----> Python datatypes -----> Complex Model Instances
+
+### Requests and Responses
+* DRF request object extends HTTPRequest
+    - 
+
+* DRF response object extends HTTPResponse

@@ -5,7 +5,7 @@
 
 Django follows Model View Template architecture; User requrested URLs are mapped to Views (through urls.py) and Views (stored in views.py in the form of functions) take the data from Model(usually DB, ORM type, stored in models.py) and then sends it to the Template (HTML) and also applies rendering logic to render django tags into the HTML code and finally the page is loaded to the user;
 
-When adding a new app to a project, add the app to the installed_apps in the project settings; And for every view:
+* When adding a new app to a project, add the app to the installed_apps in the project settings; And for every view:
     - write the function for view
     - map the view to a domain url
     - add the list of new urls of this app to the project's url list

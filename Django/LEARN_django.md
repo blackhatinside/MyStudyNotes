@@ -16,11 +16,6 @@
     - instance has primary key: django performs UPDATE operation
     - instance doesn't have primary key: django performs CREATE operation 
 
-* Django uses request and response objects to pass state through the system.
-    - When a page is requested django creates an HTTPRequest object that contains metadata about the request
-    - Each view is reponsible for returning an HTTPResponse object
-    
-
 ## MIGRATIONS:
 * Can be considered as a VCS for our Database Schema;
 
@@ -37,12 +32,51 @@
 ### Serializers:
 * converting complex Django model instances into Python datatypes that can be easily rendered into JSON/XML types
 
-    - Serialization: Complex Model Instances -----> Python datatypes -----> JSON/XML
+    - **Serialization**: Complex Model Instances -----> Python datatypes -----> JSON/XML
 
-    - Deserialization: Stream -----> Python datatypes -----> Complex Model Instances
+    - **Deserialization**: Stream -----> Python datatypes -----> Complex Model Instances
 
 ### Requests and Responses
 * DRF request object extends HTTPRequest
-    - 
 
 * DRF response object extends HTTPResponse
+
+* request.POST (django) vs request.data (DRF)
+    * request.POST - can be used only for form submissions
+
+    ``` python
+    def my_view(request):
+        if request.method == 'POST':
+            name = request.POST['name']
+            email = request.POST['email']
+            # Process form data here
+    ```
+
+    ``` py
+    from django.http import HttpRequest, HttpResponse
+    def my_view(request: HttpRequest) -> HttpResponse:
+        if request.method == 'POST':
+            name = request.POST.get('name')
+            return HttpResponse(f'Hello, {name}')
+    ```
+
+    * request.data - can be used for handling any type of request data (POST, PUT, PATCH, GET); supports parsing both JSON payloads and form data 
+
+    ``` python
+    def my_api_view(request):
+        if request.method == 'POST':
+            name = request.data['name']
+            email = request.data['email']
+            # Process data (JSON or form data) here
+    ```
+
+    ``` py
+    from rest_framework.views import APIView
+    from rest_framework.response import Response
+    from rest_framework import status
+
+    class MyAPIView(APIView):
+        def post(self, request):
+            name = request.data.get('name')
+            return Response({'message': f'Hello, {name}'}, status=status.HTTP_200_OK)
+    ```

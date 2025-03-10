@@ -32,8 +32,9 @@
 ### Serializers:
 converting complex Django model instances into Python datatypes that can be easily rendered into JSON/XML types
 
-Serializaation: Complex Model Instances -----> Python datatypes -----> JSON/XML
-Deserialization: Stream -----> Python datatypes -----> Complex Model Instances
+- Serializaation: Complex Model Instances -----> Python datatypes -----> JSON/XML
+
+- Deserialization: Stream -----> Python datatypes -----> Complex Model Instances
 
 ## CELERY:
 Segregation and temporary holding is done by message queue, a part of the message broker; and exchanges in message broker use binding rules for segregation of tasks into different storage queues. Task queues are basically { message queues + execution logic, scheduling and management }

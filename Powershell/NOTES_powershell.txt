@@ -1,0 +1,5 @@
+# find all processes using port 1234
+netstat -ano | findstr :1234
+
+# kill process with process ID
+Stop-Process -Id 21792 -Force

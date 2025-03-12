@@ -16,6 +16,16 @@
     - instance has primary key: django performs UPDATE operation
     - instance doesn't have primary key: django performs CREATE operation 
 
+* In Django, a class meta, or metaclass, is a class that defines metadata for a model class. This metadata can control various aspects of the model, such as the database table name, ordering, and unique constraints.
+  
+Some examples of metaclass options 
+    - Abstract: Makes the model an abstract base class
+    - App_label: Declares which app the model belongs to
+    - Verbose_name: A human-readable name for your model
+    - Default_related_name: Specifies the default name to use for the reverse relation from a related model
+    - Ordering: Specifies how to order query results
+    - Unique constraints: Specifies unique constraints for the model
+
 ## MIGRATIONS:
 * Can be considered as a VCS for our Database Schema;
 

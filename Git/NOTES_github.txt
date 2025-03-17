@@ -68,3 +68,9 @@ git branch -m main master
 
 // Shows branches sorted by last commit date
 git branch --sort=-committerdate
+
+
+# # # # #
+
+# to show current active git branch
+git rev-parse --abbrev-ref HEAD

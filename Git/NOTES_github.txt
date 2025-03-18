@@ -74,3 +74,11 @@ git branch --sort=-committerdate
 
 # to show current active git branch
 git rev-parse --abbrev-ref HEAD
+
+
+# # # # # 
+
+// to move codebase state to a commit 
+git reset --hard  778aee1f0e48629934e85b4d4c0beebbc2903b2c      // run locally
+git push --force                                                // run locally
+git reset --hard  778aee1f0e48629934e85b4d4c0beebbc2903b2c      // run remote

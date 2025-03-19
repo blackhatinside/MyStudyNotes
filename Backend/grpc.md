@@ -1,4 +1,4 @@
-prerequisites:
+![image](https://github.com/user-attachments/assets/0c924f39-02c7-46f0-8e42-bf9ca3b82f2c)prerequisites:
   - protoc-30.1-win64.zip (add to PATH - C:\Users\AdithyaES\Downloads\protoc-30.1-win64\bin)
   - 
 ``` bash
@@ -21,10 +21,11 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 ``` bash
 (MyVenv) C:\AdithyaWork\CONVIN\CONVIN_PROTO\convin_proto>pip install grpcio grpcio-tools
-(MyVenv) C:\AdithyaWork\CONVIN\CONVIN_PROTO\convin_proto>python -m grpc_tools.protoc -I . --python_out=convin/rule_engine/ --grpc_python_out=convin/rule_engine/ convin/rule_engine/v1/rule_engine_resources.proto
+(MyVenv) C:\AdithyaWork\CONVIN\CONVIN_PROTO\convin_proto>docker run -v C:/AdithyaWork/CONVIN/CONVIN_PROTO/convin_proto:/defs namely/protoc-all -i convin/rule_engine/v1 -f rule_engine.proto -f rule_engine_resources.proto -l python
 ```
-after running this, 2 protos files will be generated ![Screenshot 2025-03-19 164529](https://github.com/user-attachments/assets/0a7d40e1-d0e4-45e3-a42a-83b07f98d578)
+after running this, 4 protos files will be generated ![Screenshot 2025-03-19 180846](https://github.com/user-attachments/assets/4d8d68a0-d762-4464-b7e1-fa15b16b0824)
 
-replace these files in the services_proto repository ![Screenshot 2025-03-19 164807](https://github.com/user-attachments/assets/48a46b26-966a-4d21-a23c-fbc27755b89f)
+replace these files in the services_proto repository ![Screenshot 2025-03-19 180929](https://github.com/user-attachments/assets/f056f1e4-ad6d-4c6a-88ba-d91625a7d207)
 
+  
 

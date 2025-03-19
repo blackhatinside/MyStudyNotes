@@ -25,5 +25,6 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 after running this, 2 protos files will be generated ![Screenshot 2025-03-19 164529](https://github.com/user-attachments/assets/0a7d40e1-d0e4-45e3-a42a-83b07f98d578)
 
-replace these files in the services_proto repository ![Uploading Screenshot 2025-03-19 164807.png…]()
+replace these files in the services_proto repository ![Screenshot 2025-03-19 164807](https://github.com/user-attachments/assets/48a46b26-966a-4d21-a23c-fbc27755b89f)
+
 

@@ -3,3 +3,6 @@ netstat -ano | findstr :1234
 
 # kill process with process ID
 Stop-Process -Id 21792 -Force
+
+# to install 'make' command
+choco install make

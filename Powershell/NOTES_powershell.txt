@@ -6,3 +6,6 @@ Stop-Process -Id 21792 -Force
 
 # to install 'make' command
 choco install make
+
+# 
+$env:NODE_OPTIONS="--max-old-space-size=6096"

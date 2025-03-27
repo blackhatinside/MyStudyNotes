@@ -167,3 +167,348 @@ const App = () => {
 };
 
 export default App;
+
+
+#*#*#
+
+
+
+
+
+
+import json
+from django.core.cache import cache
+from loguru import logger
+from convin.router import get_current_subdomain
+from redis.commands.json.path import Path
+from redis.commands.search.field import TextField, NumericField, TagField
+from redis.commands.search.indexDefinition import IndexDefinition, IndexType
+from redis.commands.search.query import NumericFilter, Query
+from django.core.serializers.json import DjangoJSONEncoder
+import time
+
+
+USER_CACHE_TTL = 60 * 60 * 2  # 2 hours in seconds
+
+def get_key(key, prefix=None):
+    if prefix:
+        return f"{get_current_subdomain()}:{prefix}:{key}"
+    else:
+        return f"{get_current_subdomain()}:{key}"
+
+def get_user_cache_key(user_id):
+    return f"user_data_{user_id}"
+
+def cache_user_data(user_id, user_data):
+    try:
+        cache_key = get_user_cache_key(user_id)
+        cache.set(cache_key, user_data, timeout=USER_CACHE_TTL)
+        logger.debug(f"Cached user data for user_id: {user_id}")
+        return True
+    except Exception as e:
+        logger.error(f"Error caching user data: {e}")
+        return False
+
+def get_cached_user_data(user_id):
+    cache_key = get_user_cache_key(user_id)
+    cached_data = cache.get(cache_key)
+    return cached_data
+
+def invalidate_user_cache(user_id):
+    cache_key = get_user_cache_key(user_id)
+    cache.delete(cache_key)
+
+def invalidate_all_user_cache():
+    cache_keys = cache.keys("user_data_*")
+    if cache_keys:
+        cache.delete_many(cache_keys)
+    logger.debug("Cleared all user cache")
+
+
+
+
+
+def get_users_list_cache_key(filter_params):
+    filter_str = json.dumps(filter_params, sort_keys=True)
+    filter_hash = hash(filter_str)
+    return f"users_list_{filter_hash}"
+
+def cache_users_list(filter_params, users_data):
+    try:
+        cache_key = get_users_list_cache_key(filter_params)
+        cache.set(cache_key, users_data, timeout=USER_CACHE_TTL)
+        logger.debug(f"Cached users list for filters: {filter_params}")
+        return True
+    except Exception as e:
+        logger.error(f"Error caching users list: {e}")
+        return False
+
+def get_cached_users_list(filter_params):
+    cache_key = get_users_list_cache_key(filter_params)
+    cached_data = cache.get(cache_key)
+    return cached_data
+
+def invalidate_users_list_cache():
+    cache_keys = cache.keys("users_list_*")
+    if cache_keys:
+        cache.delete_many(cache_keys)
+
+import redis
+from django.conf import settings
+from django.core.cache import caches
+
+# Initialize Redis connection
+# redis_client = redis.Redis(
+#     host=settings.REDIS_HOST,
+#     port=settings.REDIS_PORT,
+#     db=settings.REDIS_DB
+# ) # 68.233.102.64:6379
+
+# rc = redis.Redis(
+#     host='127.0.0.1',
+#     port=6379,
+#     db=0
+# )
+
+rc = caches['default']
+rc = rc.client.get_client()
+
+def get_person_cache_key(person_id):  
+    return f"{get_current_subdomain()}:Person:{person_id}"
+
+def set_person_cache_data(person_id, person_data):
+    """
+    Cache person data using Redis JSON.
+    """
+    key = get_person_cache_key(person_id)
+    try:
+        # Convert to JSON string then parse to ensure proper serialization
+        if isinstance(person_data, dict):
+            # Convert datetime objects to strings
+            json_data = json.loads(json.dumps(person_data, cls=DjangoJSONEncoder))
+            rc.json().set(key, Path.root_path(), json_data)
+        else:
+            # Assume it's already a JSON string
+            json_data = json.loads(person_data)
+            rc.json().set(key, Path.root_path(), json_data)
+        
+        rc.expire(key, USER_CACHE_TTL)
+        logger.debug(f"Cached person data as JSON for person_id: {person_id}")
+        return True
+    except Exception as e:
+        logger.error(f"Error caching person data as JSON: {e}")
+        return False
+
+def get_person_cache_data(person_id):
+    """
+    Get cached person data using Redis JSON.
+    """
+    key = get_person_cache_key(person_id)
+    try:
+        if rc.exists(key):
+            person_data = rc.json().get(key)
+            return person_data
+        else:
+            return None
+    except Exception as e:
+        logger.error(f"Error retrieving person JSON data: {e}")
+        return None
+
+def invalidate_person_cache_data(person_id):
+    key = get_person_cache_key(person_id)
+    rc.delete(key)
+    logger.debug(f"Invalidated person data for person_id: {person_id}")
+
+def invalidate_person_table_cache():
+    """
+    Invalidate all cached data related to Person table.
+    This includes both the individual person cache keys and users list cache.
+    """
+    # Get all Person cache keys using pattern matching
+    person_keys = rc.keys(f"{get_current_subdomain()}:Person:*")
+    
+    # Delete all matched Person keys
+    if person_keys:
+        for key in person_keys:
+            rc.delete(key)
+    
+    # Also invalidate the users list cache
+    invalidate_users_list_cache()
+    
+    # Also invalidate the user data cache
+    invalidate_all_user_cache()
+    
+    logger.debug(f"Invalidated all Person table cache")
+    return True
+
+# get_<model>_cache_<data/key>
+# cache_<model>_data/<key>
+# invalidate_<model>_cache_<data/key>
+
+# Setup Redis JSON index - add this function
+def setup_person_index():
+    """
+    Create a search index for Person JSON objects in Redis.
+    This only needs to be run once during application startup.
+    """
+    try:
+        # Try to drop the index if it exists
+        try:
+            rc.ft("person_idx").dropindex()
+        except:
+            pass  # Index doesn't exist, that's fine
+        
+        # Define schema for the Person index
+        schema = (
+            TextField("$.id", as_name="id"),
+            TextField("$.email", as_name="email"),
+            TextField("$.first_name", as_name="first_name"),
+            TextField("$.last_name", as_name="last_name"),
+            TagField("$.is_active", as_name="is_active"),
+            TagField("$.role.name", as_name="role_name"),
+            TagField("$.team.id", as_name="team_id"),
+            TextField("$.primary_phone", as_name="primary_phone")
+        )
+        
+        # Create the index
+        rc.ft("person_idx").create_index(
+            schema,
+            definition=IndexDefinition(
+                prefix=[f"{get_current_subdomain()}:Person:"],
+                index_type=IndexType.JSON
+            )
+        )
+        logger.info("Created Person search index in Redis")
+        return True
+    except Exception as e:
+        logger.error(f"Error setting up Person index: {e}")
+        return False
+
+# Search function for querying persons
+def search_cached_persons(query_str="*", filters=None, offset=0, limit=10, sort_by=None, sort_asc=True):
+    """
+    Search for persons in the Redis cache using the search index.
+    
+    Args:
+        query_str: Search query string (default "*" for all)
+        filters: Dict of field filters {field: value}
+        offset: Pagination offset
+        limit: Number of results to return
+        sort_by: Field to sort by
+        sort_asc: Sort in ascending order if True
+        
+    Returns:
+        dict: {"total": total_count, "persons": list_of_persons}
+    """
+    try:
+        # Build the query
+        q = Query(query_str)
+        
+        # Add filters
+        if filters:
+            for field, value in filters.items():
+                if field == "is_active":
+                    q = q.add_filter(f"@{field}", value)
+                elif field == "role_name":
+                    q = q.add_filter(f"@{field}", value)
+                elif field == "team_id":
+                    q = q.add_filter(f"@{field}", value)
+        
+        # Add sorting
+        if sort_by:
+            q = q.sort_by(f"@{sort_by}", asc=sort_asc)
+            
+        # Add pagination
+        q = q.paging(offset, limit)
+        
+        # Execute search
+        result = rc.ft("person_idx").search(q)
+        
+        # Extract person data from results
+        persons = []
+        for doc in result.docs:
+            if hasattr(doc, 'json'):
+                persons.append(json.loads(doc.json))
+            else:
+                # Fallback if json attribute is not available
+                person_id = doc.id.split(':')[-1]
+                person_data = get_person_cache_data(person_id)
+                if person_data:
+                    persons.append(person_data)
+        
+        return {
+            "total": result.total,
+            "persons": persons
+        }
+    except Exception as e:
+        logger.error(f"Error searching cached persons: {e}")
+        return {"total": 0, "persons": []}
+
+# Batch cache multiple persons
+def batch_cache_persons(persons_data):
+    """
+    Cache multiple persons' data in batch.
+    
+    Args:
+        persons_data: List of (person_id, person_data) tuples
+    """
+    try:
+        # Use pipeline for better performance
+        pipe = rc.pipeline()
+        for person_id, person_data in persons_data:
+            key = get_person_cache_key(person_id)
+            json_data = json.loads(json.dumps(person_data, cls=DjangoJSONEncoder))
+            pipe.json().set(key, Path.root_path(), json_data)
+            pipe.expire(key, USER_CACHE_TTL)
+        
+        pipe.execute()
+        logger.debug(f"Cached {len(persons_data)} persons in batch")
+        return True
+    except Exception as e:
+        logger.error(f"Error batch caching persons: {e}")
+        return False
+
+# Function to cache all persons matching filter parameters
+def cache_filtered_persons(queryset, serializer_class):
+    """
+    Cache all persons from a queryset.
+    
+    Args:
+        queryset: Django queryset of Person objects
+        serializer_class: Serializer class to use for serializing Person objects
+    """
+    try:
+        start_time = time.time()
+        batch_size = 100
+        total_cached = 0
+        
+        # Process in batches to avoid memory issues
+        for i in range(0, queryset.count(), batch_size):
+            persons_batch = queryset[i:i+batch_size]
+            persons_data = []
+            
+            for person in persons_batch:
+                serializer = serializer_class(person)
+                persons_data.append((str(person.id), serializer.data))
+            
+            batch_cache_persons(persons_data)
+            total_cached += len(persons_data)
+            
+        logger.debug(f"Cached {total_cached} persons in {time.time() - start_time:.2f}s")
+        return True
+    except Exception as e:
+        logger.error(f"Error caching filtered persons: {e}")
+        return False
+
+# Function to check if person cache exists
+def check_person_cache_exists():
+    """
+    Check if any person cache entries exist.
+    """
+    try:
+        pattern = f"{get_current_subdomain()}:Person:*"
+        return bool(rc.keys(pattern))
+    except Exception as e:
+        logger.error(f"Error checking person cache existence: {e}")
+        return False
+

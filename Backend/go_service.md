@@ -7,3 +7,10 @@ defer x() runs x() when the containing function ends
 logger, _ := zap.NewProduction()
 defer logger.Sync()
 ```
+
+In Go, constructors are usually functions named:
+- `New[TypeName]`
+- `[TypeName]New`
+- Functions returning a pointer like `New()` or `Create()`
+
+They're not language features but conventions.

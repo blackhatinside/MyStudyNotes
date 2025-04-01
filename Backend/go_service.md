@@ -14,3 +14,6 @@ In Go, constructors are usually functions named:
 - Functions returning a pointer like `New()` or `Create()`
 
 They're not language features but conventions.
+
+
+So while both layers contain code, the actual algorithms and business logic reside in the controller, with the handler serving primarily as a translation and validation layer.

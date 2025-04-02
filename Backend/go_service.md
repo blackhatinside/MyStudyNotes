@@ -17,3 +17,10 @@ They're not language features but conventions.
 
 
 So while both layers contain code, the actual algorithms and business logic reside in the controller, with the handler serving primarily as a translation and validation layer.
+
+
+```
+go get <link to download from>
+go mod vendor
+go mod tidy
+```

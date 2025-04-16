@@ -9,9 +9,19 @@ const (
 ```
 
 ``` go
+type word string
+const (
+    Hello word = "Hello"
+    World word = "World"
+    Greeting word = Hello + " " + World
+)
+```
+
+``` go
 const Hello = "Hello"
 const World = "World"
 ```
+
 
 Protobuf enums are implemented as constants with integer values in Go.
 

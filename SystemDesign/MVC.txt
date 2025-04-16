@@ -1,1 +1,1 @@
-* Model-View-Controller pattern
+Model-View-Controller is a software design pattern that organizes applications into three interconnected components: the Model (data and business logic), the View (user interface), and the Controller (managing interactions between the Model and View). 

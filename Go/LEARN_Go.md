@@ -9,7 +9,7 @@ const (
 ```
 
 ``` go
-type word string
+type word string // user defined datatype 'word' of type string
 const (
     Hello word = "Hello"
     World word = "World"

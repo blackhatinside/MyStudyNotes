@@ -32,8 +32,6 @@ enum SeverityLevel {
     SeverityLevel_MEDIUM = 2;
     SeverityLevel_HIGH = 3;
 }
-```
 
-``` go
 severity := pb.SeverityLevel_MEDIUM
 ```

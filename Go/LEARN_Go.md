@@ -35,3 +35,27 @@ enum SeverityLevel {
 
 severity := pb.SeverityLevel_MEDIUM
 ```
+
+Using String() on a Protocol Buffer enum in Go will return the name of the enum value as a string. 
+
+``` go
+enum Feature {
+    Feature_UNSPECIFIED = 0;
+    Feature_AI_DISPOSITION = 1;
+    Feature_AI_SUMMARY = 2;
+    Feature_AI_INSIGHTS = 3;
+    Feature_AI_SENTIMENT_ANALYSIS = 4;
+    Feature_SCORE_SENSE = 5;
+    Feature_ENTITY_EXTRACTION = 6;
+}
+
+feedback := model.UserFeedback{
+    TenantID:     req.TenantID,
+    UserID:       req.UserID,
+    Feature:      model.FeatureChoices(req.Feature.String()),
+    FeedbackType: convertFeedbackType(req.FeedbackType),
+    Categories:   req.Categories,
+    Comment:      req.Comment,
+    Timestamp:    time.Now().Unix(),
+}
+```

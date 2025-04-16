@@ -1,1 +1,1 @@
-a design pattern where software applications are built using independent, reusable, and loosely coupled components called services. These services communicate with each other, often over a network, to perform specific business functions or tasks.
+Service-Oriented Architecture (SOA) is a design pattern where software applications are built using independent, reusable, and loosely coupled components called services. These services communicate with each other, often over a network, to perform specific business functions or tasks.

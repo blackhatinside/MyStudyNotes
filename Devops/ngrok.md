@@ -24,10 +24,27 @@ sudo snap install ngrok
 # start the tunnel
 ./ngrok tcp 22
 ```
+on running ngrok tunneling, a process starts with following output, use the port given in the 'Forwarding' field to connect to remote machine
+``` bash
+ngrok                                                                                                                                                 (Ctrl+C to quit)
+                                                                                                                                                                      
+🛡️ Protect endpoints w/ IP Intelligence: https://ngrok.com/r/ipintel                                                                                                   
+                                                                                                                                                                      
+Session Status                online                                                                                                                                  
+Account                       Adithya E S (Plan: Free)                                                                                                                
+Version                       3.22.1                                                                                                                                  
+Region                        India (in)                                                                                                                              
+Latency                       76ms                                                                                                                                    
+Web Interface                 http://127.0.0.1:4040                                                                                                                   
+Forwarding                    tcp://0.tcp.in.ngrok.io:16205 -> localhost:22                                                                                           
+                                                                                                                                                                      
+Connections                   ttl     opn     rt1     rt5     p50     p90                                                                                             
+                              0       0       0.00    0.00    0.00    0.00
+```
 
 # commands to be run on my machine
 ``` bash
 choco install ngrok
 
-ssh user@0.tcp.in.ngrok.io -p 19370
+ssh user@0.tcp.in.ngrok.io -p 16205
 ```

@@ -52,6 +52,9 @@ ssh user@0.tcp.in.ngrok.io -p 16205
 # To download files from your remote Ubuntu machine to your Windows 11 PC, use SCP:
 ``` bash
 scp -P 16205 user@0.tcp.in.ngrok.io:/path/to/remote/file C:\local\destination\folder
+
+# example:
+scp -P 16205 user@0.tcp.in.ngrok.io:/home/user/adithyaes/AdiCode/Mtech_ResearchWork/Augs/isles_aug_seg_HIMRA_5_midsem_UNet.py "C:\Cyberkid\MyMTech\Labwork\SecondYear\SEM4\temp"
 ```
 # For downloading multiple files or directories, use:
 ``` bash

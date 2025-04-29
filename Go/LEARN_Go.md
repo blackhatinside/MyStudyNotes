@@ -59,3 +59,6 @@ feedback := model.UserFeedback{
     Timestamp:    time.Now().Unix(),
 }
 ```
+
+In Go, only identifiers starting with an uppercase letter are exported and accessible from other packages.
+

@@ -62,3 +62,12 @@ feedback := model.UserFeedback{
 
 In Go, only identifiers starting with an uppercase letter are exported and accessible from other packages.
 
+
+
+```
+import (
+    "reflect"
+)
+
+reflect.TypeOf(whatever_variable_name)
+```

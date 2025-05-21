@@ -27,5 +27,111 @@ after running this, 4 protos files will be generated ![Screenshot 2025-03-19 180
 
 replace these files in the services_proto repository ![Screenshot 2025-03-19 180929](https://github.com/user-attachments/assets/f056f1e4-ad6d-4c6a-88ba-d91625a7d207)
 
-  
+
+
+
+testing a grpc service in command line (windows):
+```
+
+C:\Users\AdithyaES>grpcurl -plaintext dev.convin.ai:50051 list
+genesis.UserFeedbackService
+grpc.reflection.v1.ServerReflection
+grpc.reflection.v1alpha.ServerReflection
+
+C:\Users\AdithyaES>grpcurl -plaintext dev.convin.ai:50051 list genesis.UserFeedbackService
+genesis.UserFeedbackService.GetFeedback
+genesis.UserFeedbackService.GetFeedbackReport
+genesis.UserFeedbackService.GetFeedbackReportStatistics
+genesis.UserFeedbackService.SubmitFeedback
+
+C:\Users\AdithyaES>grpcurl -plaintext dev.convin.ai:50051 describe genesis.UserFeedbackService.GetFeedbackReport
+genesis.UserFeedbackService.GetFeedbackReport is a method:
+rpc GetFeedbackReport ( .genesis.FeedbackReportRequest ) returns ( .genesis.FeedbackReportResponse );
+
+C:\Users\AdithyaES>grpcurl -plaintext -d '{"tenantID":"sbilife","filters":"userID:convinuser;"}' dev.convin.ai:50051 genesis.UserFeedbackService.GetFeedbackReport
+Error invoking method "genesis.UserFeedbackService.GetFeedbackReport": error getting request data: invalid character '\'' looking for beginning of value
+
+C:\Users\AdithyaES>grpcurl -plaintext -d "{\"tenantID\":\"sbilife\",\"filters\":\"userID:convinuser;\"}" dev.convin.ai:50051 genesis.UserFeedbackService.GetFeedbackReport
+{}
+
+C:\Users\AdithyaES>grpcurl -plaintext -d "{\"tenantID\":\"sbilife\",\"filters\":\"userID:TestUser1;\"}" dev.convin.ai:50051 genesis.UserFeedbackService.GetFeedbackReportt
+Error invoking method "genesis.UserFeedbackService.GetFeedbackReportt": service "genesis.UserFeedbackService" does not include a method named "GetFeedbackReportt"
+
+C:\Users\AdithyaES>grpcurl -plaintext -d "{\"tenantID\":\"sbilife\",\"filters\":\"userID:TestUser1;\"}" dev.convin.ai:50051 genesis.UserFeedbackService.GetFeedbackReport
+{
+  "totalFeedbacks": 4,
+  "results": [
+    {
+      "id": "sbilife:TestUser1:AI_INSIGHTS",
+      "tenantID": "sbilife",
+      "userID": "TestUser1",
+      "featureID": "AI_INSIGHTS",
+      "categories": [
+        "less relevant insights",
+        "minor spelling issues"
+      ],
+      "comment": "Hello World",
+      "timestamp": "1745925623",
+      "metadata": {
+        "auditorname": "asdfgh",
+        "conversationID": "abcdef987"
+      }
+    },
+    {
+      "id": "sbilife:TestUser1:AI_SUMMARY",
+      "tenantID": "sbilife",
+      "userID": "TestUser1",
+      "featureID": "AI_SUMMARY",
+      "feedbackType": "FeedbackType_DOWNVOTE",
+      "categories": [
+        "extra/unnecessary entity added"
+      ],
+      "timestamp": "1746132294",
+      "severityLevel": "SeverityLevel_MEDIUM",
+      "metadata": {
+        "fields": {
+          "auditorname": {
+            "string_value": "yFgTEE"
+          },
+          "conversationID": {
+            "string_value": "feDwytmK"
+          }
+        }
+      }
+    },
+    {
+      "id": "sbilife:TestUser1:AI_DISPOSITION",
+      "tenantID": "sbilife",
+      "userID": "TestUser1",
+      "featureID": "AI_DISPOSITION",
+      "feedbackType": "FeedbackType_DOWNVOTE",
+      "categories": [
+        "minor wording improvements"
+      ],
+      "timestamp": "1746132298",
+      "severityLevel": "SeverityLevel_LOW",
+      "metadata": {}
+    },
+    {
+      "id": "sbilife:TestUser1:ENTITY_EXTRACTION",
+      "tenantID": "sbilife",
+      "userID": "TestUser1",
+      "featureID": "ENTITY_EXTRACTION",
+      "categories": [
+        "less relevant insights",
+        "minor spelling issues"
+      ],
+      "comment": "Hello World",
+      "timestamp": "1745925526",
+      "metadata": {
+        "auditorname": "asdfgh",
+        "conversationID": "abcdef987"
+      }
+    }
+  ]
+}
+
+C:\Users\AdithyaES>
+
+```
 

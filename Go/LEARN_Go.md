@@ -71,3 +71,9 @@ import (
 
 reflect.TypeOf(whatever_variable_name)
 ```
+
+
+To get a proto file (update it locally, by pulling from convin_proto)
+``` bash
+go get bitbucket.org/convin/convin_proto
+```

@@ -82,3 +82,9 @@ go mod vendor
 
 - Make changes to convin_proto repo file
 - go-genproto repo file will be generated automatically
+
+
+``` bash
+docker run --rm -v $(pwd):/defs namely/protoc-all -f bark_resources.proto -l go
+protoc --go_out=. --go_opt=paths=source_relative bark_resources.proto
+```

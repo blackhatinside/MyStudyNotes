@@ -79,3 +79,6 @@ go get bitbucket.org/convin/convin_proto
 go mod tidy
 go mod vendor
 ```
+
+- Make changes to convin_proto repo file
+- go-genproto repo file will be generated automatically

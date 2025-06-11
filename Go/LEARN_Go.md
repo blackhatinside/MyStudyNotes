@@ -73,7 +73,9 @@ reflect.TypeOf(whatever_variable_name)
 ```
 
 
-To get a proto file (update it locally, by pulling from convin_proto)
+To get a proto file(go get bitbucket.org/convin/convin_proto/src/master/convin/bark/v1/bark_resources.proto)  (update it locally, by pulling from convin_proto)
 ``` bash
 go get bitbucket.org/convin/convin_proto
+go mod tidy
+go mod vendor
 ```

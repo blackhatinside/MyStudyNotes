@@ -1,0 +1,13 @@
+# prerequisites for nginx
+sudo apt install curl gnupg2 ca-certificates lsb-release debian-archive-keyring
+
+sudo apt install nginx
+
+# prerequiesites for LFS
+sudo apt install bison gawk m4 texinfo
+
+# dark pdf reader
+sudo apt install okular
+
+# blue light reduction
+sudo apt install redshift

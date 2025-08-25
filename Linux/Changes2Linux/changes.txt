@@ -1,0 +1,29 @@
+sudo systemctl disable avahi-daemon.service --now
+sudo systemctl disable kerneloops.service --now
+sudo systemctl disable zfs-zed.service --now
+sudo systemctl disable bolt.service --now
+sudo systemctl disable colord.service --now
+
+sudo systemctl mask bolt.service
+sudo systemctl mask colord.service
+
+    cyberkid05@cyberkid05-PC:~$ sudo systemctl mask bolt.service
+    [sudo] password for cyberkid05:
+    Created symlink /etc/systemd/system/bolt.service → /dev/null.
+    cyberkid05@cyberkid05-PC:~$ sudo systemctl mask colord.service
+    Created symlink /etc/systemd/system/colord.service → /dev/null.
+    cyberkid05@cyberkid05-PC:~$ ^C
+
+
+chsh -s /bin/bash
+sudo ln -sf /bin/bash /bin/sh
+
+        # REVERSIBLE (dash is faster than bash for debian systems)
+        sudo ln -sf /bin/dash /bin/sh
+
+# disabled the NetworkManager-wait-online.service service from starting automatically on boot. This service is part of the NetworkManager suite and is responsible for waiting for the network to be fully up and online before completing the boot process
+sudo systemctl disable NetworkManager-wait-online.service
+
+sudo systemctl disable zfs-load-module.service
+sudo systemctl mask zfs-load-module.service
+

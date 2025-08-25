@@ -35,3 +35,15 @@ sudo apt-get install package_name
 eg:
   sudo apt-get install gedit
   sudo apt-get install kde-plasma-desktop
+
+# for hardware, driver and boot logs
+dmesg
+
+# for services and user activity logs
+syslog
+
+# for listing all storage devices
+lsblk
+
+# for mounting a partition 
+sudo mount /dev/nvme0n1p7/ /mnt/lfs/

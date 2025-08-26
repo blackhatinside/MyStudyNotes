@@ -27,3 +27,6 @@ sudo systemctl disable NetworkManager-wait-online.service
 sudo systemctl disable zfs-load-module.service
 sudo systemctl mask zfs-load-module.service
 
+# TODO
+sudo systemctl disable cups
+sudo systemctl disable ModemManager

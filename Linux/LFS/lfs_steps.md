@@ -244,6 +244,7 @@ if [ ! -L /bin ]; then PATH=/bin:$PATH; fi
 PATH=$LFS/tools/bin:$PATH
 CONFIG_SITE=$LFS/usr/share/config.site
 export LFS LC_ALL LFS_TGT PATH CONFIG_SITE
+export MAKEFLAGS=-j8
 EOF
 ```
 - **`cat`**: This command is used to concatenate and display the content of files, but in this case, you're redirecting input into the file.
@@ -256,17 +257,128 @@ EOF
 
 Several commercial distributions add an undocumented instantiation of /etc/bash.bashrc to the initialization of bash. This file has the potential to modify the lfs user's environment in ways that can affect the building of critical LFS packages. To make sure the lfs user's environment is clean, check for the presence of /etc/bash.bashrc and, if present, move it out of the way
 
-  ``` bash (root)
-  # in a new terminal, run this as root
-  sudo sh -c '[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE'
-  
-  # # to restore the file back after building LFS
-  mv -v /etc/bash.bashrc.NOUSE /etc/bash.bashrc
+``` bash (root)
+# in a new terminal, run this as root
+sudo sh -c '[ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE'
+
+# # to restore the file back after building LFS
+mv -v /etc/bash.bashrc.NOUSE /etc/bash.bashrc
   ```
   
-  ``` bash (lfs)
-  # set the number of cores to use for compilation
-  # my Acer Aspire 7 has 4 perf cores (2 threads each) and 2 effi cores(1 thread each) so total logical cores would be 8 + 4  = 12, thereby my cpu can handle 12 tasks(threads) at the same time
-  make -j8
-  export MAKEFLAGS=-j8
-  ```
+``` bash (lfs)
+# set the number of cores to use for compilation
+# my Acer Aspire 7 has 4 perf cores (2 threads each) and 2 effi cores(1 thread each) so total logical cores would be 8 + 4  = 12, thereby my cpu can handle 12 tasks(threads) at the same time
+make -j8
+export MAKEFLAGS=-j8
+```
+  
+  8. 
+ Installing binutils
+``` bash
+# switch to lfs user
+su - lfs
+
+# check if LFS variable set for lfs user
+echo $LFS
+
+# switch to sources dir
+cd $LFS/sources/
+
+# extract the package
+tar -xvf binutils-2.44.tar.xz
+
+# go inside extracted package folder
+cd binutils-2.44
+
+# binutils require building in a separate dir
+mkdir -v build
+cd build
+     
+# prepare binutils for compilation
+../configure \
+  --prefix=$LFS/tools \
+  --with-sysroot=$LFS \
+  --target=$LFS_TGT \
+  --disable-nls \
+  --enable-gprofng=no \
+  --disable-werror \
+  --enable-default-hash-style=gnu
+
+# continue compilation
+make
+
+# install the package
+make install
+
+# go back to sources dir
+cd $LFS/sources/
+
+# remove the extracted folder (if not mentioned to keep by LFS book)
+rm -rf binutils-2.44
+
+# verify if ld and as binaries from binutils are present or not
+$LFS/tools/bin/$LFS_TGT-ld --version
+$LFS/tools/bin/$LFS_TGT-as --version
+
+```
+
+Installing gcc
+``` bash
+su - lfs
+cd $LFS/sources/
+
+# Extract and rename MPFR
+tar -xvf ../mpfr-4.2.1.tar.xz
+mv -v mpfr-4.2.1 mpfr
+
+# Extract and rename GMP
+tar -xvf ../gmp-6.3.0.tar.xz
+mv -v gmp-6.3.0 gmp
+
+# Extract and rename MPC
+tar -xvf ../mpc-1.3.1.tar.gz
+mv -v mpc-1.3.1 mpc
+
+# set the default dir name for 64bit libraries to lib
+case $(uname -m) in
+  x86_64)
+    sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64
+  ;;
+esac
+
+mkdir -v build
+cd build
+
+# prepare gcc for compilation
+../configure \
+  --target=$LFS_TGT \
+  --prefix=$LFS/tools \
+  --with-glibc-version=2.39 \
+  --with-sysroot=$LFS \
+  --with-newlib \
+  --without-headers \
+  --enable-default-pie \
+  --enable-default-ssp \
+  --disable-nls \
+  --disable-shared \
+  --disable-multilib \
+  --disable-threads \
+  --disable-libatomic \
+  --disable-libgomp \
+  --disable-libquadmath \
+  --disable-libssp \
+  --disable-libvtv \
+  --disable-libstdcxx \
+  --enable-languages=c,c++
+
+make
+make install
+
+# create a full version of the internal header
+cd ..
+cat gcc/limitx.h gcc/glimits.h gcc/limity.h > `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h
+
+# verify if limits.h file was created 
+ls -l `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h
+
+```

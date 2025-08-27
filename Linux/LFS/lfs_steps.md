@@ -14,6 +14,10 @@ PREREQ:
 1.  GUI:
 	Use Minitool Partition to resize C:// and create an unallocated space of roughly 50 GB
 
+```
+
+```
+
 2. CMD:
 ``` bash
 # create the directory (including parent directory)
@@ -25,13 +29,30 @@ ls /mnt/lfs
 # mount the storage partition to that directory
 sudo mount /dev/nvme0n1p7 /mnt/lfs
 
+# OPTIONAL: if swap not on already (usually its on), turn it on
+sudo /sbin/swapon -v /dev/nvme0n1p5
+
 # check if mounted successfully using list block devices command
 lsblk -f
 
 # set the LFS variable in terminal and reload current terminal
 echo "export LFS=/mnt/lfs" >> ~/.bashrc
-	source ~/.bashrc
-```   
+source ~/.bashrc
+
+# check LFS variable
+echo $LFS
+
+# set file mode creation mask
+umask 022
+
+# check file mode creation mask
+umask
+
+# set owner and permission mode of $LFS dir
+sudo chown root:root $LFS
+sudo chmod 755 $LFS
+
+```
 
 3. FILE: version-check.sh
 ``` bash
@@ -143,9 +164,26 @@ mkdir -v $LFS/sources
 
 # grant write permission, sticky bit to directory for all users
 chmod -v a+wt $LFS/sources
+
+# move the package list and its md5sum file to sources dir
+sudo cp /home/cyberkid05/Downloads/Files/wget-list-sysv $LFS/sources/
+sudo cp /home/cyberkid05/Downloads/Files/md5sums $LFS/sources/
 ```
 
 - **Sticky Bit (`t`)** → when applied to a directory, it ensures that **only the owner of a file** within the directory can delete or modify that file. Other users can still create and modify files within the directory, but they can't delete or rename files owned by others.
+
+``` bash
+#!/bin/bash
+
+# Navigate to the LFS sources directory and save current location
+pushd $LFS/sources
+
+# Verify MD5 checksums against the md5sums file
+md5sum -c md5sums
+
+# Return to the previous directory
+popd
+```
 
 ``` bash
 # move downloaded missing files from Downloads to the required path
@@ -156,6 +194,9 @@ ls $LFS/sources/
 
 # download all required packages
 wget -nc --continue --input-file=/home/cyberkid05/Downloads/Files/wget-list-sysv --directory-prefix=$LFS/sources
+
+# check if any downloaded files corrupt
+
 
 # change owner of these files
 chown root:root $LFS/sources/*
@@ -192,6 +233,11 @@ mkdir -pv $LFS/tools
 groupadd lfs
 useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 
+# verify if new user and group made
+cat /etc/passwd | grep lfs # This indicates that the user `lfs` exists and has `/bin/bash` as the shell.
+
+cat /etc/group | grep lfs
+
 # set password for lfs user
 passwd lfs
 
@@ -203,19 +249,44 @@ sudo chown -R lfs:root $LFS/{usr,var,etc,tools}
 
 - `{etc,var}` → **brace expansion** that expands to both `etc` and `var`, so `mkdir` will create both directories `$LFS/etc` and `$LFS/var`.
 
-FILE: mini_scripts.sh
+FILE: mini_scripts.sh (paste and run the snippets one by one)
 ``` bash
+# create symlinks
 for i in bin lib sbin; do
   ln -sv usr/$i $LFS/$i
 done
 
+# verify system architecture (32 or 64 bit)
+uname -m
+
+# DO NOT RUN (NOT WORKING, INSTEAD RUN BELOW CMD)
 case $(uname -m) in
   x86_64) sudo mkdir -pv $LFS/lib64 ;;
 esac
 
+# run this, if system is 64 bit
+sudo mkdir -pv $LFS/lib64
+
+# DO NOT RUN (NOT WORKING, INSTEAD RUN BELOW CMD)
 case $(uname -m) in
   x86_64) sudo chown -v lfs $LFS/lib64 ;;
 esac
+
+# run this, if system is 64 bit
+sudo chown -v lfs $LFS/lib64
+
+```
+
+``` bash
+# verify if symlinks already exists
+ls -l /bin
+ls -l /lib
+ls -l /sbin
+
+# a more script friendly way to verify symlinks
+test -L /bin && echo "/bin is a symbolic link" || echo "/bin is not a symbolic link"
+test -L /lib && echo "/lib is a symbolic link" || echo "/lib is not a symbolic link"
+test -L /sbin && echo "/sbin is a symbolic link" || echo "/sbin is not a symbolic link"
 ```
 
 CMD:
@@ -304,7 +375,7 @@ cd build
   --disable-werror \
   --enable-default-hash-style=gnu
 
-# continue compilation
+# continue compilation (if "make" fails with parallel jobs, rerun with "make -j1")
 make
 
 # install the package
